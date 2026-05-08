@@ -421,13 +421,93 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
 </section>
 
-<!-- ══ 02 获客质量劣化 ══ -->
+<!-- ══ 02 获客质量 · 链路效率 ══ -->
 <section>
   <div class="sec-head">
-    <div><span class="sec-num">02</span><span class="sec-title">获客质量劣化</span></div>
-    <div class="sec-hint">安装→账号 / ARPPU / LTV7</div>
+    <div><span class="sec-num">02</span><span class="sec-title">获客质量 · 链路效率</span></div>
+    <div class="sec-hint">曝光 → 点击 → 安装 → 账号 / ARPPU / LTV7</div>
   </div>
-  <div class="sec-summary">（与 Section 01 素材/链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（39/45/39% vs 46/53/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 03 大R风险说明。</div>
+  <div class="sec-summary">AI 三地安装→账号率系统性低于非AI（39/45/39% vs 46/53/44%）；KR 入口效率有优势（CPM $11.7 vs $15.1，CPC $2.2 vs $4.4），但点击后质量劣化：<span class="hi-nai">KR AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增LTV7 $3.9 vs $5.6（<b>−30%</b>）</span>。前端廉价流量与后端低质用户并存，根因指向<b>AI 受众算法过于宽泛，采买了大量非目标付费人群</b>。JP AI ARPPU $84 领先（+67%），但见 Section 03 大R风险说明。</div>
+  <div class="g2">
+    <div class="panel">
+      <div class="panel-h"><span class="title">CTR（点击率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cCtr"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="title">CVR（转化率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cCvr"></canvas></div>
+    </div>
+  </div>
+  <div class="g2" style="margin-top:1px">
+    <div class="panel">
+      <div class="panel-h"><span class="title">CPM (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cCpm"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="title">CPC (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cCpc"></canvas></div>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:14px;overflow-x:auto">
+    <div class="panel-h"><span class="title">广告链路漏斗 · 曝光 → 点击 → 安装 → 账号</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+    <table class="dtbl ftbl">
+      <thead><tr>
+        <th class="ft-step">漏斗层级</th>
+        <th class="ft-ai">JP · <span class="th-ai">AI</span></th><th class="ft-nai">JP · <span class="th-nai">非AI</span></th>
+        <th class="ft-ai">KR · <span class="th-ai">AI</span></th><th class="ft-nai">KR · <span class="th-nai">非AI</span></th>
+        <th class="ft-ai">NA · <span class="th-ai">AI</span></th><th class="ft-nai">NA · <span class="th-nai">非AI</span></th>
+      </tr></thead>
+      <tbody>
+        <tr class="ft-group"><td colspan="7">曝光层</td></tr>
+        <tr>
+          <td class="ft-label">CPM</td>
+          <td class="ft-ai">$21.2</td><td class="ft-nai">$16.4</td>
+          <td class="ft-ai">$11.7</td><td class="ft-nai">$15.1</td>
+          <td class="ft-ai">$30.7</td><td class="ft-nai">$35.6</td>
+        </tr>
+        <tr class="ft-group"><td colspan="7">曝光 → 点击</td></tr>
+        <tr>
+          <td class="ft-label">CTR</td>
+          <td class="ft-ai">0.387%</td><td class="ft-nai">0.409%</td>
+          <td class="ft-ai ft-win">0.532%</td><td class="ft-nai">0.340%</td>
+          <td class="ft-ai">1.191%</td><td class="ft-nai ft-win">1.405%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">CPC</td>
+          <td class="ft-ai">$5.48</td><td class="ft-nai ft-win">$4.02</td>
+          <td class="ft-ai ft-win">$2.21</td><td class="ft-nai">$4.42</td>
+          <td class="ft-ai ft-win">$2.57</td><td class="ft-nai">$2.53</td>
+        </tr>
+        <tr class="ft-group"><td colspan="7">点击 → 安装</td></tr>
+        <tr>
+          <td class="ft-label">点击→安装率</td>
+          <td class="ft-ai ft-win">14.1%</td><td class="ft-nai">8.6%</td>
+          <td class="ft-ai">7.6%</td><td class="ft-nai ft-win">10.2%</td>
+          <td class="ft-ai ft-win">22.3%</td><td class="ft-nai">19.6%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">设备单价</td>
+          <td class="ft-ai ft-win">$39</td><td class="ft-nai">$47</td>
+          <td class="ft-ai ft-win">$29</td><td class="ft-nai">$43</td>
+          <td class="ft-ai ft-win">$12</td><td class="ft-nai">$13</td>
+        </tr>
+        <tr class="ft-group"><td colspan="7">安装 → 账号</td></tr>
+        <tr>
+          <td class="ft-label">安装→账号率</td>
+          <td class="ft-ai">39%</td><td class="ft-nai ft-win">46%</td>
+          <td class="ft-ai">45%</td><td class="ft-nai ft-win">53%</td>
+          <td class="ft-ai">39%</td><td class="ft-nai ft-win">44%</td>
+        </tr>
+        <tr class="ft-bottom">
+          <td class="ft-label">账号单价</td>
+          <td class="ft-ai ft-win">$100</td><td class="ft-nai">$102</td>
+          <td class="ft-ai ft-win">$64</td><td class="ft-nai">$82</td>
+          <td class="ft-ai">$29</td><td class="ft-nai">$29</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">新增7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
@@ -530,98 +610,10 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
 </section>
 
-<!-- ══ 04 链路效率深挖 ══ -->
+<!-- ══ 04 NA：高消耗低回报 ══ -->
 <section>
   <div class="sec-head">
-    <div><span class="sec-num">04</span><span class="sec-title">链路效率深挖</span></div>
-    <div class="sec-hint">曝光 → 点击 → 安装 → 账号</div>
-  </div>
-  <div class="sec-summary">KR AI 入口效率有优势：CPM $11.7（非AI $15.1），CTR 0.53%（非AI 0.34%），CPC <span class="hi-ai">$2.2 vs $4.4</span>（低50%）；但 <span class="hi-nai">点击→安装率 KR 仅 7.6%（非AI 10.2%），三地安装→账号率均系统性偏低（39/45/39% vs 46/53/44%）</span>。前端低价流量与后端低转化并存，指向同一根因：<b>AI 受众学习可能过于宽泛，采买了大量非目标付费人群</b>，导致安装质量差、账号激活率低、LTV 偏低。</div>
-  <div class="g2">
-    <div class="panel">
-      <div class="panel-h"><span class="title">CTR（点击率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h200"><canvas id="cCtr"></canvas></div>
-    </div>
-    <div class="panel">
-      <div class="panel-h"><span class="title">CVR（转化率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h200"><canvas id="cCvr"></canvas></div>
-    </div>
-  </div>
-  <div class="g2" style="margin-top:1px">
-    <div class="panel">
-      <div class="panel-h"><span class="title">CPM (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h240"><canvas id="cCpm"></canvas></div>
-    </div>
-    <div class="panel">
-      <div class="panel-h"><span class="title">CPC (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h240"><canvas id="cCpc"></canvas></div>
-    </div>
-  </div>
-  <div class="panel" style="margin-top:14px;overflow-x:auto">
-    <div class="panel-h"><span class="title">广告链路漏斗 · 曝光 → 点击 → 安装 → 账号</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-    <table class="dtbl ftbl">
-      <thead><tr>
-        <th class="ft-step">漏斗层级</th>
-        <th class="ft-ai">JP · <span class="th-ai">AI</span></th><th class="ft-nai">JP · <span class="th-nai">非AI</span></th>
-        <th class="ft-ai">KR · <span class="th-ai">AI</span></th><th class="ft-nai">KR · <span class="th-nai">非AI</span></th>
-        <th class="ft-ai">NA · <span class="th-ai">AI</span></th><th class="ft-nai">NA · <span class="th-nai">非AI</span></th>
-      </tr></thead>
-      <tbody>
-        <tr class="ft-group"><td colspan="7">曝光层</td></tr>
-        <tr>
-          <td class="ft-label">CPM</td>
-          <td class="ft-ai">$21.2</td><td class="ft-nai">$16.4</td>
-          <td class="ft-ai">$11.7</td><td class="ft-nai">$15.1</td>
-          <td class="ft-ai">$30.7</td><td class="ft-nai">$35.6</td>
-        </tr>
-        <tr class="ft-group"><td colspan="7">曝光 → 点击</td></tr>
-        <tr>
-          <td class="ft-label">CTR</td>
-          <td class="ft-ai">0.387%</td><td class="ft-nai">0.409%</td>
-          <td class="ft-ai ft-win">0.532%</td><td class="ft-nai">0.340%</td>
-          <td class="ft-ai">1.191%</td><td class="ft-nai ft-win">1.405%</td>
-        </tr>
-        <tr>
-          <td class="ft-label">CPC</td>
-          <td class="ft-ai">$5.48</td><td class="ft-nai ft-win">$4.02</td>
-          <td class="ft-ai ft-win">$2.21</td><td class="ft-nai">$4.42</td>
-          <td class="ft-ai ft-win">$2.57</td><td class="ft-nai">$2.53</td>
-        </tr>
-        <tr class="ft-group"><td colspan="7">点击 → 安装</td></tr>
-        <tr>
-          <td class="ft-label">点击→安装率</td>
-          <td class="ft-ai ft-win">14.1%</td><td class="ft-nai">8.6%</td>
-          <td class="ft-ai">7.6%</td><td class="ft-nai ft-win">10.2%</td>
-          <td class="ft-ai ft-win">22.3%</td><td class="ft-nai">19.6%</td>
-        </tr>
-        <tr>
-          <td class="ft-label">设备单价</td>
-          <td class="ft-ai ft-win">$39</td><td class="ft-nai">$47</td>
-          <td class="ft-ai ft-win">$29</td><td class="ft-nai">$43</td>
-          <td class="ft-ai ft-win">$12</td><td class="ft-nai">$13</td>
-        </tr>
-        <tr class="ft-group"><td colspan="7">安装 → 账号</td></tr>
-        <tr>
-          <td class="ft-label">安装→账号率</td>
-          <td class="ft-ai">39%</td><td class="ft-nai ft-win">46%</td>
-          <td class="ft-ai">45%</td><td class="ft-nai ft-win">53%</td>
-          <td class="ft-ai">39%</td><td class="ft-nai ft-win">44%</td>
-        </tr>
-        <tr class="ft-bottom">
-          <td class="ft-label">账号单价</td>
-          <td class="ft-ai ft-win">$100</td><td class="ft-nai">$102</td>
-          <td class="ft-ai ft-win">$64</td><td class="ft-nai">$82</td>
-          <td class="ft-ai">$29</td><td class="ft-nai">$29</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- ══ 05 NA：高消耗低回报 ══ -->
-<section>
-  <div class="sec-head">
-    <div><span class="sec-num">05</span><span class="sec-title">NA：高消耗低回报</span></div>
+    <div><span class="sec-num">04</span><span class="sec-title">NA：高消耗低回报</span></div>
     <div class="sec-hint">花费占比最高，回报最差</div>
   </div>
   <div class="sec-summary">NA AI 花费 $34,824，占 NA 总花费 <span class="hi-nai"><b>41.4%</b></span>（三地最高）；ROI7 <b>13.1%</b> 落后非AI 15.0%，毛利 <b>−$1,203</b> vs 非AI <b>+$4,314</b>；账号单价（$29/$29）和设备单价（$12/$13）与非AI几乎相同，说明 NA 的劣势不在获客成本，而在<span class="hi-nai">用户后续回收能力</span>。</div>
@@ -669,10 +661,10 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
 </section>
 
-<!-- ══ 06 附录 ══ -->
+<!-- ══ 05 附录 ══ -->
 <section class="last">
   <div class="sec-head">
-    <div><span class="sec-num">06</span><span class="sec-title">附录</span></div>
+    <div><span class="sec-num">05</span><span class="sec-title">附录</span></div>
     <div class="sec-hint">规模 / 出价预算 / 完整数据</div>
   </div>
   <div class="sec-summary">以下为各地区投放规模及出价/预算演变的完整记录，供参考核对。</div>
