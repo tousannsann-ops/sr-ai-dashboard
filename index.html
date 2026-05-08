@@ -94,6 +94,27 @@ section.last{border-bottom:none}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .panel{background:var(--bg);padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.wrap-summary.panel{padding:18px 0 0;overflow:hidden;border:1px solid var(--line)}
+.summary-head{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;padding:0 22px}
+.summary-shell{overflow-x:auto;border-top:1px solid var(--line)}
+.summary-table{width:100%;border-collapse:collapse;font-family:"JetBrains Mono","SF Mono",monospace;font-size:11.5px;min-width:900px}
+.summary-table thead tr:last-child th{border-bottom:2px solid var(--line2)}
+.sum-spend th{padding:0;border-bottom:1px solid var(--line2)}
+.sum-spend-label{
+  text-align:left;padding:14px 13px;background:var(--bg2);color:var(--mute);
+  font-size:10px;letter-spacing:.1em;text-transform:uppercase;min-width:90px
+}
+.sum-spend-cell{
+  padding:14px 18px;background:linear-gradient(180deg,rgba(201,122,16,.10),rgba(201,122,16,.04));
+  text-align:left;vertical-align:top
+}
+.sum-spend-cell .k{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.sum-spend-cell .v{font-size:24px;line-height:1;font-weight:700;color:var(--ai)}
+.sum-spend-cell .s{font-size:10px;color:var(--mute);margin-top:6px}
+.summary-table th.sum-head-metric{text-align:left;padding:9px 13px;color:var(--mute);font-size:10px;letter-spacing:.1em;text-transform:uppercase;min-width:90px;background:var(--bg3)}
+.summary-table th.sum-head-ai{padding:9px 10px;color:var(--ai);background:rgba(201,122,16,.06)}
+.summary-table th.sum-head-nai{padding:9px 10px;color:var(--nai);background:rgba(40,120,176,.06)}
+.summary-table th.sum-head-delta{padding:9px 10px;color:var(--ink2);font-size:10px;font-weight:600;background:var(--bg3)}
 .panel-h{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;font-family:"JetBrains Mono","SF Mono",monospace;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
 .panel-h .title{display:inline-block}
 .panel-h .legend{margin-bottom:0;margin-left:auto;gap:12px;font-size:10px;color:var(--ink2);letter-spacing:0;text-transform:none;flex-shrink:0}
@@ -285,46 +306,47 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <section>
   <div class="sec-head">
     <div><span class="sec-num">01</span><span class="sec-title">整体效果对比</span></div>
-    <div class="sec-hint">消耗 / 账号数 / 账号单价 / LTV365 / ROI365 / 毛利</div>
+    <div class="sec-hint">AI 花费占比 / 消耗 / 账号数 / 账号单价 / LTV365 / ROI365 / 毛利</div>
   </div>
   <div class="sec-summary">三地区整体效果对比显示AI投放ROI优势仅在JP（去大R口径），KR/NA均落后非AI；三地AI毛利均为负，NA AI单地消耗$34,824但亏损$1,203，规模效应尚未建立。</div>
-  <div class="g3" style="margin-bottom:18px">
-    <div class="panel" style="text-align:center;padding:18px 14px">
-      <div style="font-size:10px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">JP · AI 花费占比</div>
-      <div style="font-size:28px;font-weight:700;color:var(--ai);font-family:'JetBrains Mono','SF Mono',monospace">13.2%</div>
-      <div style="font-size:10px;color:var(--mute);margin-top:4px">$43,238 / $326,685</div>
-    </div>
-    <div class="panel" style="text-align:center;padding:18px 14px">
-      <div style="font-size:10px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">KR · AI 花费占比</div>
-      <div style="font-size:28px;font-weight:700;color:var(--ai);font-family:'JetBrains Mono','SF Mono',monospace">14.5%</div>
-      <div style="font-size:10px;color:var(--mute);margin-top:4px">$47,519 / $326,929</div>
-    </div>
-    <div class="panel" style="text-align:center;padding:18px 14px">
-      <div style="font-size:10px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px">NA · AI 花费占比</div>
-      <div style="font-size:28px;font-weight:700;color:var(--ai);font-family:'JetBrains Mono','SF Mono',monospace">41.4%</div>
-      <div style="font-size:10px;color:var(--mute);margin-top:4px">$34,824 / $84,149</div>
-    </div>
-  </div>
-  <div class="wrap-summary" style="padding:0">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap">
+  <div class="wrap-summary panel">
+    <div class="summary-head">
       <span style="font-size:13px;font-weight:600;color:var(--ink)">数据汇总</span>
       <span style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:10px;color:var(--mute);letter-spacing:.1em">AI vs 非AI · JP / KR / NA · 核心指标一览</span>
       <span style="font-family:'JetBrains Mono','SF Mono',monospace;font-size:9px;color:var(--mute);margin-left:auto">* JP ROI365 / LTV365 / 毛利 为去大R口径</span>
     </div>
-    <div style="overflow-x:auto;border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.06)">
-      <table style="width:100%;border-collapse:collapse;font-family:'JetBrains Mono','SF Mono',monospace;font-size:11.5px;min-width:900px">
+    <div class="summary-shell">
+      <table class="summary-table">
         <thead>
-          <tr style="background:var(--bg3);border-bottom:2px solid var(--line2)">
-            <th style="text-align:left;padding:9px 13px;color:var(--mute);font-size:10px;letter-spacing:.1em;text-transform:uppercase;min-width:90px">指标</th>
-            <th style="padding:9px 10px;color:var(--ai);background:rgba(201,122,16,.06)">JP · AI</th>
-            <th style="padding:9px 10px;color:var(--nai);background:rgba(40,120,176,.06)">JP · 非AI</th>
-            <th style="padding:9px 10px;color:var(--ink2);font-size:10px;font-weight:600">Δ JP</th>
-            <th style="padding:9px 10px;color:var(--ai);background:rgba(201,122,16,.06)">KR · AI</th>
-            <th style="padding:9px 10px;color:var(--nai);background:rgba(40,120,176,.06)">KR · 非AI</th>
-            <th style="padding:9px 10px;color:var(--ink2);font-size:10px;font-weight:600">Δ KR</th>
-            <th style="padding:9px 10px;color:var(--ai);background:rgba(201,122,16,.06)">NA · AI</th>
-            <th style="padding:9px 10px;color:var(--nai);background:rgba(40,120,176,.06)">NA · 非AI</th>
-            <th style="padding:9px 10px;color:var(--ink2);font-size:10px;font-weight:600">Δ NA</th>
+          <tr class="sum-spend">
+            <th class="sum-spend-label">AI 花费占比</th>
+            <th class="sum-spend-cell" colspan="3">
+              <div class="k">JP</div>
+              <div class="v">13.2%</div>
+              <div class="s">$43,238 / $326,685</div>
+            </th>
+            <th class="sum-spend-cell" colspan="3">
+              <div class="k">KR</div>
+              <div class="v">14.5%</div>
+              <div class="s">$47,519 / $326,929</div>
+            </th>
+            <th class="sum-spend-cell" colspan="3">
+              <div class="k">NA</div>
+              <div class="v">41.4%</div>
+              <div class="s">$34,824 / $84,149</div>
+            </th>
+          </tr>
+          <tr>
+            <th class="sum-head-metric">指标</th>
+            <th class="sum-head-ai">JP · AI</th>
+            <th class="sum-head-nai">JP · 非AI</th>
+            <th class="sum-head-delta">Δ JP</th>
+            <th class="sum-head-ai">KR · AI</th>
+            <th class="sum-head-nai">KR · 非AI</th>
+            <th class="sum-head-delta">Δ KR</th>
+            <th class="sum-head-ai">NA · AI</th>
+            <th class="sum-head-nai">NA · 非AI</th>
+            <th class="sum-head-delta">Δ NA</th>
           </tr>
         </thead>
         <tbody id="sum-tbody"></tbody>
@@ -377,8 +399,8 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
         html+=`<td style="padding:8px 10px;text-align:center;color:var(--ai);background:rgba(201,122,16,.04)">${row.fmt(a)}</td>`;
         html+=`<td style="padding:8px 10px;text-align:center;color:var(--nai);background:rgba(40,120,176,.04)">${row.fmt(b)}</td>`;
         const deltaStyle=aiWin
-          ?'color:var(--pos);background:rgba(42,138,62,.07)'
-          :'color:var(--neg);background:rgba(192,57,43,.07)';
+          ?'color:var(--pos);background:rgba(42,138,62,.18)'
+          :'color:var(--neg);background:rgba(192,57,43,.18)';
         html+=`<td style="padding:8px 10px;text-align:center;${deltaStyle};font-weight:600">${dStr}</td>`;
       });
       html+='</tr>';
@@ -392,7 +414,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <section>
   <div class="sec-head">
     <div><span class="sec-num">02</span><span class="sec-title">链路效率对比</span></div>
-    <div class="sec-hint">曝光 → 点击 → 安装 → 账号 / ARPPU / LTV7</div>
+    <div class="sec-hint">CTR / 点击→安装 / 安装→账号 / ARPPU / LTV7</div>
   </div>
   <div class="sec-summary">AI 三地安装→账号率系统性低于非AI（39/45/39% vs 46/53/44%）；KR 入口效率有优势（CPM $11.7 vs $15.1，CPC $2.2 vs $4.4），但点击后质量劣化：<span class="hi-nai">KR AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增LTV7 $3.9 vs $5.6（<b>−30%</b>）</span>。前端廉价流量与后端低质用户并存，根因指向<b>AI 受众算法过于宽泛，采买了大量非目标付费人群</b>。JP AI ARPPU $84 领先（+67%），但见 Section 07 的 JP 大R风险说明。</div>
   <div class="g2">
@@ -415,13 +437,6 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
         <th class="ft-ai">NA · AI</th><th class="ft-nai">NA · 非AI</th><th style="padding:6px 8px;font-size:10px;color:var(--ink2);font-weight:600;text-align:center">Δ NA</th>
       </tr></thead>
       <tbody>
-        <tr class="ft-group"><td colspan="10">曝光层</td></tr>
-        <tr>
-          <td class="ft-label">CPM</td>
-          <td class="ft-ai">$21.2</td><td class="ft-nai ft-win">$16.4</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">+29%</td>
-          <td class="ft-ai ft-win">$11.7</td><td class="ft-nai">$15.1</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">−22%</td>
-          <td class="ft-ai ft-win">$30.7</td><td class="ft-nai">$35.6</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">−14%</td>
-        </tr>
         <tr class="ft-group"><td colspan="10">曝光 → 点击</td></tr>
         <tr>
           <td class="ft-label">CTR</td>
