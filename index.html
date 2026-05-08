@@ -513,47 +513,52 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
         NA: AI 2.13% &lt; 非AI <b>2.45%</b>（−13%）
       </div>
     </div>
-    <div class="g2">
-      <div>
-        <div style="font-size:11px;font-family:'JetBrains Mono','SF Mono',monospace;color:var(--mute);margin-bottom:8px;letter-spacing:.06em">含文案 CTR</div>
-        <div class="ch h180"><canvas id="cCtrWith"></canvas></div>
-      </div>
-      <div>
-        <div style="font-size:11px;font-family:'JetBrains Mono','SF Mono',monospace;color:var(--mute);margin-bottom:8px;letter-spacing:.06em">去文案 CTR（纯创意）</div>
-        <div class="ch h180"><canvas id="cCtrNoText"></canvas></div>
-      </div>
-    </div>
-    <table class="dtbl ftbl" style="margin-top:14px">
+    <div style="margin-top:6px;font-size:11px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace;margin-bottom:12px">按素材类型拆分（去除文案口径）· AI vs 非AI · <span style="color:var(--ai)">■ AI 更优</span> <span style="color:var(--nai);margin-left:8px">■ 非AI 更优</span></div>
+    <table class="dtbl ftbl">
       <thead><tr>
-        <th class="lt">指标</th>
+        <th class="lt">素材类型</th><th class="lt">指标</th>
         <th class="ft-ai">JP · AI</th><th class="ft-nai">JP · 非AI</th>
         <th class="ft-ai">KR · AI</th><th class="ft-nai">KR · 非AI</th>
         <th class="ft-ai">NA · AI</th><th class="ft-nai">NA · 非AI</th>
       </tr></thead>
       <tbody>
         <tr>
-          <td class="ft-label">CTR 含文案</td>
-          <td class="ft-ai ft-win">0.82%</td><td class="ft-nai">0.64%</td>
-          <td class="ft-ai ft-win">0.66%</td><td class="ft-nai">0.37%</td>
-          <td class="ft-ai">3.69%</td><td class="ft-nai ft-win">3.83%</td>
+          <td class="ft-label" rowspan="3" style="font-weight:700;color:var(--ink)">图片</td>
+          <td class="ft-label">CTR</td>
+          <td class="ft-ai ft-win">1.13%</td><td class="ft-nai">0.85%</td>
+          <td class="ft-ai">0.96%</td><td class="ft-nai ft-win">1.06%</td>
+          <td class="ft-ai ft-win">5.44%</td><td class="ft-nai">3.26%</td>
         </tr>
         <tr>
-          <td class="ft-label">CTR 去文案</td>
-          <td class="ft-ai">0.52%</td><td class="ft-nai">0.52%</td>
-          <td class="ft-ai ft-win">0.60%</td><td class="ft-nai">0.38%</td>
-          <td class="ft-ai">2.13%</td><td class="ft-nai ft-win">2.45%</td>
+          <td class="ft-label">CPM</td>
+          <td class="ft-ai tng">$43.3</td><td class="ft-nai ft-win">$29.4</td>
+          <td class="ft-ai ft-win">$17.6</td><td class="ft-nai">$44.5</td>
+          <td class="ft-ai ft-win">$65.0</td><td class="ft-nai">$88.3</td>
         </tr>
         <tr>
-          <td class="ft-label">CPM 去文案</td>
-          <td class="ft-ai tng">$28.2</td><td class="ft-nai ft-win">$11.0</td>
-          <td class="ft-ai ft-win">$6.3</td><td class="ft-nai">$9.2</td>
-          <td class="ft-ai ft-win">$32.8</td><td class="ft-nai">$57.7</td>
+          <td class="ft-label">安装/点击</td>
+          <td class="ft-ai ft-win">6.9%</td><td class="ft-nai">5.4%</td>
+          <td class="ft-ai ft-win">11.7%</td><td class="ft-nai">8.1%</td>
+          <td class="ft-ai ft-win">21.3%</td><td class="ft-nai">16.5%</td>
+        </tr>
+        <tr style="border-top:2px solid var(--line2)">
+          <td class="ft-label" rowspan="3" style="font-weight:700;color:var(--ink)">视频</td>
+          <td class="ft-label">CTR</td>
+          <td class="ft-ai">0.19%</td><td class="ft-nai ft-win">0.44%</td>
+          <td class="ft-ai ft-win">0.58%</td><td class="ft-nai">0.28%</td>
+          <td class="ft-ai">0.40%</td><td class="ft-nai ft-win">1.66%</td>
         </tr>
         <tr>
-          <td class="ft-label">安装/点击 去文案</td>
-          <td class="ft-ai ft-win">10.4%</td><td class="ft-nai">4.1%</td>
-          <td class="ft-ai">4.9%</td><td class="ft-nai ft-win">8.4%</td>
-          <td class="ft-ai ft-win">22.0%</td><td class="ft-nai">19.5%</td>
+          <td class="ft-label">CPM</td>
+          <td class="ft-ai tng">$20.2</td><td class="ft-nai ft-win">$6.2</td>
+          <td class="ft-ai ft-win">$5.6</td><td class="ft-nai">$4.5</td>
+          <td class="ft-ai ft-win">$15.9</td><td class="ft-nai">$28.3</td>
+        </tr>
+        <tr>
+          <td class="ft-label">安装/点击</td>
+          <td class="ft-ai ft-win">21.2%</td><td class="ft-nai">3.5%</td>
+          <td class="ft-ai">4.2%</td><td class="ft-nai ft-win">8.6%</td>
+          <td class="ft-ai ft-win">26.8%</td><td class="ft-nai">25.2%</td>
         </tr>
       </tbody>
     </table>
@@ -962,23 +967,6 @@ mk('cRoiJPExcl',{type:'bar',data:{
     }
   }}});
 
-const ctrOpts=(title)=>({indexAxis:'y',responsive:true,maintainAspectRatio:false,
-  scales:{x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'}}),y:mergeScale(bX)},
-  plugins:{
-    legend:legendCfg({labels:{boxWidth:10,boxHeight:10,padding:10,font:{size:11}}}),
-    tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.x.toFixed(3)}%`),
-    datalabels:{display:true,anchor:'end',align:'end',color:'#4A5168',
-      font:{family:'"JetBrains Mono","SF Mono",monospace',size:11,weight:'600'},
-      formatter:v=>v.toFixed(2)+'%'}
-  }});
-mk('cCtrWith',{type:'bar',data:{labels:['JP','KR','NA'],datasets:[
-  {label:'AI',data:[0.817,0.656,3.690],backgroundColor:C.ai,barPercentage:.7,categoryPercentage:.6},
-  {label:'非AI',data:[0.635,0.365,3.830],backgroundColor:C.nai,barPercentage:.7,categoryPercentage:.6}
-]},options:ctrOpts()});
-mk('cCtrNoText',{type:'bar',data:{labels:['JP','KR','NA'],datasets:[
-  {label:'AI',data:[0.516,0.601,2.131],backgroundColor:C.ai,barPercentage:.7,categoryPercentage:.6},
-  {label:'非AI',data:[0.520,0.377,2.448],backgroundColor:C.nai,barPercentage:.7,categoryPercentage:.6}
-]},options:ctrOpts()});
 
 mk('cRoi365',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('ROI365'),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
