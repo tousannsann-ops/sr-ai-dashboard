@@ -164,9 +164,9 @@ section.last{border-bottom:none}
 /* ── DATA TABLE ── */
 .tbl-wrap{overflow-x:auto;border:1px solid var(--line)}
 .dtbl{width:100%;border-collapse:collapse;font-family:"JetBrains Mono","SF Mono",monospace;font-size:11px}
-.dtbl th{text-align:right;padding:10px 11px;border-bottom:1px solid var(--line2);color:var(--mute);font-weight:500;letter-spacing:.04em;text-transform:uppercase;font-size:9px;background:var(--bg3);position:sticky;top:0;white-space:nowrap}
+.dtbl th{text-align:right;padding:10px 11px;border-bottom:1px solid var(--line2);color:var(--mute);font-weight:500;letter-spacing:.04em;text-transform:uppercase;font-size:10px;background:var(--bg3);position:sticky;top:0;white-space:nowrap}
 .dtbl th.lt{text-align:left}
-.dtbl td{text-align:right;padding:9px 11px;border-bottom:1px solid var(--line);color:var(--ink2);white-space:nowrap}
+.dtbl td{text-align:right;padding:9px 11px;border-bottom:1px solid var(--line);color:var(--ink2);white-space:nowrap;font-size:12px}
 .dtbl td.lt{text-align:left;color:var(--ink)}
 .dtbl tr:hover td{background:rgba(26,29,38,.03)}
 .dtbl .row-ai td.lt{border-left:2px solid var(--ai)}
@@ -206,7 +206,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
   <div class="topbar-meta">
     <div><span>Markets:</span> JP · KR · NA &nbsp;|&nbsp; <span>Snapshot:</span> 2026-05-07</div>
-    <div>AI <span>$125,575</span>（17.0%）&nbsp; 非AI <span>$612,172</span>（83.0%）</div>
+    <div>AI <span>$125,581</span>（17.0%）&nbsp; 非AI <span>$612,182</span>（83.0%）</div>
   </div>
 </div>
 
@@ -223,15 +223,15 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     </div>
     <div class="lede-card" style="border-left-color:var(--neg)">
       <div class="lede-tag">问题 02 · 获客质量</div>
-      <div class="lede-body">AI 安装→账号率三地系统性偏低（42/48/40% vs 47/54/44%）；KR AI ARPPU <b>$25 vs 非AI $39</b>（−37%），新增LTV7 低30%。</div>
+      <div class="lede-body">AI 安装→账号率三地系统性偏低（39/45/39% vs 46/53/44%）；KR AI ARPPU <b>$25 vs 非AI $39</b>（−37%），新增LTV7 低30%。</div>
     </div>
     <div class="lede-card" style="border-left-color:var(--neg)">
       <div class="lede-tag">问题 03 · NA 回报</div>
-      <div class="lede-body">NA AI 花费占比 <b>41.4%</b>（三地最高），ROI7 却落后非AI（12.7% vs 14.9%），毛利 −$1.5K vs 非AI +$4K。</div>
+      <div class="lede-body">NA AI 花费占比 <b>41.4%</b>（三地最高），ROI7 却落后非AI（13.1% vs 15.0%），毛利 −$1.2K vs 非AI +$4.3K。</div>
     </div>
-    <div class="lede-card" style="border-left-color:var(--ail)">
+    <div class="lede-card" style="border-left-color:var(--neg)">
       <div class="lede-tag">待验证 · JP</div>
-      <div class="lede-body">JP AI ROI7 领先 <b>+170%</b>，但非AI 已大幅撤量（$283K → 同级），且疑似存在大R拉高均值；排除极端值后结论待定。</div>
+      <div class="lede-body">JP AI ROI7 含大R <b>12.8%</b>（非AI 6.1%，+110%）；排除 4/26 大R 后降至 <b>8.6%</b>（非AI 6.0%，+43%）；新增LTV7 AI $4.3 低于非AI $5.6，<b>AI 拉新质量不具备优势</b>。</div>
     </div>
   </div>
 
@@ -240,20 +240,20 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <!-- JP -->
     <div class="sc">
       <div class="sc-region">JP · 日本</div>
-      <div class="sc-title">AI花费 13.2% <span class="badge b-ai">ROI/毛利领先</span></div>
-      <div class="sc-row"><span class="sc-label">ROI7</span><div class="sc-vals"><span class="v-ai">15.9%</span><span class="v-sep">/</span><span class="v-nai">5.9%</span><span class="badge b-pos">AI +170%</span></div></div>
-      <div class="sc-row"><span class="sc-label">毛利</span><div class="sc-vals"><span class="v-ai" style="color:var(--pos)">+$3,262</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$139K</span></div></div>
+      <div class="sc-title">AI花費 13.2% <span class="badge b-neg">大R去除后弱领先</span></div>
+      <div class="sc-row"><span class="sc-label">ROI7</span><div class="sc-vals"><span class="v-ai">12.8%</span><span class="v-sep">/</span><span class="v-nai">6.1%</span><span class="badge b-flat">AI +110%</span></div></div>
+      <div class="sc-row"><span class="sc-label">毛利</span><div class="sc-vals"><span class="v-ai" style="color:var(--neg)">−$1,163</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$137K</span></div></div>
       <div class="sc-row"><span class="sc-label">账号单价</span><div class="sc-vals"><span class="v-ai">$100</span><span class="v-sep">/</span><span class="v-nai">$102</span><span class="badge b-flat">相近</span></div></div>
-      <div class="sc-row"><span class="sc-label">新增LTV7</span><div class="sc-vals"><span class="v-ai">$14.54</span><span class="v-sep">/</span><span class="v-nai">$5.33</span><span class="badge b-pos">AI +173%</span></div></div>
-      <div class="sc-row"><span class="sc-label">ARPPU</span><div class="sc-vals"><span class="v-ai">$84</span><span class="v-sep">/</span><span class="v-nai">$50</span><span class="badge b-pos">AI +67%</span></div></div>
+      <div class="sc-row"><span class="sc-label">新增LTV7</span><div class="sc-vals"><span class="v-ai">$14.5</span><span class="v-sep">/</span><span class="v-nai">$5.3</span><span class="badge b-flat">含大R</span></div></div>
+      <div class="sc-row"><span class="sc-label">ARPPU</span><div class="sc-vals"><span class="v-ai">$84</span><span class="v-sep">/</span><span class="v-nai">$50</span><span class="badge b-flat">含大R</span></div></div>
     </div>
     <!-- KR -->
     <div class="sc">
       <div class="sc-region">KR · 韩国</div>
       <div class="sc-title">AI花费 14.5% <span class="badge b-flat">指标分化</span></div>
-      <div class="sc-row"><span class="sc-label">ROI7</span><div class="sc-vals"><span class="v-ai">7.1%</span><span class="v-sep">/</span><span class="v-nai">6.8%</span><span class="badge b-flat">相近</span></div></div>
-      <div class="sc-row"><span class="sc-label">毛利</span><div class="sc-vals"><span class="v-ai" style="color:var(--neg)">−$12.6K</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$95.5K</span></div></div>
-      <div class="sc-row"><span class="sc-label">账号单价</span><div class="sc-vals"><span class="v-ai">$65</span><span class="v-sep">/</span><span class="v-nai">$82</span><span class="badge b-pos">AI 低21%</span></div></div>
+      <div class="sc-row"><span class="sc-label">ROI7</span><div class="sc-vals"><span class="v-ai">6.4%</span><span class="v-sep">/</span><span class="v-nai">6.8%</span><span class="badge b-neg">AI −6%</span></div></div>
+      <div class="sc-row"><span class="sc-label">毛利</span><div class="sc-vals"><span class="v-ai" style="color:var(--neg)">−$17K</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$97.9K</span></div></div>
+      <div class="sc-row"><span class="sc-label">账号单价</span><div class="sc-vals"><span class="v-ai">$64</span><span class="v-sep">/</span><span class="v-nai">$82</span><span class="badge b-pos">AI 低22%</span></div></div>
       <div class="sc-row"><span class="sc-label">新增LTV7</span><div class="sc-vals"><span class="v-ai">$3.91</span><span class="v-sep">/</span><span class="v-nai">$5.56</span><span class="badge b-neg">AI −30%</span></div></div>
       <div class="sc-row"><span class="sc-label">ARPPU</span><div class="sc-vals"><span class="v-ai">$25</span><span class="v-sep">/</span><span class="v-nai">$39</span><span class="badge b-neg">AI −37%</span></div></div>
     </div>
@@ -261,9 +261,9 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div class="sc">
       <div class="sc-region">NA · 北美</div>
       <div class="sc-title">AI花费 41.4% <span class="badge b-nai">非AI ROI领先</span></div>
-      <div class="sc-row"><span class="sc-label">ROI7</span><div class="sc-vals"><span class="v-ai">12.7%</span><span class="v-sep">/</span><span class="v-nai">14.9%</span><span class="badge b-neg">AI −15%</span></div></div>
-      <div class="sc-row"><span class="sc-label">毛利</span><div class="sc-vals"><span class="v-ai" style="color:var(--neg)">−$1,469</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--pos)">+$4,106</span></div></div>
-      <div class="sc-row"><span class="sc-label">账号单价</span><div class="sc-vals"><span class="v-ai">$31</span><span class="v-sep">/</span><span class="v-nai">$30</span><span class="badge b-flat">相近</span></div></div>
+      <div class="sc-row"><span class="sc-label">ROI7</span><div class="sc-vals"><span class="v-ai">13.1%</span><span class="v-sep">/</span><span class="v-nai">15.0%</span><span class="badge b-neg">AI −13%</span></div></div>
+      <div class="sc-row"><span class="sc-label">毛利</span><div class="sc-vals"><span class="v-ai" style="color:var(--neg)">−$1,203</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--pos)">+$4,314</span></div></div>
+      <div class="sc-row"><span class="sc-label">账号单价</span><div class="sc-vals"><span class="v-ai">$29</span><span class="v-sep">/</span><span class="v-nai">$29</span><span class="badge b-flat">相近</span></div></div>
       <div class="sc-row"><span class="sc-label">单次付费</span><div class="sc-vals"><span class="v-ai">$26</span><span class="v-sep">/</span><span class="v-nai">$21</span><span class="badge b-neg">AI +28%</span></div></div>
       <div class="sc-row"><span class="sc-label">ARPPU</span><div class="sc-vals"><span class="v-ai">$44</span><span class="v-sep">/</span><span class="v-nai">$46</span><span class="badge b-flat">相近</span></div></div>
     </div>
@@ -284,7 +284,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     </div>
     <div class="panel">
       <div class="panel-h"><span class="title">素材构成：跑出 vs 未跑出</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h260"><canvas id="cMatCount"></canvas></div>
+      <div class="ch h300"><canvas id="cMatCount"></canvas></div>
     </div>
   </div>
   <div class="bb-grid">
@@ -349,7 +349,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">02</span><span class="sec-title">JP 表现评估</span></div>
     <div class="sec-hint">领先数据背后的前提条件</div>
   </div>
-  <div class="sec-summary">排除 4/26 大R 后确认：JP AI ROI7 从 <span class="hi-ai">15.9%</span> 降至 <span class="hi-nai">8.6%</span>（−48%），毛利 +$3K → <span class="hi-nai">−$8K（反转）</span>，<b>新增LTV7 AI $4.3 低于非AI $5.6</b>——大R 几乎全部来自 AI 渠道新增，去除后 AI 拉新质量不具备真实优势。① 规模仍不对等（AI $42K vs 非AI $221K 去大R后）；② JP 表现降级为"弱领先"。</div>
+  <div class="sec-summary">JP AI ROI7 含大R 12.8%，排除大R后降至 8.6%（−34%），毛利含大R −$1K → 去大R −$8K；新增LTV7 AI $4.3 低于非AI $5.6——AI 拉新质量不具备真实优势。规模仍不对等（AI $43K vs 非AI $283K）。</div>
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">JP · 关键指标（去大R）</span><span class="badge b-neg">弱领先</span></div>
@@ -378,7 +378,6 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       <span class="badge b-neg">大R影响已确认</span>
     </div>
     <div style="font-size:11.5px;color:var(--ink2);margin-bottom:14px;line-height:1.65;font-family:'JetBrains Mono','SF Mono',monospace">
-      排除 4/26 大R 后 AI ROI 大幅下修，而非AI 基本不变——说明 <b>大R 几乎全部来自 AI 渠道新增用户</b>。
       去除后 AI 新增LTV7（$4.3）低于非AI（$5.6），<b>AI 拉新质量不具备真实优势</b>。
     </div>
     <div class="ch h200"><canvas id="cRoiJPExcl"></canvas></div>
@@ -391,13 +390,13 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       <tbody>
         <tr>
           <td class="ft-label">ROI1/3/7</td>
-          <td class="ft-ai">2.8/7.6/15.9%</td><td class="ft-ai">2.4/5.8/8.6%</td><td class="tng">−7.3pp</td>
-          <td class="ft-nai">1.5/4.2/5.9%</td><td class="ft-nai">1.8/4.4/6.0%</td><td class="tp">+0.1pp</td>
+          <td class="ft-ai">2.8/7.6/12.8%</td><td class="ft-ai">2.4/5.8/8.6%</td><td class="tng">−4.2pp</td>
+          <td class="ft-nai">1.5/4.1/6.1%</td><td class="ft-nai">1.8/4.4/6.0%</td><td class="tng">−0.1pp</td>
         </tr>
         <tr>
           <td class="ft-label">ROI365</td>
-          <td class="ft-ai">1.189</td><td class="ft-ai">0.622</td><td class="tng">−48%</td>
-          <td class="ft-nai">0.431</td><td class="ft-nai">0.441</td><td class="tp">+2%</td>
+          <td class="ft-ai">0.949</td><td class="ft-ai">0.622</td><td class="tng">−34%</td>
+          <td class="ft-nai">0.450</td><td class="ft-nai">0.441</td><td class="tng">−2%</td>
         </tr>
         <tr>
           <td class="ft-label">新增LTV7</td>
@@ -406,8 +405,8 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
         </tr>
         <tr>
           <td class="ft-label">毛利</td>
-          <td class="ft-ai tp">+$3,262</td><td class="ft-ai tng">−$8,245</td><td class="tng">反转</td>
-          <td class="ft-nai tng">−$139K</td><td class="ft-nai tng">−$105K</td><td class="tp">改善</td>
+          <td class="ft-ai tng">−$1,163</td><td class="ft-ai tng">−$8,245</td><td class="tng">恶化 −$7K</td>
+          <td class="ft-nai tng">−$137K</td><td class="ft-nai tng">−$105K</td><td class="tp">改善</td>
         </tr>
         <tr>
           <td class="ft-label">花费</td>
@@ -417,13 +416,6 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       </tbody>
     </table>
   </div>
-  <div class="ph-row">
-    <div class="ph-card">
-      <div class="ph-badge">⏳ 数据拉取中</div>
-      <div class="ph-title">JP 出价变化与量级关联</div>
-      <div class="ph-desc">JP AI 出价从 18% → 26% 期间，日消耗量级变化趋势及相关性分析。待补充。</div>
-    </div>
-  </div>
 </section>
 
 <!-- ══ 03 链路效率深挖 ══ -->
@@ -432,7 +424,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">03</span><span class="sec-title">链路效率深挖</span></div>
     <div class="sec-hint">曝光 → 点击 → 安装 → 账号</div>
   </div>
-  <div class="sec-summary">KR AI 入口效率有优势：CPM $11.7（非AI $15.1），CTR 0.53%（非AI 0.34%），CPC <span class="hi-ai">$2.2 vs $4.4</span>（低50%）；但 <span class="hi-nai">点击→安装率 KR 仅 7.1%（非AI 10.0%），三地安装→账号率均系统性偏低（42/48/40% vs 47/54/44%）</span>。前端低价流量与后端低转化并存，指向同一根因：<b>AI 受众学习可能过于宽泛，采买了大量非目标付费人群</b>，导致安装质量差、账号激活率低、LTV 偏低。</div>
+  <div class="sec-summary">KR AI 入口效率有优势：CPM $11.7（非AI $15.1），CTR 0.53%（非AI 0.34%），CPC <span class="hi-ai">$2.2 vs $4.4</span>（低50%）；但 <span class="hi-nai">点击→安装率 KR 仅 7.6%（非AI 10.2%），三地安装→账号率均系统性偏低（39/45/39% vs 46/53/44%）</span>。前端低价流量与后端低转化并存，指向同一根因：<b>AI 受众学习可能过于宽泛，采买了大量非目标付费人群</b>，导致安装质量差、账号激活率低、LTV 偏低。</div>
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">CTR（点击率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
@@ -486,38 +478,75 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
         <tr class="ft-group"><td colspan="7">点击 → 安装</td></tr>
         <tr>
           <td class="ft-label">点击→安装率</td>
-          <td class="ft-ai ft-win">13.0%</td><td class="ft-nai">8.4%</td>
-          <td class="ft-ai">7.1%</td><td class="ft-nai ft-win">10.0%</td>
-          <td class="ft-ai ft-win">20.8%</td><td class="ft-nai">19.3%</td>
+          <td class="ft-ai ft-win">14.1%</td><td class="ft-nai">8.6%</td>
+          <td class="ft-ai">7.6%</td><td class="ft-nai ft-win">10.2%</td>
+          <td class="ft-ai ft-win">22.3%</td><td class="ft-nai">19.6%</td>
         </tr>
         <tr>
           <td class="ft-label">设备单价</td>
-          <td class="ft-ai ft-win">$42</td><td class="ft-nai">$48</td>
-          <td class="ft-ai ft-win">$31</td><td class="ft-nai">$44</td>
+          <td class="ft-ai ft-win">$39</td><td class="ft-nai">$47</td>
+          <td class="ft-ai ft-win">$29</td><td class="ft-nai">$43</td>
           <td class="ft-ai ft-win">$12</td><td class="ft-nai">$13</td>
         </tr>
         <tr class="ft-group"><td colspan="7">安装 → 账号</td></tr>
         <tr>
           <td class="ft-label">安装→账号率</td>
-          <td class="ft-ai">42.3%</td><td class="ft-nai ft-win">47.3%</td>
-          <td class="ft-ai">48.2%</td><td class="ft-nai ft-win">54.2%</td>
-          <td class="ft-ai">39.5%</td><td class="ft-nai ft-win">43.8%</td>
+          <td class="ft-ai">39%</td><td class="ft-nai ft-win">46%</td>
+          <td class="ft-ai">45%</td><td class="ft-nai ft-win">53%</td>
+          <td class="ft-ai">39%</td><td class="ft-nai ft-win">44%</td>
         </tr>
         <tr class="ft-bottom">
           <td class="ft-label">账号单价</td>
           <td class="ft-ai ft-win">$100</td><td class="ft-nai">$102</td>
-          <td class="ft-ai ft-win">$65</td><td class="ft-nai">$82</td>
-          <td class="ft-ai ft-win">$31</td><td class="ft-nai">$30</td>
+          <td class="ft-ai ft-win">$64</td><td class="ft-nai">$82</td>
+          <td class="ft-ai">$29</td><td class="ft-nai">$29</td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="ph-row">
-    <div class="ph-card">
-      <div class="ph-badge">⏳ 数据拉取中</div>
-      <div class="ph-title">排除文案后的真实 CTR</div>
-      <div class="ph-desc">当前 CTR 包含文案类广告，排除文案后的纯视频/图片素材 CTR 对比。待补充。</div>
+  <div class="panel" style="margin-top:1px">
+    <div class="panel-h">
+      <span class="title">CTR · 排除文案广告后（纯视频/图片）</span>
+      <span class="badge b-neg">JP AI 文案依赖暴露</span>
     </div>
+    <div style="font-size:11.5px;color:var(--ink2);margin-bottom:14px;line-height:1.65;font-family:'JetBrains Mono','SF Mono',monospace">
+      去除文案类广告后：<b>JP AI CTR 从 0.82% 降至 0.52%，与非AI 0.52% 持平</b>——JP 的 AI CTR 优势来自文案广告而非视频/图片创意；KR AI 纯创意 CTR 0.60% 仍领先（非AI 0.38%）；NA AI 2.13% 低于非AI 2.45%。<b>JP AI 纯创意 CPM $28.2 vs 非AI $11.0</b>（高156%），高成本进一步压缩纯创意效率。
+    </div>
+    <div class="ch h200"><canvas id="cCtrNoText"></canvas></div>
+    <table class="dtbl ftbl" style="margin-top:14px">
+      <thead><tr>
+        <th class="lt">指标</th>
+        <th class="ft-ai">JP · AI</th><th class="ft-nai">JP · 非AI</th>
+        <th class="ft-ai">KR · AI</th><th class="ft-nai">KR · 非AI</th>
+        <th class="ft-ai">NA · AI</th><th class="ft-nai">NA · 非AI</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ft-label">CTR 含文案</td>
+          <td class="ft-ai">0.82%</td><td class="ft-nai">0.64%</td>
+          <td class="ft-ai">0.66%</td><td class="ft-nai">0.37%</td>
+          <td class="ft-ai">3.69%</td><td class="ft-nai">3.83%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">CTR 去文案</td>
+          <td class="ft-ai">0.52%</td><td class="ft-nai">0.52%</td>
+          <td class="ft-ai tp">0.60%</td><td class="ft-nai">0.38%</td>
+          <td class="ft-ai">2.13%</td><td class="ft-nai tp">2.45%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">CPM 去文案</td>
+          <td class="ft-ai tng">$28.2</td><td class="ft-nai tp">$11.0</td>
+          <td class="ft-ai tp">$6.3</td><td class="ft-nai">$9.2</td>
+          <td class="ft-ai tp">$32.8</td><td class="ft-nai">$57.7</td>
+        </tr>
+        <tr>
+          <td class="ft-label">安装/点击 去文案</td>
+          <td class="ft-ai tp">10.4%</td><td class="ft-nai">4.1%</td>
+          <td class="ft-ai">4.9%</td><td class="ft-nai tp">8.4%</td>
+          <td class="ft-ai tp">22.0%</td><td class="ft-nai">19.5%</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
@@ -527,7 +556,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">04</span><span class="sec-title">NA：高消耗低回报</span></div>
     <div class="sec-hint">花费占比最高，回报最差</div>
   </div>
-  <div class="sec-summary">NA AI 花费 $34,824，占 NA 总花费 <span class="hi-nai"><b>41.4%</b></span>（三地最高）；ROI7 <b>12.7%</b> 落后非AI 14.9%，毛利 <b>−$1,469</b> vs 非AI <b>+$4,106</b>；账号单价（$31/$30）和设备单价（$12/$13）与非AI几乎相同，说明 NA 的劣势不在获客成本，而在<span class="hi-nai">用户后续回收能力</span>。</div>
+  <div class="sec-summary">NA AI 花费 $34,824，占 NA 总花费 <span class="hi-nai"><b>41.4%</b></span>（三地最高）；ROI7 <b>13.1%</b> 落后非AI 15.0%，毛利 <b>−$1,203</b> vs 非AI <b>+$4,314</b>；账号单价（$29/$29）和设备单价（$12/$13）与非AI几乎相同，说明 NA 的劣势不在获客成本，而在<span class="hi-nai">用户后续回收能力</span>。</div>
   <div class="g3kpi">
     <div class="panel">
       <div class="panel-h"><span class="title">花费占比</span><span class="badge b-neg">三地最高</span></div>
@@ -539,16 +568,16 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div class="panel">
       <div class="panel-h"><span class="title">ROI7 Δ vs 非AI</span><span class="badge b-neg">落后</span></div>
       <div style="display:flex;align-items:baseline;gap:10px;margin-top:6px">
-        <span class="kpi-v" style="color:var(--neg)">−2.2<span class="kpi-u">pp</span></span>
+        <span class="kpi-v" style="color:var(--neg)">−1.9<span class="kpi-u">pp</span></span>
       </div>
-      <div class="kpi-cap">AI 12.7% / 非AI 14.9%</div>
+      <div class="kpi-cap">AI 13.1% / 非AI 15.0%</div>
     </div>
     <div class="panel">
       <div class="panel-h"><span class="title">毛利差</span><span class="badge b-neg">净落后</span></div>
       <div style="display:flex;align-items:baseline;gap:10px;margin-top:6px">
-        <span class="kpi-v" style="color:var(--neg)">−5,575<span class="kpi-u">USD</span></span>
+        <span class="kpi-v" style="color:var(--neg)">−5,517<span class="kpi-u">USD</span></span>
       </div>
-      <div class="kpi-cap">AI −$1,469 / 非AI +$4,106</div>
+      <div class="kpi-cap">AI −$1,203 / 非AI +$4,314</div>
     </div>
   </div>
   <div class="g2" style="margin-top:1px">
@@ -564,10 +593,10 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   <div class="cmp-cards" style="grid-template-columns:1fr">
     <div class="cc">
       <div class="cc-region">NA · 北美</div>
-      <div class="cc-row"><span class="cc-label">ROI1/3/7</span><div class="cc-right"><span class="v-ai">3.2/9.2/12.7%</span><span class="v-sep">/</span><span class="v-nai">3.9/8.9/14.9%</span></div></div>
-      <div class="cc-row"><span class="cc-label">ROI365</span><div class="cc-right"><span class="v-ai">0.933</span><span class="v-sep">/</span><span class="v-nai">1.098</span><span class="badge b-neg">AI −15%</span></div></div>
+      <div class="cc-row"><span class="cc-label">ROI1/3/7</span><div class="cc-right"><span class="v-ai">3.5/9.5/13.1%</span><span class="v-sep">/</span><span class="v-nai">3.9/8.7/15.0%</span></div></div>
+      <div class="cc-row"><span class="cc-label">ROI365</span><div class="cc-right"><span class="v-ai">0.951</span><span class="v-sep">/</span><span class="v-nai">1.102</span><span class="badge b-neg">AI −14%</span></div></div>
       <div class="cc-row"><span class="cc-label">新增/回流LTV7</span><div class="cc-right"><span class="v-ai">$2.9/$6.2</span><span class="v-sep">/</span><span class="v-nai">$2.8/$7.8</span></div></div>
-      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$1,469</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--pos)">+$4,106</span></div></div>
+      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$1,203</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--pos)">+$4,314</span></div></div>
     </div>
   </div>
 </section>
@@ -578,7 +607,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">05</span><span class="sec-title">获客质量劣化</span></div>
     <div class="sec-hint">安装→账号 / ARPPU / LTV7</div>
   </div>
-  <div class="sec-summary">（与 Section 03 链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（42/48/40% vs 47/54/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 02 大R风险说明。</div>
+  <div class="sec-summary">（与 Section 03 链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（39/45/39% vs 46/53/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 02 大R风险说明。</div>
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">新增7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
@@ -720,16 +749,16 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <script>
 const R={
   JP:{
-    AI:{花费:43239.12,新增设备:1023,总账号:433,CTR:0.003874,CVR:0.000502,设备单价:42.27,账号单价:99.86,CPM:21.22,CPC:5.48,ROI1:0.0276,ROI3:0.0763,ROI7:0.1592,ROI365:1.1892,新增LTV7:14.54,回流LTV7:22.14,毛利:3261.9,新增7日留:0.2571,回流7日留:0.4,单次付费:50.57,单付费UV:196.54,ARPPU:84.24,新增占比:0.6605,回流占比:0.3395,R7线:0.1339},
-    NAI:{花费:283433.92,新增设备:5891,总账号:2787,CTR:0.004088,CVR:0.000342,设备单价:48.11,账号单价:101.70,CPM:16.44,CPC:4.02,ROI1:0.0154,ROI3:0.0415,ROI7:0.0590,ROI365:0.4313,新增LTV7:5.33,回流LTV7:8.79,毛利:-139007.25,新增7日留:0.2924,回流7日留:0.3276,单次付费:56.23,单付费UV:169.21,ARPPU:50.36,新增占比:0.6943,回流占比:0.3057,R7线:0.1368}
+    AI:{花费:43238,新增设备:1111,总账号:433,CTR:0.00387,CVR:0.000547,设备单价:38.92,账号单价:99.86,CPM:21.22,CPC:5.48,ROI1:0.028,ROI3:0.076,ROI7:0.128,ROI365:0.949,新增LTV7:14.54,回流LTV7:22.14,毛利:-1163,新增7日留:0.2571,回流7日留:0.4,单次付费:50.57,单付费UV:196.54,ARPPU:84.24,新增占比:0.6605,回流占比:0.3395,R7线:0.1339},
+    NAI:{花费:283447,新增设备:6048,总账号:2789,CTR:0.004088,CVR:0.000384,设备单价:46.87,账号单价:101.63,CPM:16.44,CPC:4.02,ROI1:0.015,ROI3:0.041,ROI7:0.061,ROI365:0.450,新增LTV7:5.33,回流LTV7:8.79,毛利:-137466,新增7日留:0.2924,回流7日留:0.3276,单次付费:56.23,单付费UV:169.21,ARPPU:50.36,新增占比:0.6943,回流占比:0.3057,R7线:0.1368}
   },
   KR:{
-    AI:{花费:47511.38,新增设备:1526,总账号:736,CTR:0.005319,CVR:0.000377,设备单价:31.13,账号单价:64.55,CPM:11.73,CPC:2.21,ROI1:0.0123,ROI3:0.0373,ROI7:0.0714,ROI365:0.5728,新增LTV7:3.91,回流LTV7:9.37,毛利:-12598.91,新增7日留:0.2744,回流7日留:0.2963,单次付费:41.06,单付费UV:106.77,ARPPU:24.50,新增占比:0.6712,回流占比:0.3288,R7线:0.1247},
-    NAI:{花费:279412.83,新增设备:6314,总账号:3425,CTR:0.003404,CVR:0.000340,设备单价:44.25,账号单价:81.58,CPM:15.06,CPC:4.42,ROI1:0.0219,ROI3:0.0548,ROI7:0.0678,ROI365:0.5685,新增LTV7:5.56,回流LTV7:7.34,毛利:-95518.21,新增7日留:0.2270,回流7日留:0.2830,单次付费:38.09,单付费UV:108.51,ARPPU:38.95,新增占比:0.6365,回流占比:0.3635,R7线:0.1192}
+    AI:{花费:47519,新增设备:1648,总账号:737,CTR:0.005319,CVR:0.000342,设备单价:28.83,账号单价:64.48,CPM:11.73,CPC:2.21,ROI1:0.012,ROI3:0.037,ROI7:0.064,ROI365:0.516,新增LTV7:3.91,回流LTV7:9.37,毛利:-17033,新增7日留:0.2744,回流7日留:0.2963,单次付费:41.06,单付费UV:106.77,ARPPU:24.50,新增占比:0.6712,回流占比:0.3288,R7线:0.1247},
+    NAI:{花费:279410,新增设备:6427,总账号:3427,CTR:0.003404,CVR:0.000363,设备单价:43.47,账号单价:81.53,CPM:15.06,CPC:4.43,ROI1:0.022,ROI3:0.055,ROI7:0.068,ROI365:0.574,新增LTV7:5.56,回流LTV7:7.34,毛利:-97876,新增7日留:0.2270,回流7日留:0.2830,单次付费:38.09,单付费UV:108.51,ARPPU:38.95,新增占比:0.6365,回流占比:0.3635,R7线:0.1192}
   },
   NA:{
-    AI:{花费:34824.14,新增设备:2818,总账号:1112,CTR:0.011906,CVR:0.002481,设备单价:12.36,账号单价:31.32,CPM:30.66,CPC:2.57,ROI1:0.0324,ROI3:0.0917,ROI7:0.1271,ROI365:0.9332,新增LTV7:2.85,回流LTV7:6.21,毛利:-1469.28,新增7日留:0.1195,回流7日留:0.2634,单次付费:26.32,单付费UV:79.15,ARPPU:43.92,新增占比:0.6628,回流占比:0.3372,R7线:0.1363},
-    NAI:{花费:49324.78,新增设备:3768,总账号:1651,CTR:0.014047,CVR:0.002717,设备单价:13.09,账号单价:29.88,CPM:35.56,CPC:2.53,ROI1:0.0387,ROI3:0.0885,ROI7:0.1495,ROI365:1.0981,新增LTV7:2.76,回流LTV7:7.83,毛利:4106.21,新增7日留:0.1304,回流7日留:0.2484,单次付费:20.62,单付费UV:62.99,ARPPU:45.91,新增占比:0.6651,回流占比:0.3349,R7线:0.1361}
+    AI:{花费:34824,新增设备:3020,总账号:1183,CTR:0.011906,CVR:0.002479,设备单价:11.53,账号单价:29.44,CPM:30.66,CPC:2.57,ROI1:0.035,ROI3:0.095,ROI7:0.131,ROI365:0.951,新增LTV7:2.85,回流LTV7:6.21,毛利:-1203,新增7日留:0.1195,回流7日留:0.2634,单次付费:26.32,单付费UV:79.15,ARPPU:43.92,新增占比:0.6628,回流占比:0.3372,R7线:0.1363},
+    NAI:{花费:49325,新增设备:3821,总账号:1684,CTR:0.014047,CVR:0.002766,设备单价:12.91,账号单价:29.29,CPM:35.56,CPC:2.53,ROI1:0.039,ROI3:0.087,ROI7:0.150,ROI365:1.102,新增LTV7:2.76,回流LTV7:7.83,毛利:4314,新增7日留:0.1304,回流7日留:0.2484,单次付费:20.62,单付费UV:62.99,ARPPU:45.91,新增占比:0.6651,回流占比:0.3349,R7线:0.1361}
   }
 };
 const BB={
@@ -742,15 +771,15 @@ const REGS=['JP','KR','NA'];
 const LBL={JP:'JP·日本',KR:'KR·韩国',NA:'NA·北美'};
 const C={
   ai:'#C97A10',nai:'#2878B0',
-  aiS:'rgba(201,122,16,.85)',naiS:'rgba(40,120,176,.80)',
+  aiS:'#C97A10',naiS:'#2878B0',
   aiL:'rgba(201,122,16,.40)',naiL:'rgba(40,120,176,.38)',
   g:'rgba(0,0,0,.07)',tx:'#4A5168',mu:'#8990A4'
 };
 
-const MF={family:'"JetBrains Mono","SF Mono","Menlo","Consolas",monospace',size:11};
+const MF={family:'"JetBrains Mono","SF Mono","Menlo","Consolas",monospace',size:12};
 Chart.defaults.font={
   family:'-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif',
-  size:12
+  size:13
 };
 Chart.defaults.color='#4A5168';
 Chart.register(ChartDataLabels);
@@ -769,12 +798,12 @@ Chart.defaults.plugins.tooltip={
 
 const bG={
   grid:{color:'rgba(0,0,0,.07)',drawTicks:false},
-  ticks:{padding:7,color:'#4A5168',font:{...MF,size:11}},
+  ticks:{padding:7,color:'#4A5168',font:{...MF,size:12}},
   border:{display:false}
 };
 const bX={
   grid:{display:false},
-  ticks:{padding:7,color:'#4A5168',font:{...MF,size:11}},
+  ticks:{padding:7,color:'#4A5168',font:{...MF,size:12}},
   border:{color:'#C8CDD9'}
 };
 const LABS=REGS.map(r=>LBL[r]);
@@ -803,7 +832,7 @@ function legendCfg(extra={}){
     ...extra,
     labels:{
       ...labels,
-      font:{size:11,...(labels.font||{})}
+      font:{size:12,...(labels.font||{})}
     }
   };
 }
@@ -904,7 +933,7 @@ mk('cRoiJPExcl',{type:'bar',data:{
   labels:['AI 含大R','AI 去大R','非AI 含大R','非AI 去大R'],
   datasets:[{
     label:'ROI7',
-    data:[0.159, 0.0864, 0.059, 0.0596],
+    data:[0.128, 0.0864, 0.061, 0.060],
     backgroundColor:[C.ai, C.aiL, C.nai, C.naiL],
     barPercentage:.6, categoryPercentage:.7
   }]
@@ -920,6 +949,33 @@ mk('cRoiJPExcl',{type:'bar',data:{
       display:true, anchor:'end', align:'end',
       formatter:v=>(v*100).toFixed(1)+'%',
       color:'#4A5168', font:{...MF, size:11, weight:600}
+    }
+  }}});  
+
+mk('cCtrNoText',{type:'bar',data:{
+  labels:['JP','KR','NA'],
+  datasets:[
+    {label:'AI 含文案',data:[0.817,0.656,3.690],
+     backgroundColor:'rgba(201,122,16,.35)',barPercentage:.7,categoryPercentage:.55},
+    {label:'AI 去文案',data:[0.516,0.601,2.131],
+     backgroundColor:'#C97A10',barPercentage:.7,categoryPercentage:.55},
+    {label:'非AI 含文案',data:[0.635,0.365,3.830],
+     backgroundColor:'rgba(40,120,176,.30)',barPercentage:.7,categoryPercentage:.55},
+    {label:'非AI 去文案',data:[0.520,0.377,2.448],
+     backgroundColor:'#2878B0',barPercentage:.7,categoryPercentage:.55}
+  ]
+},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{
+    x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'}}),
+    y:mergeScale(bX)
+  },
+  plugins:{
+    legend:legendCfg({labels:{boxWidth:10,boxHeight:10,padding:12,font:{size:11}}}),
+    tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.x.toFixed(3)}%`),
+    datalabels:{
+      display:true, anchor:'end', align:'end', color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:11,weight:'600'},
+      formatter:v=>v.toFixed(2)+'%'
     }
   }}});
 
@@ -1011,8 +1067,25 @@ mk('cCvr',{type:'bar',data:{labels:LABS,datasets:[
       formatter:v=>v.toFixed(3)+'%'
     }
   }}});
-bar2('cCpm','CPM',v=>'$'+v.toFixed(2));
-bar2('cCpc','CPC',v=>'$'+v.toFixed(2));
+mk('cCpm',{type:'bar',data:{labels:LABS,datasets:[
+  {label:'AI',data:aa('CPM'),backgroundColor:'#C97A10',barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI',data:na('CPM'),backgroundColor:'#2878B0',barPercentage:.7,categoryPercentage:.6}
+]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>'$'+v.toFixed(0)}}),y:mergeScale(bX)},
+  plugins:{legend:legendCfg(),tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.x.toFixed(2)}`),
+    datalabels:{display:true,anchor:'end',align:'end',color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:12,weight:'600'},formatter:v=>'$'+v.toFixed(1)}
+  }}});  
+
+mk('cCpc',{type:'bar',data:{labels:LABS,datasets:[
+  {label:'AI',data:aa('CPC'),backgroundColor:'#C97A10',barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI',data:na('CPC'),backgroundColor:'#2878B0',barPercentage:.7,categoryPercentage:.6}
+]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>'$'+v.toFixed(0)}}),y:mergeScale(bX)},
+  plugins:{legend:legendCfg(),tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.x.toFixed(2)}`),
+    datalabels:{display:true,anchor:'end',align:'end',color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:12,weight:'600'},formatter:v=>'$'+v.toFixed(2)}
+  }}});  
 bar2('cPayOnce','单次付费',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 bar2('cPayUV','单付费UV',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 
@@ -1123,25 +1196,35 @@ mk('cMatRate',{type:'bar',data:{labels:LABS,datasets:[
       formatter:v=>v.toFixed(2)+'%'
     }
   }}});
-mk('cMatCount',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·跑出',data:REGS.map(r=>BB[r].AI.mat_h),backgroundColor:C.aiS,stack:'ai',barPercentage:.55,categoryPercentage:.8},
-  {label:'AI·未跑出',data:REGS.map(r=>BB[r].AI.mat_t-BB[r].AI.mat_h),backgroundColor:'rgba(201,122,16,.15)',stack:'ai',barPercentage:.55,categoryPercentage:.8},
-  {label:'非AI·跑出',data:REGS.map(r=>BB[r].NAI.mat_h),backgroundColor:C.naiS,stack:'nai',barPercentage:.55,categoryPercentage:.8},
-  {label:'非AI·未跑出',data:REGS.map(r=>BB[r].NAI.mat_t-BB[r].NAI.mat_h),backgroundColor:'rgba(40,120,176,.12)',stack:'nai',barPercentage:.55,categoryPercentage:.8}
-]},options:{responsive:true,maintainAspectRatio:false,
-  scales:{x:mergeScale(bX,{stacked:true}),y:mergeScale(bG,{stacked:true})},
+mk('cMatCount',{type:'bar',data:{
+  labels:[
+    'JP · AI (4/709)','JP · 非AI (30/639)',
+    'KR · AI (3/784)','KR · 非AI (19/1025)',
+    'NA · AI (0/683)','NA · 非AI (6/2793)'
+  ],
+  datasets:[{
+    label:'跑出率',
+    data:[0.564, 4.695, 0.383, 1.854, 0.000, 0.215],
+    backgroundColor:['#C97A10','#2878B0','#C97A10','#2878B0','#C97A10','#2878B0'],
+    barPercentage:.65,
+    categoryPercentage:.85
+  }]
+},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{
+    x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'},max:6}),
+    y:mergeScale(bX,{grid:{display:false},border:{display:false},
+      ticks:{...bX.ticks,font:{...MF,size:12}}})
+  },
   plugins:{
-    tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.y}条`),
-    legend:legendCfg(),
+    legend:{display:false},
+    tooltip:tooltipCfg(c=>` 跑出率: ${c.parsed.x.toFixed(3)}%`),
     datalabels:{
-      display:ctx=>ctx.datasetIndex%2===0,
-      anchor:'center',
-      align:'center',
-      color:'#fff',
-      font:{family:'"JetBrains Mono","SF Mono",monospace',size:10,weight:'700'},
-      formatter:v=>v===0?'':v+'条'
+      display:true, anchor:'end', align:'end',
+      color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:12,weight:'600'},
+      formatter:v=>v===0?'0%':v.toFixed(2)+'%'
     }
-  }}});
+  }}});  
 
 // 06 数据表
 const METRICS=[
