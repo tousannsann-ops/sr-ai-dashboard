@@ -273,9 +273,15 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <span class="hi-nai">AI 三地区素材投入 709 / 784 / 683 条，实际跑出 4 / 3 / 0 条，跑出率 <b>0.56% / 0.38% / 0%</b>；非AI 跑出率 4.69% / 1.85% / 0.21%，高出 <b>8–13 倍</b>。</span>
     AI 三地每地仅 1 个广告计划（非AI 2个），广告组数相近（14–19 vs 17–20），说明问题不在组数配置，而在<b>单计划素材量过大</b>（最高 784 条）及<b>平台分发机制效率低</b>。NA AI 0 条跑出，分发完全失效。
   </div>
-  <div class="panel" style="border:1px solid var(--line)">
-    <div class="panel-h"><span class="title">素材跑出率（AI vs 非AI）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-    <div class="ch h200"><canvas id="cMatRate"></canvas></div>
+  <div class="g2">
+    <div class="panel">
+      <div class="panel-h"><span class="title">素材跑出率（AI vs 非AI）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cMatRate"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="title">单计划素材数（AI vs 非AI）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cMatPerPlan"></canvas></div>
+    </div>
   </div>
   <div class="bb-grid">
     <div class="bb-card">
@@ -400,23 +406,15 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">JP · 关键指标（去大R）</span><span class="badge b-neg">弱领先</span></div>
-      <div class="cc-row"><span class="cc-label">ROI7</span><div class="cc-right"><span class="v-ai">8.6%</span><span class="v-sep">/</span><span class="v-nai">6.0%</span><span class="badge b-flat">AI +43%</span></div></div>
+      <div class="cc-row"><span class="cc-label">ROI365 <span style="font-size:9px;color:var(--mute)">去大R</span></span><div class="cc-right"><span class="v-ai">0.622</span><span class="v-sep">/</span><span class="v-nai">0.441</span><span class="badge b-pos">AI +41%</span></div></div>
       <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$8,245</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$105K</span></div></div>
-      <div class="cc-row"><span class="cc-label">花费规模</span><div class="cc-right"><span class="v-ai">$42K</span><span class="v-sep">/</span><span class="v-nai">$221K</span><span class="badge b-neg">规模不对等</span></div></div>
+      <div class="cc-row"><span class="cc-label">账号数</span><div class="cc-right"><span class="v-ai">433</span><span class="v-sep">/</span><span class="v-nai">2,789</span><span class="badge b-neg">规模不对等</span></div></div>
+      <div class="cc-row"><span class="cc-label">账号单价</span><div class="cc-right"><span class="v-ai">$100</span><span class="v-sep">/</span><span class="v-nai">$102</span><span class="badge b-flat">相近</span></div></div>
       <div class="cc-row"><span class="cc-label">新增LTV7</span><div class="cc-right"><span class="v-ai">$4.3</span><span class="v-sep">/</span><span class="v-nai">$5.6</span><span class="badge b-neg">AI 更低</span></div></div>
     </div>
     <div class="panel">
       <div class="panel-h"><span class="title">ROI D1/D3/D7 · JP 日本 <span style="font-weight:400;color:var(--mute);font-size:9px">（含大R）</span></span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
       <div class="ch h240"><canvas id="cRoiJP"></canvas></div>
-    </div>
-  </div>
-  <div class="cmp-cards" style="grid-template-columns:1fr">
-    <div class="cc">
-      <div class="cc-region">JP · 日本 <span style="font-size:9px;color:var(--neg);margin-left:6px">（去大R）</span></div>
-      <div class="cc-row"><span class="cc-label">ROI1/3/7</span><div class="cc-right"><span class="v-ai">2.4/5.8/8.6%</span><span class="v-sep">/</span><span class="v-nai">1.8/4.4/6.0%</span></div></div>
-      <div class="cc-row"><span class="cc-label">ROI365</span><div class="cc-right"><span class="v-ai">0.622</span><span class="v-sep">/</span><span class="v-nai">0.441</span><span class="badge b-flat">AI +41%</span></div></div>
-      <div class="cc-row"><span class="cc-label">新增/回流LTV7</span><div class="cc-right"><span class="v-ai">$4.3/$20.0</span><span class="v-sep">/</span><span class="v-nai">$5.6/$7.3</span></div></div>
-      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$8,245</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$105K</span></div></div>
     </div>
   </div>
   <div class="panel" style="margin-top:1px">
@@ -431,34 +429,28 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <table class="dtbl ftbl" style="margin-top:14px">
       <thead><tr>
         <th class="lt">指标</th>
-        <th class="ft-ai">AI 含大R</th><th class="ft-ai">AI 去大R</th><th>Δ</th>
-        <th class="ft-nai">非AI 含大R</th><th class="ft-nai">非AI 去大R</th><th>Δ</th>
+        <th class="ft-ai">AI 含大R</th><th class="ft-ai">AI 去大R</th><th>Δ（AI）</th>
       </tr></thead>
       <tbody>
         <tr>
-          <td class="ft-label">ROI1/3/7</td>
-          <td class="ft-ai">2.8/7.6/12.8%</td><td class="ft-ai">2.4/5.8/8.6%</td><td class="tng">−4.2pp</td>
-          <td class="ft-nai">1.5/4.1/6.1%</td><td class="ft-nai">1.8/4.4/6.0%</td><td class="tng">−0.1pp</td>
-        </tr>
-        <tr>
           <td class="ft-label">ROI365</td>
           <td class="ft-ai">0.949</td><td class="ft-ai">0.622</td><td class="tng">−34%</td>
-          <td class="ft-nai">0.450</td><td class="ft-nai">0.441</td><td class="tng">−2%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">ROI1/3/7</td>
+          <td class="ft-ai">2.8/7.6/12.8%</td><td class="ft-ai">2.4/5.8/8.6%</td><td class="tng">−4.2pp</td>
         </tr>
         <tr>
           <td class="ft-label">新增LTV7</td>
           <td class="ft-ai">$14.5</td><td class="ft-ai">$4.3</td><td class="tng">−70%</td>
-          <td class="ft-nai">$5.3</td><td class="ft-nai">$5.6</td><td class="tp">+6%</td>
         </tr>
         <tr>
           <td class="ft-label">毛利</td>
           <td class="ft-ai tng">−$1,163</td><td class="ft-ai tng">−$8,245</td><td class="tng">恶化 −$7K</td>
-          <td class="ft-nai tng">−$137K</td><td class="ft-nai tng">−$105K</td><td class="tp">改善</td>
         </tr>
         <tr>
           <td class="ft-label">花费</td>
           <td class="ft-ai">$43K</td><td class="ft-ai">$42K</td><td class="tmt">−2%</td>
-          <td class="ft-nai">$283K</td><td class="ft-nai">$221K</td><td class="tng">−22%</td>
         </tr>
       </tbody>
     </table>
@@ -553,13 +545,36 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
   <div class="panel" style="margin-top:1px">
     <div class="panel-h">
-      <span class="title">CTR · 排除文案广告后（纯视频/图片）</span>
+      <span class="title">CTR 文案影响分析</span>
       <span class="badge b-neg">JP AI 文案依赖暴露</span>
     </div>
-    <div style="font-size:11.5px;color:var(--ink2);margin-bottom:14px;line-height:1.65;font-family:'JetBrains Mono','SF Mono',monospace">
-      去除文案类广告后：<b>JP AI CTR 从 0.82% 降至 0.52%，与非AI 0.52% 持平</b>——JP 的 AI CTR 优势来自文案广告而非视频/图片创意；KR AI 纯创意 CTR 0.60% 仍领先（非AI 0.38%）；NA AI 2.13% 低于非AI 2.45%。<b>JP AI 纯创意 CPM $28.2 vs 非AI $11.0</b>（高156%），高成本进一步压缩纯创意效率。
+    <div style="font-size:12px;color:var(--ink);font-weight:600;margin-bottom:8px;font-family:'JetBrains Mono','SF Mono',monospace">
+      JP AI CTR 优势完全来自文案广告——排除后与非AI持平；KR AI 纯创意仍领先；NA AI 含/去文案均落后非AI。
     </div>
-    <div class="ch h200"><canvas id="cCtrNoText"></canvas></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px;color:var(--ink2);margin-bottom:16px;font-family:'JetBrains Mono','SF Mono',monospace;line-height:1.7">
+      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--ail)">
+        <div style="font-weight:600;color:var(--ai);margin-bottom:4px">含文案 CTR（全素材口径）</div>
+        JP: AI <b>0.82%</b> > 非AI 0.64%（+28%）<br>
+        KR: AI <b>0.66%</b> > 非AI 0.37%（+78%）<br>
+        NA: AI 3.69% &lt; 非AI <b>3.83%</b>（−4%）
+      </div>
+      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--nail)">
+        <div style="font-weight:600;color:var(--nai);margin-bottom:4px">去文案 CTR（纯视频/图片）</div>
+        JP: AI <b>0.52%</b> = 非AI <b>0.52%</b>（持平，AI优势消失）<br>
+        KR: AI <b>0.60%</b> > 非AI 0.38%（+58%，AI仍领先）<br>
+        NA: AI 2.13% &lt; 非AI <b>2.45%</b>（−13%）
+      </div>
+    </div>
+    <div class="g2">
+      <div>
+        <div style="font-size:11px;font-family:'JetBrains Mono','SF Mono',monospace;color:var(--mute);margin-bottom:8px;letter-spacing:.06em">含文案 CTR</div>
+        <div class="ch h180"><canvas id="cCtrWith"></canvas></div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-family:'JetBrains Mono','SF Mono',monospace;color:var(--mute);margin-bottom:8px;letter-spacing:.06em">去文案 CTR（纯创意）</div>
+        <div class="ch h180"><canvas id="cCtrNoText"></canvas></div>
+      </div>
+    </div>
     <table class="dtbl ftbl" style="margin-top:14px">
       <thead><tr>
         <th class="lt">指标</th>
@@ -570,27 +585,27 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       <tbody>
         <tr>
           <td class="ft-label">CTR 含文案</td>
-          <td class="ft-ai">0.82%</td><td class="ft-nai">0.64%</td>
-          <td class="ft-ai">0.66%</td><td class="ft-nai">0.37%</td>
-          <td class="ft-ai">3.69%</td><td class="ft-nai">3.83%</td>
+          <td class="ft-ai ft-win">0.82%</td><td class="ft-nai">0.64%</td>
+          <td class="ft-ai ft-win">0.66%</td><td class="ft-nai">0.37%</td>
+          <td class="ft-ai">3.69%</td><td class="ft-nai ft-win">3.83%</td>
         </tr>
         <tr>
           <td class="ft-label">CTR 去文案</td>
           <td class="ft-ai">0.52%</td><td class="ft-nai">0.52%</td>
-          <td class="ft-ai tp">0.60%</td><td class="ft-nai">0.38%</td>
-          <td class="ft-ai">2.13%</td><td class="ft-nai tp">2.45%</td>
+          <td class="ft-ai ft-win">0.60%</td><td class="ft-nai">0.38%</td>
+          <td class="ft-ai">2.13%</td><td class="ft-nai ft-win">2.45%</td>
         </tr>
         <tr>
           <td class="ft-label">CPM 去文案</td>
-          <td class="ft-ai tng">$28.2</td><td class="ft-nai tp">$11.0</td>
-          <td class="ft-ai tp">$6.3</td><td class="ft-nai">$9.2</td>
-          <td class="ft-ai tp">$32.8</td><td class="ft-nai">$57.7</td>
+          <td class="ft-ai tng">$28.2</td><td class="ft-nai ft-win">$11.0</td>
+          <td class="ft-ai ft-win">$6.3</td><td class="ft-nai">$9.2</td>
+          <td class="ft-ai ft-win">$32.8</td><td class="ft-nai">$57.7</td>
         </tr>
         <tr>
           <td class="ft-label">安装/点击 去文案</td>
-          <td class="ft-ai tp">10.4%</td><td class="ft-nai">4.1%</td>
-          <td class="ft-ai">4.9%</td><td class="ft-nai tp">8.4%</td>
-          <td class="ft-ai tp">22.0%</td><td class="ft-nai">19.5%</td>
+          <td class="ft-ai ft-win">10.4%</td><td class="ft-nai">4.1%</td>
+          <td class="ft-ai">4.9%</td><td class="ft-nai ft-win">8.4%</td>
+          <td class="ft-ai ft-win">22.0%</td><td class="ft-nai">19.5%</td>
         </tr>
       </tbody>
     </table>
@@ -975,56 +990,47 @@ roiChart('cRoiJP','JP');
 roiChart('cRoiKR','KR');
 roiChart('cRoiNA','NA');
 
-// JP 大R排除对比：ROI7 含大R vs 去大R
+// JP 大R排除对比：ROI365 仅AI
 mk('cRoiJPExcl',{type:'bar',data:{
-  labels:['AI 含大R','AI 去大R','非AI 含大R','非AI 去大R'],
+  labels:['AI 含大R','AI 去大R'],
   datasets:[{
-    label:'ROI7',
-    data:[0.128, 0.0864, 0.061, 0.060],
-    backgroundColor:[C.ai, C.aiL, C.nai, C.naiL],
-    barPercentage:.6, categoryPercentage:.7
+    label:'ROI365',
+    data:[0.949, 0.622],
+    backgroundColor:[C.ai, C.aiL],
+    barPercentage:.5, categoryPercentage:.7
   }]
 },options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
   scales:{
-    x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>(v*100).toFixed(0)+'%'},max:0.20}),
+    x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>v.toFixed(2)},max:1.2}),
     y:mergeScale(bX,{grid:{display:false},border:{display:false}})
   },
   plugins:{
     legend:{display:false},
-    tooltip:tooltipCfg(c=>` ROI7: ${(c.parsed.x*100).toFixed(2)}%`),
+    tooltip:tooltipCfg(c=>` ROI365: ${c.parsed.x.toFixed(3)}`),
     datalabels:{
       display:true, anchor:'end', align:'end',
-      formatter:v=>(v*100).toFixed(1)+'%',
-      color:'#4A5168', font:{...MF, size:11, weight:600}
-    }
-  }}});  
-
-mk('cCtrNoText',{type:'bar',data:{
-  labels:['JP','KR','NA'],
-  datasets:[
-    {label:'AI 含文案',data:[0.817,0.656,3.690],
-     backgroundColor:'rgba(201,122,16,.35)',barPercentage:.7,categoryPercentage:.55},
-    {label:'AI 去文案',data:[0.516,0.601,2.131],
-     backgroundColor:'#C97A10',barPercentage:.7,categoryPercentage:.55},
-    {label:'非AI 含文案',data:[0.635,0.365,3.830],
-     backgroundColor:'rgba(40,120,176,.30)',barPercentage:.7,categoryPercentage:.55},
-    {label:'非AI 去文案',data:[0.520,0.377,2.448],
-     backgroundColor:'#2878B0',barPercentage:.7,categoryPercentage:.55}
-  ]
-},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-  scales:{
-    x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'}}),
-    y:mergeScale(bX)
-  },
-  plugins:{
-    legend:legendCfg({labels:{boxWidth:10,boxHeight:10,padding:12,font:{size:11}}}),
-    tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.x.toFixed(3)}%`),
-    datalabels:{
-      display:true, anchor:'end', align:'end', color:'#4A5168',
-      font:{family:'"JetBrains Mono","SF Mono",monospace',size:11,weight:'600'},
-      formatter:v=>v.toFixed(2)+'%'
+      formatter:v=>v.toFixed(3),
+      color:'#4A5168', font:{...MF, size:12, weight:600}
     }
   }}});
+
+const ctrOpts=(title)=>({indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'}}),y:mergeScale(bX)},
+  plugins:{
+    legend:legendCfg({labels:{boxWidth:10,boxHeight:10,padding:10,font:{size:11}}}),
+    tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.x.toFixed(3)}%`),
+    datalabels:{display:true,anchor:'end',align:'end',color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:11,weight:'600'},
+      formatter:v=>v.toFixed(2)+'%'}
+  }});
+mk('cCtrWith',{type:'bar',data:{labels:['JP','KR','NA'],datasets:[
+  {label:'AI',data:[0.817,0.656,3.690],backgroundColor:C.ai,barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI',data:[0.635,0.365,3.830],backgroundColor:C.nai,barPercentage:.7,categoryPercentage:.6}
+]},options:ctrOpts()});
+mk('cCtrNoText',{type:'bar',data:{labels:['JP','KR','NA'],datasets:[
+  {label:'AI',data:[0.516,0.601,2.131],backgroundColor:C.ai,barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI',data:[0.520,0.377,2.448],backgroundColor:C.nai,barPercentage:.7,categoryPercentage:.6}
+]},options:ctrOpts()});
 
 mk('cRoi365',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('ROI365'),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
@@ -1241,6 +1247,21 @@ mk('cMatRate',{type:'bar',data:{labels:LABS,datasets:[
       color:'#4A5168',
       font:{family:'"JetBrains Mono","SF Mono",monospace',size:10,weight:'600'},
       formatter:v=>v.toFixed(2)+'%'
+    }
+  }}});
+mk('cMatPerPlan',{type:'bar',data:{labels:LABS,datasets:[
+  {label:'AI',data:[709,784,683],backgroundColor:C.ai,barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI',data:[320,513,1397],backgroundColor:C.nai,barPercentage:.7,categoryPercentage:.6}
+]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{x:mergeScale(bG),y:mergeScale(bX)},
+  plugins:{
+    tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.x}条/计划`),
+    legend:legendCfg(),
+    datalabels:{
+      display:true, anchor:'end', align:'end',
+      color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:10,weight:'600'},
+      formatter:v=>v
     }
   }}});
 
