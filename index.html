@@ -349,35 +349,75 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">02</span><span class="sec-title">JP 表现评估</span></div>
     <div class="sec-hint">领先数据背后的前提条件</div>
   </div>
-  <div class="sec-summary">JP AI ROI7 <span class="hi-ai">15.9%</span> 领先非AI（5.9%）<b>170%</b>，毛利唯一为正（+$3K vs −$139K）；但此对比有两个前提：① <span class="hi-nai">非AI 已大幅撤量</span>（JP 非AI 花费 $283K，AI 仅 $43K，规模不对等）；② <span class="hi-nai">JP AI ARPPU $84 疑似受大R拉高</span>，排除极端值后实际表现待定。</div>
+  <div class="sec-summary">排除 4/26 大R 后确认：JP AI ROI7 从 <span class="hi-ai">15.9%</span> 降至 <span class="hi-nai">8.6%</span>（−48%），毛利 +$3K → <span class="hi-nai">−$8K（反转）</span>，<b>新增LTV7 AI $4.3 低于非AI $5.6</b>——大R 几乎全部来自 AI 渠道新增，去除后 AI 拉新质量不具备真实优势。① 规模仍不对等（AI $42K vs 非AI $221K 去大R后）；② JP 表现降级为"弱领先"。</div>
   <div class="g2">
     <div class="panel">
-      <div class="panel-h"><span class="title">JP · 关键指标</span><span class="badge b-flat">条件性领先</span></div>
-      <div class="cc-row"><span class="cc-label">ROI7</span><div class="cc-right"><span class="v-ai">15.9%</span><span class="v-sep">/</span><span class="v-nai">5.9%</span><span class="badge b-pos">AI +170%</span></div></div>
-      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--pos)">+$3,262</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$139K</span></div></div>
-      <div class="cc-row"><span class="cc-label">花费规模</span><div class="cc-right"><span class="v-ai">$43K</span><span class="v-sep">/</span><span class="v-nai">$283K</span><span class="badge b-neg">规模不对等</span></div></div>
-      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$84</span><span class="v-sep">/</span><span class="v-nai">$50</span><span class="badge b-flat">待排除大R</span></div></div>
+      <div class="panel-h"><span class="title">JP · 关键指标（去大R）</span><span class="badge b-neg">弱领先</span></div>
+      <div class="cc-row"><span class="cc-label">ROI7</span><div class="cc-right"><span class="v-ai">8.6%</span><span class="v-sep">/</span><span class="v-nai">6.0%</span><span class="badge b-flat">AI +43%</span></div></div>
+      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$8,245</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$105K</span></div></div>
+      <div class="cc-row"><span class="cc-label">花费规模</span><div class="cc-right"><span class="v-ai">$42K</span><span class="v-sep">/</span><span class="v-nai">$221K</span><span class="badge b-neg">规模不对等</span></div></div>
+      <div class="cc-row"><span class="cc-label">新增LTV7</span><div class="cc-right"><span class="v-ai">$4.3</span><span class="v-sep">/</span><span class="v-nai">$5.6</span><span class="badge b-neg">AI 更低</span></div></div>
     </div>
     <div class="panel">
-      <div class="panel-h"><span class="title">ROI D1/D3/D7 · JP 日本</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="panel-h"><span class="title">ROI D1/D3/D7 · JP 日本 <span style="font-weight:400;color:var(--mute);font-size:9px">（含大R）</span></span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
       <div class="ch h240"><canvas id="cRoiJP"></canvas></div>
     </div>
   </div>
   <div class="cmp-cards" style="grid-template-columns:1fr">
     <div class="cc">
-      <div class="cc-region">JP · 日本</div>
-      <div class="cc-row"><span class="cc-label">ROI1/3/7</span><div class="cc-right"><span class="v-ai">2.8/7.6/15.9%</span><span class="v-sep">/</span><span class="v-nai">1.5/4.2/5.9%</span></div></div>
-      <div class="cc-row"><span class="cc-label">ROI365</span><div class="cc-right"><span class="v-ai">1.189</span><span class="v-sep">/</span><span class="v-nai">0.431</span><span class="badge b-pos">AI +176%</span></div></div>
-      <div class="cc-row"><span class="cc-label">新增/回流LTV7</span><div class="cc-right"><span class="v-ai">$14.5/$22.1</span><span class="v-sep">/</span><span class="v-nai">$5.3/$8.8</span></div></div>
-      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--pos)">+$3,262</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$139K</span></div></div>
+      <div class="cc-region">JP · 日本 <span style="font-size:9px;color:var(--neg);margin-left:6px">（去大R）</span></div>
+      <div class="cc-row"><span class="cc-label">ROI1/3/7</span><div class="cc-right"><span class="v-ai">2.4/5.8/8.6%</span><span class="v-sep">/</span><span class="v-nai">1.8/4.4/6.0%</span></div></div>
+      <div class="cc-row"><span class="cc-label">ROI365</span><div class="cc-right"><span class="v-ai">0.622</span><span class="v-sep">/</span><span class="v-nai">0.441</span><span class="badge b-flat">AI +41%</span></div></div>
+      <div class="cc-row"><span class="cc-label">新增/回流LTV7</span><div class="cc-right"><span class="v-ai">$4.3/$20.0</span><span class="v-sep">/</span><span class="v-nai">$5.6/$7.3</span></div></div>
+      <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$8,245</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--neg)">−$105K</span></div></div>
     </div>
   </div>
-  <div class="g2 ph-row">
-    <div class="ph-card">
-      <div class="ph-badge">⏳ 数据拉取中</div>
-      <div class="ph-title">JP 大R排除后 ROI</div>
-      <div class="ph-desc">排除极端付费用户后重跑 JP AI / 非AI ROI1/3/7，验证领先幅度是否成立。数据来源：安德/浩龙，待补充。</div>
+  <div class="panel" style="margin-top:1px">
+    <div class="panel-h">
+      <span class="title">JP 大R排除后 ROI · 影响量化</span>
+      <span class="badge b-neg">大R影响已确认</span>
     </div>
+    <div style="font-size:11.5px;color:var(--ink2);margin-bottom:14px;line-height:1.65;font-family:'JetBrains Mono','SF Mono',monospace">
+      排除 4/26 大R 后 AI ROI 大幅下修，而非AI 基本不变——说明 <b>大R 几乎全部来自 AI 渠道新增用户</b>。
+      去除后 AI 新增LTV7（$4.3）低于非AI（$5.6），<b>AI 拉新质量不具备真实优势</b>。
+    </div>
+    <div class="ch h200"><canvas id="cRoiJPExcl"></canvas></div>
+    <table class="dtbl ftbl" style="margin-top:14px">
+      <thead><tr>
+        <th class="lt">指标</th>
+        <th class="ft-ai">AI 含大R</th><th class="ft-ai">AI 去大R</th><th>Δ</th>
+        <th class="ft-nai">非AI 含大R</th><th class="ft-nai">非AI 去大R</th><th>Δ</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="ft-label">ROI1/3/7</td>
+          <td class="ft-ai">2.8/7.6/15.9%</td><td class="ft-ai">2.4/5.8/8.6%</td><td class="tng">−7.3pp</td>
+          <td class="ft-nai">1.5/4.2/5.9%</td><td class="ft-nai">1.8/4.4/6.0%</td><td class="tp">+0.1pp</td>
+        </tr>
+        <tr>
+          <td class="ft-label">ROI365</td>
+          <td class="ft-ai">1.189</td><td class="ft-ai">0.622</td><td class="tng">−48%</td>
+          <td class="ft-nai">0.431</td><td class="ft-nai">0.441</td><td class="tp">+2%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">新增LTV7</td>
+          <td class="ft-ai">$14.5</td><td class="ft-ai">$4.3</td><td class="tng">−70%</td>
+          <td class="ft-nai">$5.3</td><td class="ft-nai">$5.6</td><td class="tp">+6%</td>
+        </tr>
+        <tr>
+          <td class="ft-label">毛利</td>
+          <td class="ft-ai tp">+$3,262</td><td class="ft-ai tng">−$8,245</td><td class="tng">反转</td>
+          <td class="ft-nai tng">−$139K</td><td class="ft-nai tng">−$105K</td><td class="tp">改善</td>
+        </tr>
+        <tr>
+          <td class="ft-label">花费</td>
+          <td class="ft-ai">$43K</td><td class="ft-ai">$42K</td><td class="tmt">−2%</td>
+          <td class="ft-nai">$283K</td><td class="ft-nai">$221K</td><td class="tng">−22%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="ph-row">
     <div class="ph-card">
       <div class="ph-badge">⏳ 数据拉取中</div>
       <div class="ph-title">JP 出价变化与量级关联</div>
@@ -858,6 +898,30 @@ function roiChart(id,reg){
 roiChart('cRoiJP','JP');
 roiChart('cRoiKR','KR');
 roiChart('cRoiNA','NA');
+
+// JP 大R排除对比：ROI7 含大R vs 去大R
+mk('cRoiJPExcl',{type:'bar',data:{
+  labels:['AI 含大R','AI 去大R','非AI 含大R','非AI 去大R'],
+  datasets:[{
+    label:'ROI7',
+    data:[0.159, 0.0864, 0.059, 0.0596],
+    backgroundColor:[C.ai, C.aiL, C.nai, C.naiL],
+    barPercentage:.6, categoryPercentage:.7
+  }]
+},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  scales:{
+    x:mergeScale(bG,{ticks:{...bG.ticks,callback:v=>(v*100).toFixed(0)+'%'},max:0.20}),
+    y:mergeScale(bX,{grid:{display:false},border:{display:false}})
+  },
+  plugins:{
+    legend:{display:false},
+    tooltip:tooltipCfg(c=>` ROI7: ${(c.parsed.x*100).toFixed(2)}%`),
+    datalabels:{
+      display:true, anchor:'end', align:'end',
+      formatter:v=>(v*100).toFixed(1)+'%',
+      color:'#4A5168', font:{...MF, size:11, weight:600}
+    }
+  }}});
 
 mk('cRoi365',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('ROI365'),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
