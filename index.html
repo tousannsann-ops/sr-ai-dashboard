@@ -208,7 +208,7 @@ section.last{border-bottom:none}
 .cfg-table th,.cfg-table td{padding:6px 10px;border:1px solid var(--line);text-align:right}
 .cfg-table th{background:var(--bg3);font-weight:600;color:var(--mute);text-align:center}
 .cfg-table td:first-child{text-align:left;color:var(--mute);font-size:11px}
-.cfg-table .flag-bad{background:rgba(192,57,43,.12);color:var(--neg);font-weight:700;border:1px solid rgba(192,57,43,.25)}
+.cfg-table .flag-bad{background:rgba(192,57,43,.25);color:var(--neg);font-weight:700;border:1px solid rgba(192,57,43,.4)}
 
 footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-family:"JetBrains Mono","SF Mono",monospace;font-size:11px;color:var(--mute)}
 
@@ -470,25 +470,6 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
           <td class="ft-ai ft-win">$64</td><td class="ft-nai">$82</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">−21%</td>
           <td class="ft-ai">$29</td><td class="ft-nai">$29</td><td style="text-align:center;color:var(--mute);font-size:10px;font-weight:600">0%</td>
         </tr>
-        <tr class="ft-group"><td colspan="10">用户质量（账号后）</td></tr>
-        <tr>
-          <td class="ft-label">新增7日留存</td>
-          <td class="ft-ai">25.7%</td><td class="ft-nai ft-win">29.2%</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−12%</td>
-          <td class="ft-ai ft-win">27.4%</td><td class="ft-nai">22.7%</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">+21%</td>
-          <td class="ft-ai">11.9%</td><td class="ft-nai ft-win">13.0%</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−8%</td>
-        </tr>
-        <tr>
-          <td class="ft-label">ARPPU</td>
-          <td class="ft-ai ft-win">$84</td><td class="ft-nai">$50</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">+67%</td>
-          <td class="ft-ai">$25</td><td class="ft-nai ft-win">$39</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−37%</td>
-          <td class="ft-ai">$44</td><td class="ft-nai">$46</td><td style="text-align:center;color:var(--mute);font-size:10px;font-weight:600">−4%</td>
-        </tr>
-        <tr>
-          <td class="ft-label">新增LTV7</td>
-          <td class="ft-ai">$4.3</td><td class="ft-nai ft-win">$5.3</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−19%</td>
-          <td class="ft-ai">$3.9</td><td class="ft-nai ft-win">$5.6</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−30%</td>
-          <td class="ft-ai">$2.9</td><td class="ft-nai">$2.8</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">+4%</td>
-        </tr>
       </tbody>
     </table>
   </div>
@@ -509,6 +490,43 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
         <div class="panel-h"><span class="title">ARPPU (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
         <div class="ch h280"><canvas id="cArppu"></canvas></div>
       </div>
+    </div>
+    <div class="panel" style="margin-top:1px">
+      <div class="panel-h">
+        <span class="title">用户质量（账号后）子表</span>
+        <span style="font-size:10px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace">新增7日留存 / ARPPU / 新增LTV7</span>
+      </div>
+      <table class="dtbl ftbl">
+        <thead>
+          <tr>
+            <th class="lt">指标</th>
+            <th class="ft-ai">JP · AI</th><th class="ft-nai">JP · 非AI</th><th>差值</th>
+            <th class="ft-ai">KR · AI</th><th class="ft-nai">KR · 非AI</th><th>差值</th>
+            <th class="ft-ai">NA · AI</th><th class="ft-nai">NA · 非AI</th><th>差值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ft-group"><td colspan="10">用户质量（账号后）</td></tr>
+          <tr>
+            <td class="ft-label">新增7日留存</td>
+            <td class="ft-ai">25.7%</td><td class="ft-nai ft-win">29.2%</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−12%</td>
+            <td class="ft-ai ft-win">27.4%</td><td class="ft-nai">22.7%</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">+21%</td>
+            <td class="ft-ai">11.9%</td><td class="ft-nai ft-win">13.0%</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−8%</td>
+          </tr>
+          <tr>
+            <td class="ft-label">ARPPU</td>
+            <td class="ft-ai ft-win">$84</td><td class="ft-nai">$50</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">+67%</td>
+            <td class="ft-ai">$25</td><td class="ft-nai ft-win">$39</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−37%</td>
+            <td class="ft-ai">$44</td><td class="ft-nai">$46</td><td style="text-align:center;color:var(--mute);font-size:10px;font-weight:600">−4%</td>
+          </tr>
+          <tr>
+            <td class="ft-label">新增LTV7</td>
+            <td class="ft-ai">$4.3</td><td class="ft-nai ft-win">$5.3</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−19%</td>
+            <td class="ft-ai">$3.9</td><td class="ft-nai ft-win">$5.6</td><td style="text-align:center;color:var(--neg);font-size:10px;font-weight:600">−30%</td>
+            <td class="ft-ai">$2.9</td><td class="ft-nai">$2.8</td><td style="text-align:center;color:var(--pos);font-size:10px;font-weight:600">+4%</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </details>
   <details style="margin-top:8px">
@@ -543,12 +561,48 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <section>
   <div class="sec-head">
     <div><span class="sec-num">03</span><span class="sec-title">流量分布问题</span></div>
-    <div class="sec-hint">Meta IG / FB / AN · Google network / search / youtube</div>
+    <div class="sec-hint">Google network/search/youtube · Meta 待补充</div>
   </div>
-  <div class="sec-summary">当前报告暂无分版位（Meta IG/FB/AN；Google network/search/youtube）维度数据，该维度分析待后续补充。</div>
-  <div class="panel">
-    <div style="font-size:12px;color:var(--ink2);line-height:1.7">当前报告暂无分版位（Meta IG/FB/AN；Google network/search/youtube）维度数据，该维度分析待后续补充。</div>
-    <div style="margin-top:12px;font-family:'JetBrains Mono','SF Mono',monospace;font-size:11px;color:var(--mute)">// TODO: 补充分版位消耗、CTR、CVR数据</div>
+  <div class="sec-summary">先按 Google / Meta 建立版位诊断框架：Google 重点看 network / search / youtube 的流量结构与 CTR / CVR 断点；Meta 暂无 AI 对比数据，先保留 IG / reels / feed 的占比假设与异常排查方向。</div>
+  <div class="g2">
+    <div class="panel">
+      <div class="panel-h">
+        <span class="title">Google 版位分析框架</span>
+        <span class="badge b-flat">network 50-60% · search 10% · youtube 20-30%</span>
+      </div>
+      <div style="font-size:12px;color:var(--ink2);line-height:1.7">
+        先看版位结构是否接近 network 50-60%、search 10%、youtube 20-30%；再拆 CTR / CVR 异常究竟来自素材适配、关键词意图、版位承接还是算法扩量。
+      </div>
+      <div style="display:grid;gap:8px;margin-top:12px;font-size:11px;line-height:1.7;font-family:'JetBrains Mono','SF Mono',monospace">
+        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--ai)">
+          <div style="font-weight:600;color:var(--ai);margin-bottom:4px">CTR 异常诊断</div>
+          network 看素材是否过泛、低质 app 面是否拉低点击；search 看关键词意图与文案是否错配；youtube 看首屏 3 秒钩子、封面和受众包是否失效。
+        </div>
+        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--nail)">
+          <div style="font-weight:600;color:var(--nai);margin-bottom:4px">CVR 异常诊断</div>
+          network 低 CVR 先排查误点流量和商店页承接；search 低 CVR 看高点击关键词是否过宽；youtube 低 CVR 看视频承诺与下载页体验是否不一致。
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-h">
+        <span class="title">Meta 版位分析框架</span>
+        <span class="badge b-flat">暂无 AI 对比数据，待补充</span>
+      </div>
+      <div style="font-size:12px;color:var(--ink2);line-height:1.7">
+        先保留版位框架：IG 占比 &gt;90%，reels + 激励视频 50-60%，feed 30%。待补齐 AI / 非AI 分版位消耗、CTR、CVR 后，再验证异常到底出在库存结构还是创意匹配。
+      </div>
+      <div style="display:grid;gap:8px;margin-top:12px;font-size:11px;line-height:1.7;font-family:'JetBrains Mono','SF Mono',monospace">
+        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--ai)">
+          <div style="font-weight:600;color:var(--ai);margin-bottom:4px">CTR 异常诊断</div>
+          IG 整体低 CTR 看封面、首帧和文案钩子；reels / 激励视频低 CTR 看短视频节奏与互动设计；feed 低 CTR 看主视觉、标题和评论区社证是否不足。
+        </div>
+        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--nail)">
+          <div style="font-weight:600;color:var(--nai);margin-bottom:4px">CVR 异常诊断</div>
+          reels / 激励视频高点击低转化时先排查误触和低意图流量；feed 低 CVR 看受众过宽、落地页承接和转化事件回传是否失真。
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -724,6 +778,11 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
           <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
           <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
           <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
+        </tr>
+        <tr>
+          <td colspan="8" style="padding:12px 14px;text-align:left;background:var(--bg2);font-size:11px;color:var(--ink2);line-height:1.7;font-family:'JetBrains Mono','SF Mono',monospace">
+            <span style="color:var(--ink);font-weight:600">文案分析维度：</span>需对比含文案 vs 排除文案口径的 CTR 差异，判断文案对点击率的独立贡献；维度包含文案类型（卖点文案 / 情感文案 / 活动文案） × CTR / CVR。
+          </td>
         </tr>
       </tbody>
     </table>
