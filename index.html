@@ -344,6 +344,29 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
   <div class="panel" style="margin-top:1px">
     <div class="panel-h">
+      <span class="title">CTR 文案影响分析</span>
+      <span class="badge b-neg">JP AI 文案依赖暴露</span>
+    </div>
+    <div style="font-size:12px;color:var(--ink);font-weight:600;margin-bottom:8px;font-family:'JetBrains Mono','SF Mono',monospace">
+      JP AI CTR 优势完全来自文案广告——排除后与非AI持平；KR AI 纯创意仍领先；NA AI 含/去文案均落后非AI。
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px;color:var(--ink2);margin-bottom:0;font-family:'JetBrains Mono','SF Mono',monospace;line-height:1.7">
+      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--ail)">
+        <div style="font-weight:600;color:var(--ai);margin-bottom:4px">含文案 CTR（全素材口径）</div>
+        JP: AI <b>0.82%</b> > 非AI 0.64%（+28%）<br>
+        KR: AI <b>0.66%</b> > 非AI 0.37%（+78%）<br>
+        NA: AI 3.69% &lt; 非AI <b>3.83%</b>（−4%）
+      </div>
+      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--nail)">
+        <div style="font-weight:600;color:var(--nai);margin-bottom:4px">去文案 CTR（纯视频/图片）</div>
+        JP: AI <b>0.52%</b> = 非AI <b>0.52%</b>（持平，AI优势消失）<br>
+        KR: AI <b>0.60%</b> > 非AI 0.38%（+58%，AI仍领先）<br>
+        NA: AI 2.13% &lt; 非AI <b>2.45%</b>（−13%）
+      </div>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:1px">
+    <div class="panel-h">
       <span class="title">素材类型 · 链路效率（去文案口径）</span>
       <span style="font-size:10px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace">■ <span style="color:var(--ai)">AI 更优</span> &nbsp;■ <span style="color:var(--nai)">非AI 更优</span></span>
     </div>
@@ -545,29 +568,6 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       </tbody>
     </table>
   </div>
-  <div class="panel" style="margin-top:1px">
-    <div class="panel-h">
-      <span class="title">CTR 文案影响分析</span>
-      <span class="badge b-neg">JP AI 文案依赖暴露</span>
-    </div>
-    <div style="font-size:12px;color:var(--ink);font-weight:600;margin-bottom:8px;font-family:'JetBrains Mono','SF Mono',monospace">
-      JP AI CTR 优势完全来自文案广告——排除后与非AI持平；KR AI 纯创意仍领先；NA AI 含/去文案均落后非AI。
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px;color:var(--ink2);margin-bottom:16px;font-family:'JetBrains Mono','SF Mono',monospace;line-height:1.7">
-      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--ail)">
-        <div style="font-weight:600;color:var(--ai);margin-bottom:4px">含文案 CTR（全素材口径）</div>
-        JP: AI <b>0.82%</b> > 非AI 0.64%（+28%）<br>
-        KR: AI <b>0.66%</b> > 非AI 0.37%（+78%）<br>
-        NA: AI 3.69% &lt; 非AI <b>3.83%</b>（−4%）
-      </div>
-      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--nail)">
-        <div style="font-weight:600;color:var(--nai);margin-bottom:4px">去文案 CTR（纯视频/图片）</div>
-        JP: AI <b>0.52%</b> = 非AI <b>0.52%</b>（持平，AI优势消失）<br>
-        KR: AI <b>0.60%</b> > 非AI 0.38%（+58%，AI仍领先）<br>
-        NA: AI 2.13% &lt; 非AI <b>2.45%</b>（−13%）
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ══ 04 NA：高消耗低回报 ══ -->
@@ -627,7 +627,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">05</span><span class="sec-title">获客质量劣化</span></div>
     <div class="sec-hint">安装→账号 / ARPPU / LTV7</div>
   </div>
-  <div class="sec-summary">（与 Section 03 链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（39/45/39% vs 46/53/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 02 大R风险说明。</div>
+  <div class="sec-summary">（与 Section 01 素材/链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（39/45/39% vs 46/53/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 02 大R风险说明。</div>
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">新增7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
