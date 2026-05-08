@@ -9,13 +9,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root{
-  --bg:#0E0F12;--bg2:#15171C;--bg3:#1C1F27;
-  --line:#262B36;--line2:#353C4A;
-  --ink:#EDEBE3;--ink2:#B8B4A8;--mute:#737880;--mute2:#4D525C;
-  --ai:#E8962A;--ais:rgba(232,150,42,.18);--ail:rgba(232,150,42,.5);
-  --nai:#4FA3D1;--nais:rgba(79,163,209,.15);--nail:rgba(79,163,209,.42);
-  --pos:#6ABF72;--neg:#D95F4F;
-  --pos-s:rgba(106,191,114,.13);--neg-s:rgba(217,95,79,.12);
+  --bg:#FFFFFF;--bg2:#F7F8FB;--bg3:#EEF0F5;
+  --line:#DDE1EB;--line2:#C8CDD9;
+  --ink:#1A1D26;--ink2:#4A5168;--mute:#8990A4;--mute2:#B4BAC8;
+  --ai:#C97A10;--ais:rgba(201,122,16,.14);--ail:rgba(201,122,16,.40);
+  --nai:#2878B0;--nais:rgba(40,120,176,.12);--nail:rgba(40,120,176,.35);
+  --pos:#2A8A3E;--neg:#C0392B;
+  --pos-s:rgba(42,138,62,.10);--neg-s:rgba(192,57,43,.09);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
@@ -24,9 +24,7 @@ html,body{
   font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased
 }
 body{
-  background-image:radial-gradient(700px 350px at 4% -4%,rgba(232,150,42,.07),transparent 55%),
-    radial-gradient(550px 350px at 98% 0,rgba(79,163,209,.06),transparent 50%);
-  background-attachment:fixed
+  background:var(--bg)
 }
 .wrap{max-width:1380px;margin:0 auto;padding:44px 40px 88px}
 .mono{font-family:"JetBrains Mono","SF Mono","Menlo","Consolas",monospace;font-feature-settings:"tnum" 1}
@@ -56,7 +54,7 @@ h1 .sub{display:block;font-size:.42em;font-family:"JetBrains Mono","SF Mono",mon
 @media(max-width:980px){.lede-grid{grid-template-columns:1fr}}
 
 /* ── SCORECARD ── */
-.scorecard{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.scorecard{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
 .sc{background:var(--bg);padding:20px 18px}
 .sc-region{font-family:"JetBrains Mono","SF Mono",monospace;font-size:10px;letter-spacing:.14em;color:var(--mute);text-transform:uppercase;margin-bottom:6px}
 .sc-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:12px;display:flex;align-items:center;gap:8px}
@@ -68,8 +66,8 @@ h1 .sub{display:block;font-size:.42em;font-family:"JetBrains Mono","SF Mono",mon
 .v-nai{color:var(--nai);font-weight:600}
 .v-sep{color:var(--mute2)}
 .badge{display:inline-block;padding:2px 6px;border-radius:3px;font-family:"JetBrains Mono","SF Mono",monospace;font-size:9.5px;font-weight:600;letter-spacing:.02em}
-.b-pos{background:var(--pos-s);color:var(--pos);border:1px solid rgba(106,191,114,.3)}
-.b-neg{background:var(--neg-s);color:var(--neg);border:1px solid rgba(217,95,79,.25)}
+.b-pos{background:var(--pos-s);color:var(--pos);border:1px solid rgba(42,138,62,.22)}
+.b-neg{background:var(--neg-s);color:var(--neg);border:1px solid rgba(192,57,43,.18)}
 .b-flat{background:rgba(180,176,168,.07);color:var(--mute);border:1px solid var(--line)}
 .b-ai{background:var(--ais);color:var(--ai);border:1px solid var(--ail)}
 .b-nai{background:var(--nais);color:var(--nai);border:1px solid var(--nail)}
@@ -81,7 +79,7 @@ section.last{border-bottom:none}
 .sec-num{font-family:"JetBrains Mono","SF Mono",monospace;font-size:10px;color:var(--mute);letter-spacing:.18em;margin-right:12px}
 .sec-title{font-size:22px;font-weight:600;letter-spacing:-.01em}
 .sec-hint{font-size:11.5px;color:var(--mute);font-family:"JetBrains Mono","SF Mono",monospace}
-.sec-summary{font-size:13px;color:var(--ink2);padding:9px 14px 9px 16px;border-left:2px solid var(--ail);background:rgba(232,150,42,.04);margin-bottom:22px;line-height:1.65;font-family:"JetBrains Mono","SF Mono",monospace}
+.sec-summary{font-size:13px;color:var(--ink2);padding:9px 14px 9px 16px;border-left:2px solid var(--ai);background:rgba(201,122,16,.06);margin-bottom:22px;line-height:1.65;font-family:"JetBrains Mono","SF Mono",monospace}
 .sec-summary .hi-ai{color:var(--ai);font-weight:500}
 .sec-summary .hi-nai{color:var(--nai);font-weight:500}
 .sec-summary .hi-n{color:var(--mute)}
@@ -94,7 +92,7 @@ section.last{border-bottom:none}
 /* ── GRIDS ── */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.panel{background:var(--bg);padding:22px}
+.panel{background:var(--bg);padding:22px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .panel-h{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;font-family:"JetBrains Mono","SF Mono",monospace;color:var(--mute);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
 .panel-h .title{display:inline-block}
 .panel-h .legend{margin-bottom:0;margin-left:auto;gap:12px;font-size:10px;color:var(--ink2);letter-spacing:0;text-transform:none;flex-shrink:0}
@@ -113,7 +111,7 @@ section.last{border-bottom:none}
 
 /* ── COMPARE CARDS ── */
 .cmp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-.cc{border:1px solid var(--line);background:var(--bg2);padding:15px}
+.cc{border:1px solid var(--line);background:var(--bg2);padding:15px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .cc-region{font-family:"JetBrains Mono","SF Mono",monospace;font-size:10px;color:var(--mute);letter-spacing:.13em;text-transform:uppercase;margin-bottom:9px}
 .cc-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px dashed var(--line)}
 .cc-row:last-child{border:none}
@@ -122,23 +120,23 @@ section.last{border-bottom:none}
 
 /* ── BID/BUDGET SECTION ── */
 .bb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-.bb-card{border:1px solid var(--line);background:var(--bg2);padding:15px}
+.bb-card{border:1px solid var(--line);background:var(--bg2);padding:15px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .bb-region{font-family:"JetBrains Mono","SF Mono",monospace;font-size:10px;color:var(--mute);letter-spacing:.13em;text-transform:uppercase;margin-bottom:10px}
 .bb-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line)}
 .bb-row:last-child{border:none}
 .bb-label{font-family:"JetBrains Mono","SF Mono",monospace;font-size:10.5px;color:var(--ink2)}
 .bb-vals{display:flex;align-items:center;gap:5px;font-family:"JetBrains Mono","SF Mono",monospace;font-size:11.5px}
 .bb-arrow{color:var(--mute2);font-size:10px}
-.bb-note{font-size:12px;color:var(--ink2);margin-top:12px;padding:8px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--line2)}
+.bb-note{font-size:12px;color:var(--ink2);margin-top:12px;padding:8px 10px;background:rgba(26,29,38,.03);border-left:2px solid var(--line2)}
 
 /* ── FUNNEL TABLE ── */
 .ftbl th.ft-step{text-align:left;color:var(--mute);min-width:110px}
-.ftbl th.ft-ai{color:var(--ai);background:rgba(232,150,42,.06)}
-.ftbl th.ft-nai{color:var(--nai);background:rgba(79,163,209,.06)}
+.ftbl th.ft-ai{color:var(--ai);background:rgba(201,122,16,.06)}
+.ftbl th.ft-nai{color:var(--nai);background:rgba(40,120,176,.06)}
 .ftbl td.ft-label{text-align:left;color:var(--ink2);font-weight:500}
-.ftbl td.ft-ai{color:var(--ai);background:rgba(232,150,42,.04)}
-.ftbl td.ft-nai{color:var(--nai);background:rgba(79,163,209,.04)}
-.ftbl td.ft-win{font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.2)}
+.ftbl td.ft-ai{color:var(--ai);background:rgba(201,122,16,.04)}
+.ftbl td.ft-nai{color:var(--nai);background:rgba(40,120,176,.04)}
+.ftbl td.ft-win{font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(26,29,38,.18)}
 .ftbl tr.ft-group td{padding:4px 11px 3px;font-size:9px;letter-spacing:.10em;text-transform:uppercase;color:var(--mute2);background:var(--bg3);border-top:1px solid var(--line2);text-align:left}
 .ftbl tr.ft-bottom td{border-top:1px solid var(--line2);font-weight:700;font-size:12px;padding-top:11px;padding-bottom:11px}
 
@@ -149,7 +147,7 @@ section.last{border-bottom:none}
 .dtbl th.lt{text-align:left}
 .dtbl td{text-align:right;padding:9px 11px;border-bottom:1px solid var(--line);color:var(--ink2);white-space:nowrap}
 .dtbl td.lt{text-align:left;color:var(--ink)}
-.dtbl tr:hover td{background:rgba(255,255,255,.013)}
+.dtbl tr:hover td{background:rgba(26,29,38,.03)}
 .dtbl .row-ai td.lt{border-left:2px solid var(--ai)}
 .dtbl .row-nai td.lt{border-left:2px solid var(--nai)}
 .dtbl .row-delta td{background:var(--bg3);font-size:9.5px;padding:4px 11px;color:var(--mute)}
@@ -437,15 +435,25 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   <div class="sec-summary"><span class="hi-ai">JP：AI入口贵但点击→安装率高55%（13% vs 8.4%），账号单价持平（$100/$102）；KR：低CPM×高CTR使CPC低50%（$2.2 vs $4.4），点击质量折损仍实现账号单价低21%</span>；<span class="hi-nai">NA：全链路指标基本等价，差异在后链路而非获客效率</span>；三地AI安装→账号率均系统性低于非AI（42/48/40% vs 47/54/44%）</div>
   <div class="g2">
     <div class="panel">
-      <div class="panel-h"><span class="title">账号单价 / 设备单价 (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h320"><canvas id="cUnit"></canvas></div>
+      <div class="panel-h"><span class="title">账号单价（USD）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cAccCPA"></canvas></div>
     </div>
     <div class="panel">
-      <div class="panel-h"><span class="title">CTR% (柱) / CVR% (线)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h280"><canvas id="cCtrCvr"></canvas></div>
+      <div class="panel-h"><span class="title">设备单价（USD）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cDevCPA"></canvas></div>
     </div>
   </div>
-  <div class="g3" style="margin-top:1px">
+  <div class="g2" style="margin-top:1px">
+    <div class="panel">
+      <div class="panel-h"><span class="title">CTR（点击率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cCtr"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="title">CVR（转化率）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cCvr"></canvas></div>
+    </div>
+  </div>
+  <div class="g2" style="margin-top:1px">
     <div class="panel">
       <div class="panel-h"><span class="title">CPM (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
       <div class="ch h240"><canvas id="cCpm"></canvas></div>
@@ -454,9 +462,15 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       <div class="panel-h"><span class="title">CPC (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
       <div class="ch h240"><canvas id="cCpc"></canvas></div>
     </div>
+  </div>
+  <div class="g2" style="margin-top:1px">
     <div class="panel">
-      <div class="panel-h"><span class="title">单次付费成本 / 单付费UV成本 (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h280"><canvas id="cPayCost"></canvas></div>
+      <div class="panel-h"><span class="title">单次支付成本（USD）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cPayOnce"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="title">单支付UV成本（USD）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h240"><canvas id="cPayUV"></canvas></div>
     </div>
   </div>
   <div class="cmp-cards">
@@ -553,12 +567,18 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   <div class="sec-summary"><span class="hi-ai">JP AI：ARPPU $84（非AI $50，+67%），新增LTV7 $14.5 vs $5.3，付费用户价值显著更高</span>；<span class="hi-nai">KR AI：7日留存高4.7pp（27.4% vs 22.7%），但ARPPU仅$25（非AI $39，−37%），LTV7低30%</span></div>
   <div class="g2">
     <div class="panel">
-      <div class="panel-h"><span class="title">新增 / 回流 7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h320"><canvas id="cRet"></canvas></div>
+      <div class="panel-h"><span class="title">新增7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h280"><canvas id="cRetNew"></canvas></div>
     </div>
     <div class="panel">
-      <div class="panel-h"><span class="title">ARPPU / 单付费UV成本 (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h320"><canvas id="cArppu"></canvas></div>
+      <div class="panel-h"><span class="title">回流7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h280"><canvas id="cRetRet"></canvas></div>
+    </div>
+  </div>
+  <div class="g2" style="margin-top:1px">
+    <div class="panel" style="grid-column:1 / -1">
+      <div class="panel-h"><span class="title">ARPPU (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h280"><canvas id="cArppu"></canvas></div>
     </div>
   </div>
   <div class="cmp-cards">
@@ -754,82 +774,147 @@ const BB={
 const REGS=['JP','KR','NA'];
 const LBL={JP:'JP·日本',KR:'KR·韩国',NA:'NA·北美'};
 const C={
-  ai:'#E8962A',nai:'#4FA3D1',
-  aiS:'rgba(232,150,42,.80)',naiS:'rgba(79,163,209,.75)',
-  aiL:'rgba(232,150,42,.45)',naiL:'rgba(79,163,209,.42)',
-  g:'rgba(255,255,255,.045)',tx:'#B8B4A8',mu:'#737880'
+  ai:'#C97A10',nai:'#2878B0',
+  aiS:'rgba(201,122,16,.85)',naiS:'rgba(40,120,176,.80)',
+  aiL:'rgba(201,122,16,.40)',naiL:'rgba(40,120,176,.38)',
+  g:'rgba(0,0,0,.07)',tx:'#4A5168',mu:'#8990A4'
 };
 
-const MF={family:'"JetBrains Mono","SF Mono","Menlo","Consolas",monospace',size:10};
-Chart.defaults.font={family:'-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif',size:11};
-Chart.defaults.color=C.tx;
-Chart.defaults.plugins.legend.labels={boxWidth:10,boxHeight:10,padding:12};
+const MF={family:'"JetBrains Mono","SF Mono","Menlo","Consolas",monospace',size:11};
+Chart.defaults.font={
+  family:'-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif',
+  size:12
+};
+Chart.defaults.color='#4A5168';
+Chart.defaults.plugins.legend.labels={boxWidth:10,boxHeight:10,padding:14,
+  font:{size:12}};
 Chart.defaults.plugins.tooltip={
-  backgroundColor:'#15171C',titleColor:'#EDEBE3',bodyColor:'#B8B4A8',
-  borderColor:'#262B36',borderWidth:1,padding:11,
+  backgroundColor:'#FFFFFF',
+  titleColor:'#1A1D26',
+  bodyColor:'#4A5168',
+  borderColor:'#DDE1EB',
+  borderWidth:1,
+  padding:11,
   bodyFont:MF,titleFont:{...MF,size:11}
 };
 
-const bG={grid:{color:C.g,drawTicks:false},ticks:{padding:7,color:C.tx,font:MF},border:{display:false}};
-const bX={grid:{display:false},ticks:{padding:7,color:C.tx,font:MF},border:{color:'#353C4A'}};
+const bG={
+  grid:{color:'rgba(0,0,0,.07)',drawTicks:false},
+  ticks:{padding:7,color:'#4A5168',font:{...MF,size:11}},
+  border:{display:false}
+};
+const bX={
+  grid:{display:false},
+  ticks:{padding:7,color:'#4A5168',font:{...MF,size:11}},
+  border:{color:'#C8CDD9'}
+};
 const LABS=REGS.map(r=>LBL[r]);
 const aa=k=>REGS.map(r=>R[r].AI[k]);
 const na=k=>REGS.map(r=>R[r].NAI[k]);
 function mk(id,cfg){const el=document.getElementById(id);if(el)new Chart(el,cfg);}
-function bar2(id,k,fmt,opts){
+function mergeScale(base,extra={}){
+  const baseTicks=base.ticks||{};
+  const extraTicks=extra.ticks||{};
+  return{
+    ...base,
+    ...extra,
+    grid:{...(base.grid||{}),...(extra.grid||{})},
+    ticks:{
+      ...baseTicks,
+      ...extraTicks,
+      font:{...(baseTicks.font||{}),...(extraTicks.font||{})}
+    },
+    border:{...(base.border||{}),...(extra.border||{})}
+  };
+}
+function legendCfg(extra={}){
+  const labels=extra.labels||{};
+  return{
+    position:'bottom',
+    ...extra,
+    labels:{
+      ...labels,
+      font:{size:11,...(labels.font||{})}
+    }
+  };
+}
+function tooltipCfg(labelCb,extra={}){
+  const callbacks=extra.callbacks||{};
+  return{
+    ...extra,
+    callbacks:{...callbacks,label:labelCb},
+    bodyFont:{size:12,...(extra.bodyFont||{})}
+  };
+}
+function bar2(id,k,fmt,opts={}){
+  const {
+    dataAI=aa(k),
+    dataNAI=na(k),
+    aiLabel='AI',
+    naiLabel='非AI',
+    scaleY={},
+    scaleX={},
+    barPercentage=.7,
+    categoryPercentage=.55
+  }=opts;
   mk(id,{type:'bar',data:{labels:LABS,datasets:[
-    {label:'AI',data:aa(k),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.55},
-    {label:'非AI',data:na(k),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.55}
-  ]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-    plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${fmt(c.parsed.y)}`}},legend:{position:'bottom'}},
-    ...opts}});
+    {label:aiLabel,data:dataAI,backgroundColor:C.aiS,barPercentage,categoryPercentage},
+    {label:naiLabel,data:dataNAI,backgroundColor:C.naiS,barPercentage,categoryPercentage}
+  ]},options:{responsive:true,maintainAspectRatio:false,
+    scales:{y:mergeScale(bG,scaleY),x:mergeScale(bX,scaleX)},
+    plugins:{
+      tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${fmt(c.parsed.y)}`),
+      legend:legendCfg()
+    }}});
 }
 
 // 01 规模
 mk('cSpend',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('花费'),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI',data:na('花费'),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString(undefined,{maximumFractionDigits:0})}`}},legend:{position:'bottom'}}}});
+]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString(undefined,{maximumFractionDigits:0})}`),legend:legendCfg()}}});
 const aiNewAcc=REGS.map(r=>Math.round(R[r].AI.总账号*R[r].AI.新增占比));
 const aiReturn=REGS.map(r=>Math.round(R[r].AI.总账号*R[r].AI.回流占比));
 const naiNewAcc=REGS.map(r=>Math.round(R[r].NAI.总账号*R[r].NAI.新增占比));
 const naiReturn=REGS.map(r=>Math.round(R[r].NAI.总账号*R[r].NAI.回流占比));
 mk('cVol',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·新增账号',data:aiNewAcc,backgroundColor:'rgba(232,150,42,.55)',stack:'ai',barPercentage:.55,categoryPercentage:.85},
-  {label:'AI·回流账号',data:aiReturn,backgroundColor:'rgba(232,150,42,.25)',stack:'ai',barPercentage:.55,categoryPercentage:.85},
-  {label:'非AI·新增账号',data:naiNewAcc,backgroundColor:'rgba(79,163,209,.60)',stack:'nai',barPercentage:.55,categoryPercentage:.85},
-  {label:'非AI·回流账号',data:naiReturn,backgroundColor:'rgba(79,163,209,.25)',stack:'nai',barPercentage:.55,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{...bX,stacked:true},y:{...bG,stacked:true}},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toLocaleString()}`}},legend:{position:'bottom'}}}});
+  {label:'AI·新增账号',data:aiNewAcc,backgroundColor:'rgba(201,122,16,.55)',stack:'ai',barPercentage:.55,categoryPercentage:.85},
+  {label:'AI·回流账号',data:aiReturn,backgroundColor:'rgba(201,122,16,.25)',stack:'ai',barPercentage:.55,categoryPercentage:.85},
+  {label:'非AI·新增账号',data:naiNewAcc,backgroundColor:'rgba(40,120,176,.60)',stack:'nai',barPercentage:.55,categoryPercentage:.85},
+  {label:'非AI·回流账号',data:naiReturn,backgroundColor:'rgba(40,120,176,.25)',stack:'nai',barPercentage:.55,categoryPercentage:.85}
+]},options:{responsive:true,maintainAspectRatio:false,scales:{x:mergeScale(bX,{stacked:true}),y:mergeScale(bG,{stacked:true})},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.y.toLocaleString()}`),legend:legendCfg()}}});
 
 // 02 效果 — profit: always use brand colors, negative gets lower opacity + border
 mk('cProfit',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('毛利'),
-    backgroundColor:REGS.map(r=>R[r].AI.毛利>=0?C.aiS:'rgba(232,150,42,.28)'),
-    borderColor:REGS.map(r=>R[r].AI.毛利>=0?'transparent':'rgba(232,150,42,.7)'),
+    backgroundColor:REGS.map(r=>R[r].AI.毛利>=0?C.aiS:'rgba(201,122,16,.22)'),
+    borderColor:REGS.map(r=>R[r].AI.毛利>=0?'transparent':'rgba(201,122,16,.55)'),
     borderWidth:REGS.map(r=>R[r].AI.毛利>=0?0:2),
     barPercentage:.7,categoryPercentage:.6},
   {label:'非AI',data:na('毛利'),
-    backgroundColor:REGS.map(r=>R[r].NAI.毛利>=0?C.naiS:'rgba(79,163,209,.28)'),
-    borderColor:REGS.map(r=>R[r].NAI.毛利>=0?'transparent':'rgba(79,163,209,.7)'),
+    backgroundColor:REGS.map(r=>R[r].NAI.毛利>=0?C.naiS:'rgba(40,120,176,.22)'),
+    borderColor:REGS.map(r=>R[r].NAI.毛利>=0?'transparent':'rgba(40,120,176,.55)'),
     borderWidth:REGS.map(r=>R[r].NAI.毛利>=0?0:2),
     barPercentage:.7,categoryPercentage:.6}
 ]},options:{responsive:true,maintainAspectRatio:false,
-  scales:{y:{...bG,grid:{...bG.grid,color:c=>c.tick.value===0?'#3A4050':C.g}},x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString(undefined,{maximumFractionDigits:0})}`}},legend:{position:'bottom'}}}});
+  scales:{y:mergeScale(bG,{grid:{color:c=>c.tick.value===0?'#C8CDD9':C.g}}),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString(undefined,{maximumFractionDigits:0})}`),legend:legendCfg()}}});
 
 // ROI曲线：3张独立图，每张仅 AI(橙) vs 非AI(蓝) 两条线
 function roiChart(id,reg){
   mk(id,{type:'line',data:{labels:['D1','D3','D7'],datasets:[
     {label:'AI',data:[R[reg].AI.ROI1,R[reg].AI.ROI3,R[reg].AI.ROI7],
-      borderColor:C.ai,backgroundColor:'rgba(232,150,42,.12)',fill:true,tension:.35,borderWidth:3,pointRadius:5,pointBackgroundColor:C.ai},
+      borderColor:C.ai,backgroundColor:'rgba(201,122,16,.10)',fill:true,tension:.35,borderWidth:3,pointRadius:5,pointBackgroundColor:C.ai},
     {label:'非AI',data:[R[reg].NAI.ROI1,R[reg].NAI.ROI3,R[reg].NAI.ROI7],
-      borderColor:C.nai,backgroundColor:'rgba(79,163,209,.10)',fill:true,tension:.35,borderWidth:3,borderDash:[6,3],pointRadius:5,pointBackgroundColor:C.nai,pointStyle:'rectRot'}
+      borderColor:C.nai,backgroundColor:'rgba(40,120,176,.08)',fill:true,tension:.35,borderWidth:3,borderDash:[6,3],pointRadius:5,pointBackgroundColor:C.nai,pointStyle:'rectRot'}
   ]},options:{responsive:true,maintainAspectRatio:false,
-    scales:{y:{...bG,ticks:{...bG.ticks,callback:v=>(v*100).toFixed(1)+'%'}},x:bX},
-    plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${(c.parsed.y*100).toFixed(2)}%`}},
-      legend:{position:'bottom',labels:{boxWidth:12,boxHeight:12,padding:14}}}}});}
+    scales:{y:mergeScale(bG,{ticks:{callback:v=>(v*100).toFixed(1)+'%'}}),x:mergeScale(bX)},
+    plugins:{
+      tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${(c.parsed.y*100).toFixed(2)}%`),
+      legend:legendCfg({labels:{boxWidth:12,boxHeight:12,padding:14}})
+    }}});}
 roiChart('cRoiJP','JP');
 roiChart('cRoiKR','KR');
 roiChart('cRoiNA','NA');
@@ -840,50 +925,33 @@ bar2('cLtvNew','新增LTV7',v=>'$'+v.toFixed(2));
 bar2('cLtvRet','回流LTV7',v=>'$'+v.toFixed(2));
 
 // 03 效率
-mk('cUnit',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·账号单价',data:aa('账号单价'),backgroundColor:C.aiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'AI·设备单价',data:aa('设备单价'),backgroundColor:C.aiL,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·账号单价',data:na('账号单价'),backgroundColor:C.naiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·设备单价',data:na('设备单价'),backgroundColor:C.naiL,barPercentage:.45,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}`}},legend:{position:'bottom'}}}});
-mk('cCtrCvr',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·CTR',data:aa('CTR').map(v=>v*100),backgroundColor:C.aiS,barPercentage:.5,categoryPercentage:.7,yAxisID:'y'},
-  {label:'非AI·CTR',data:na('CTR').map(v=>v*100),backgroundColor:C.naiS,barPercentage:.5,categoryPercentage:.7,yAxisID:'y'},
-  {label:'AI·CVR',data:aa('CVR').map(v=>v*100),type:'line',borderColor:C.ai,backgroundColor:C.ai,borderWidth:2.5,pointRadius:5,yAxisID:'y1',tension:.3},
-  {label:'非AI·CVR',data:na('CVR').map(v=>v*100),type:'line',borderColor:C.nai,backgroundColor:C.nai,borderWidth:2,pointStyle:'rectRot',pointRadius:5,yAxisID:'y1',tension:.3,borderDash:[5,3]}
-]},options:{responsive:true,maintainAspectRatio:false,
-  scales:{
-    y:{...bG,position:'left',ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'}},
-    y1:{...bG,position:'right',grid:{display:false},ticks:{...bG.ticks,callback:v=>v.toFixed(3)+'%'}},
-    x:bX
-  },plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(3)}%`}},legend:{position:'bottom'}}}});
+bar2('cAccCPA','账号单价',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
+bar2('cDevCPA','设备单价',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
+bar2('cCtr','CTR',v=>(v*100).toFixed(3)+'%',{
+  scaleY:{ticks:{callback:v=>(v*100).toFixed(2)+'%'}}
+});
+bar2('cCvr','CVR',v=>(v*100).toFixed(3)+'%',{
+  scaleY:{ticks:{callback:v=>(v*100).toFixed(3)+'%'}}
+});
 bar2('cCpm','CPM',v=>'$'+v.toFixed(2));
 bar2('cCpc','CPC',v=>'$'+v.toFixed(2));
-mk('cPayCost',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·单次付费',data:aa('单次付费'),backgroundColor:C.aiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'AI·单付费UV',data:aa('单付费UV'),backgroundColor:C.aiL,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·单次付费',data:na('单次付费'),backgroundColor:C.naiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·单付费UV',data:na('单付费UV'),backgroundColor:C.naiL,barPercentage:.45,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}`}},legend:{position:'bottom'}}}});
+bar2('cPayOnce','单次付费',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
+bar2('cPayUV','单付费UV',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 
 // 04 用户质量
-mk('cRet',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·新增7日留',data:aa('新增7日留').map(v=>v*100),backgroundColor:C.aiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·新增7日留',data:na('新增7日留').map(v=>v*100),backgroundColor:C.naiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'AI·回流7日留',data:aa('回流7日留').map(v=>v*100),backgroundColor:C.aiL,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·回流7日留',data:na('回流7日留').map(v=>v*100),backgroundColor:C.naiL,barPercentage:.45,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,
-  scales:{y:{...bG,ticks:{...bG.ticks,callback:v=>v.toFixed(0)+'%'}},x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(1)}%`}},legend:{position:'bottom'}}}});
+bar2('cRetNew','新增7日留',v=>(v*100).toFixed(1)+'%',{
+  scaleY:{ticks:{callback:v=>(v*100).toFixed(0)+'%'}},
+  categoryPercentage:.6
+});
+bar2('cRetRet','回流7日留',v=>(v*100).toFixed(1)+'%',{
+  scaleY:{ticks:{callback:v=>(v*100).toFixed(0)+'%'}},
+  categoryPercentage:.6
+});
 mk('cArppu',{type:'bar',data:{labels:LABS,datasets:[
-  {label:'AI·ARPPU',data:aa('ARPPU'),backgroundColor:C.aiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'AI·单付费UV',data:aa('单付费UV'),backgroundColor:C.aiL,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·ARPPU',data:na('ARPPU'),backgroundColor:C.naiS,barPercentage:.45,categoryPercentage:.85},
-  {label:'非AI·单付费UV',data:na('单付费UV'),backgroundColor:C.naiL,barPercentage:.45,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}`}},legend:{position:'bottom'}}}});
+  {label:'AI·ARPPU',data:aa('ARPPU'),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI·ARPPU',data:na('ARPPU'),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
+]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}`),legend:legendCfg()}}});
 
 // 05 出价/预算
 const bidLabs=['JP AI','JP 非AI','KR AI','KR 非AI','NA AI','NA 非AI'];
@@ -896,27 +964,27 @@ const bidBgCurr=[C.aiS,C.naiS,C.aiS,C.naiS,C.aiS,C.naiS];
 mk('cBid',{type:'bar',data:{labels:bidLabs,datasets:[
   {label:'初始出价',data:bidInit,backgroundColor:bidBgInit,barPercentage:.55,categoryPercentage:.85},
   {label:'当前出价',data:bidCurr,backgroundColor:bidBgCurr,barPercentage:.55,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:{...bG,ticks:{...bG.ticks,callback:v=>v+'%'}},x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}%`}},legend:{position:'bottom'}}}});
+]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG,{ticks:{callback:v=>v+'%'}}),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.y}%`),legend:legendCfg()}}});
 mk('cBudget',{type:'bar',data:{labels:bidLabs,datasets:[
   {label:'初始预算',data:budInit,backgroundColor:bidBgInit,barPercentage:.55,categoryPercentage:.85},
   {label:'当前预算',data:budCurr,backgroundColor:bidBgCurr,barPercentage:.55,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString()}`}},legend:{position:'bottom'}}}});
+]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString()}`),legend:legendCfg()}}});
 // 素材跑出率/数量
 mk('cMatRate',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI 跑出率',data:REGS.map(r=>BB[r].AI.mat_r*100),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI 跑出率',data:REGS.map(r=>BB[r].NAI.mat_r*100),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
 ]},options:{responsive:true,maintainAspectRatio:false,
-  scales:{y:{...bG,ticks:{...bG.ticks,callback:v=>v.toFixed(2)+'%'}},x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}%`}},legend:{position:'bottom'}}}});
+  scales:{y:mergeScale(bG,{ticks:{callback:v=>v.toFixed(2)+'%'}}),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}%`),legend:legendCfg()}}});
 mk('cMatCount',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI 素材总数',data:REGS.map(r=>BB[r].AI.mat_t),backgroundColor:C.aiL,barPercentage:.45,categoryPercentage:.85},
   {label:'AI 跑出数',data:REGS.map(r=>BB[r].AI.mat_h),backgroundColor:C.aiS,barPercentage:.45,categoryPercentage:.85},
   {label:'非AI 素材总数',data:REGS.map(r=>BB[r].NAI.mat_t),backgroundColor:C.naiL,barPercentage:.45,categoryPercentage:.85},
   {label:'非AI 跑出数',data:REGS.map(r=>BB[r].NAI.mat_h),backgroundColor:C.naiS,barPercentage:.45,categoryPercentage:.85}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:bG,x:bX},
-  plugins:{tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}`}},legend:{position:'bottom'}}}});
+]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
+  plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.y}`),legend:legendCfg()}}});
 
 // 06 数据表
 const METRICS=[
