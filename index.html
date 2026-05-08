@@ -217,21 +217,17 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <span class="sub">问题分析 · JP · KR · NA（北美）&nbsp;|&nbsp; 数据截至 2026-05-07</span>
   </h1>
   <div class="lede-grid">
+    <div class="lede-card" style="grid-column:span 2;border-left-color:var(--neg)">
+      <div class="lede-tag">综合结论</div>
+      <div class="lede-body">排除 4/26 大R 影响后，<b>AI 三地效果目前无明显优势</b>——JP 略优（ROI7 8.6% vs 6.0%），KR 接近（6.4% vs 6.8%，非AI微领先），NA 较差（13.1% vs 15.0%，AI 落后非AI 15%）。三地毛利均为负值，规模差异仍显著。</div>
+    </div>
     <div class="lede-card" style="border-left-color:var(--neg)">
-      <div class="lede-tag">问题 01 · 素材</div>
-      <div class="lede-body">AI 三地区素材跑出率 <b>0–0.56%</b>，709条素材仅4条起量；非AI跑出率高出 <b>8–13×</b>。平台素材分发机制基本失效。</div>
+      <div class="lede-tag">问题 01 · 素材跑出率</div>
+      <div class="lede-body">AI 三地素材跑出率 <b>0–0.56%</b>（4/3/0条），非AI <b>1.85–4.69%</b>（30/19/6条），差距 <b>8–13×</b>；AI 每地仅 1 个广告计划（非AI 2个），素材分发与筛选机制存在根本差距。NA AI 0条跑出，分发完全失效。</div>
     </div>
     <div class="lede-card" style="border-left-color:var(--neg)">
       <div class="lede-tag">问题 02 · 获客质量</div>
-      <div class="lede-body">AI 安装→账号率三地系统性偏低（39/45/39% vs 46/53/44%）；KR AI ARPPU <b>$25 vs 非AI $39</b>（−37%），新增LTV7 低30%。</div>
-    </div>
-    <div class="lede-card" style="border-left-color:var(--neg)">
-      <div class="lede-tag">问题 03 · NA 回报</div>
-      <div class="lede-body">NA AI 花费占比 <b>41.4%</b>（三地最高），ROI7 却落后非AI（13.1% vs 15.0%），毛利 −$1.2K vs 非AI +$4.3K。</div>
-    </div>
-    <div class="lede-card" style="border-left-color:var(--neg)">
-      <div class="lede-tag">待验证 · JP</div>
-      <div class="lede-body">JP AI ROI7 含大R <b>12.8%</b>（非AI 6.1%，+110%）；排除 4/26 大R 后降至 <b>8.6%</b>（非AI 6.0%，+43%）；新增LTV7 AI $4.3 低于非AI $5.6，<b>AI 拉新质量不具备优势</b>。</div>
+      <div class="lede-body">AI 前端成本具备优势（KR CPM $11.7 vs $15.1，CPC $2.2 vs $4.4），但<b>点击→安装率仅 7.1%</b>（非AI 10.0%），安装→账号率三地系统性偏低（42/48/40% vs 47/54/44%）。AI 受众学习可能过于宽泛，买入大量非目标付费人群，导致安装质量差、LTV 偏低。</div>
     </div>
   </div>
 
@@ -276,7 +272,10 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     <div><span class="sec-num">01</span><span class="sec-title">素材效率失效</span></div>
     <div class="sec-hint">AI 平台素材分发机制核心问题</div>
   </div>
-  <div class="sec-summary"><span class="hi-nai">AI 三地区累计投入素材 709 / 784 / 683 条，实际起量仅 4 / 3 / 0 条，跑出率 <b>0.56% / 0.38% / 0%</b>；非AI 跑出率 4.69% / 1.85% / 0.21%，高出 <b>8–13 倍</b>。</span>根因：单计划素材过多、广告组层级缺乏开关调整机制、素材筛选逻辑与实际效果脱节。</div>
+  <div class="sec-summary">
+    <span class="hi-nai">AI 三地区素材投入 709 / 784 / 683 条，实际跑出 4 / 3 / 0 条，跑出率 <b>0.56% / 0.38% / 0%</b>；非AI 跑出率 4.69% / 1.85% / 0.21%，高出 <b>8–13 倍</b>。</span>
+    AI 三地每地仅 1 个广告计划（非AI 2个），广告组数相近（14–19 vs 17–20），说明问题不在组数配置，而在<b>单计划素材量过大</b>（最高 784 条）及<b>平台分发机制效率低</b>。NA AI 0 条跑出，分发完全失效。
+  </div>
   <div class="g2">
     <div class="panel">
       <div class="panel-h"><span class="title">素材跑出率（AI vs 非AI）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
@@ -335,10 +334,67 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     </div>
   </div>
   <div class="ph-row">
-    <div class="ph-card">
-      <div class="ph-badge">⏳ 数据拉取中</div>
-      <div class="ph-title">单计划素材数 / 广告组数对比</div>
-      <div class="ph-desc">AI vs 非AI 单广告计划内的素材数量分布、广告组数配置对比。数据拉取中，待补充。</div>
+    <div class="panel" style="border:1px solid var(--line)">
+      <div class="panel-h">
+        <span class="title">广告计划 / 组数 · 素材配置对比</span>
+        <span class="legend">
+          <span><span class="dot dot-ai"></span>AI</span>
+          <span><span class="dot dot-nai"></span>非AI</span>
+        </span>
+      </div>
+      <table class="dtbl ftbl">
+        <thead>
+          <tr>
+            <th>地区</th><th>类型</th><th>广告计划数</th><th>广告组数</th>
+            <th>素材总数</th><th>素材跑出数</th><th>素材跑出率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2">JP</td>
+            <td class="ft-ai">AI</td>
+            <td class="ft-ai">1</td><td class="ft-ai">14</td>
+            <td class="ft-ai">709</td><td class="ft-ai">4</td>
+            <td class="ft-ai">0.56%</td>
+          </tr>
+          <tr>
+            <td class="ft-nai">非AI</td>
+            <td class="ft-nai ft-win">2</td><td class="ft-nai ft-win">20</td>
+            <td class="ft-nai">639</td><td class="ft-nai ft-win">30</td>
+            <td class="ft-nai ft-win">4.69%</td>
+          </tr>
+          <tr>
+            <td rowspan="2">KR</td>
+            <td class="ft-ai">AI</td>
+            <td class="ft-ai">1</td><td class="ft-ai ft-win">19</td>
+            <td class="ft-ai">784</td><td class="ft-ai">3</td>
+            <td class="ft-ai">0.38%</td>
+          </tr>
+          <tr>
+            <td class="ft-nai">非AI</td>
+            <td class="ft-nai ft-win">2</td><td class="ft-nai">17</td>
+            <td class="ft-nai ft-win">1025</td><td class="ft-nai ft-win">19</td>
+            <td class="ft-nai ft-win">1.85%</td>
+          </tr>
+          <tr>
+            <td rowspan="2">NA</td>
+            <td class="ft-ai">AI</td>
+            <td class="ft-ai">1</td><td class="ft-ai ft-win">19</td>
+            <td class="ft-ai">683</td>
+            <td class="ft-ai" style="color:var(--neg);font-weight:600">0</td>
+            <td class="ft-ai" style="color:var(--neg);font-weight:600">0.00%</td>
+          </tr>
+          <tr>
+            <td class="ft-nai">非AI</td>
+            <td class="ft-nai ft-win">2</td><td class="ft-nai ft-win">20</td>
+            <td class="ft-nai ft-win">2793</td><td class="ft-nai ft-win">6</td>
+            <td class="ft-nai ft-win">0.21%</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:10px;font-size:11px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace;line-height:1.6">
+        AI 三地均仅 1 个广告计划（非AI 2个）；素材跑出率差距 8–13×；NA AI 无一素材跑出，分发机制完全失效。
+      </div>
     </div>
   </div>
 </section>
