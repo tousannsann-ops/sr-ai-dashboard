@@ -421,10 +421,58 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
 </section>
 
-<!-- ══ 02 JP 表现评估（有条件） ══ -->
+<!-- ══ 02 获客质量劣化 ══ -->
 <section>
   <div class="sec-head">
-    <div><span class="sec-num">02</span><span class="sec-title">JP 表现评估</span></div>
+    <div><span class="sec-num">02</span><span class="sec-title">获客质量劣化</span></div>
+    <div class="sec-hint">安装→账号 / ARPPU / LTV7</div>
+  </div>
+  <div class="sec-summary">（与 Section 01 素材/链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（39/45/39% vs 46/53/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 03 大R风险说明。</div>
+  <div class="g2">
+    <div class="panel">
+      <div class="panel-h"><span class="title">新增7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cRetNew"></canvas></div>
+    </div>
+    <div class="panel">
+      <div class="panel-h"><span class="title">回流7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cRetRet"></canvas></div>
+    </div>
+  </div>
+  <div class="g2" style="margin-top:1px">
+    <div class="panel" style="grid-column:1 / -1">
+      <div class="panel-h"><span class="title">ARPPU (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h280"><canvas id="cArppu"></canvas></div>
+    </div>
+  </div>
+  <div class="cmp-cards">
+    <div class="cc">
+      <div class="cc-region">JP · 日本</div>
+      <div class="cc-row"><span class="cc-label">新增7日留</span><div class="cc-right"><span class="v-ai">25.7%</span><span class="v-sep">/</span><span class="v-nai">29.2%</span><span class="badge b-neg">AI −3.5pp</span></div></div>
+      <div class="cc-row"><span class="cc-label">回流7日留</span><div class="cc-right"><span class="v-ai">40.0%</span><span class="v-sep">/</span><span class="v-nai">32.8%</span><span class="badge b-pos">AI +7.2pp</span></div></div>
+      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$84</span><span class="v-sep">/</span><span class="v-nai">$50</span><span class="badge b-pos">AI +67%</span></div></div>
+      <div class="cc-row"><span class="cc-label">新增占比</span><div class="cc-right"><span class="v-ai">66%</span><span class="v-sep">/</span><span class="v-nai">69%</span><span class="badge b-flat">相近</span></div></div>
+    </div>
+    <div class="cc">
+      <div class="cc-region">KR · 韩国</div>
+      <div class="cc-row"><span class="cc-label">新增7日留</span><div class="cc-right"><span class="v-ai">27.4%</span><span class="v-sep">/</span><span class="v-nai">22.7%</span><span class="badge b-pos">AI +4.7pp</span></div></div>
+      <div class="cc-row"><span class="cc-label">回流7日留</span><div class="cc-right"><span class="v-ai">29.6%</span><span class="v-sep">/</span><span class="v-nai">28.3%</span><span class="badge b-flat">相近</span></div></div>
+      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$25</span><span class="v-sep">/</span><span class="v-nai">$39</span><span class="badge b-neg">AI −37%</span></div></div>
+      <div class="cc-row"><span class="cc-label">新增占比</span><div class="cc-right"><span class="v-ai">67%</span><span class="v-sep">/</span><span class="v-nai">64%</span><span class="badge b-flat">相近</span></div></div>
+    </div>
+    <div class="cc">
+      <div class="cc-region">NA · 北美</div>
+      <div class="cc-row"><span class="cc-label">新增7日留</span><div class="cc-right"><span class="v-ai">12.0%</span><span class="v-sep">/</span><span class="v-nai">13.0%</span><span class="badge b-flat">相近</span></div></div>
+      <div class="cc-row"><span class="cc-label">回流7日留</span><div class="cc-right"><span class="v-ai">26.3%</span><span class="v-sep">/</span><span class="v-nai">24.8%</span><span class="badge b-flat">相近</span></div></div>
+      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$44</span><span class="v-sep">/</span><span class="v-nai">$46</span><span class="badge b-flat">相近</span></div></div>
+      <div class="cc-row"><span class="cc-label">新增占比</span><div class="cc-right"><span class="v-ai">66%</span><span class="v-sep">/</span><span class="v-nai">67%</span><span class="badge b-flat">相近</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 JP 表现评估（有条件） ══ -->
+<section>
+  <div class="sec-head">
+    <div><span class="sec-num">03</span><span class="sec-title">JP 表现评估</span></div>
     <div class="sec-hint">领先数据背后的前提条件</div>
   </div>
   <div class="sec-summary">JP AI ROI7 含大R 12.8%，排除大R后降至 8.6%（−34%），毛利含大R −$1K → 去大R −$8K；新增LTV7 AI $4.3 低于非AI $5.6——AI 拉新质量不具备真实优势。规模仍不对等（AI $43K vs 非AI $283K）。</div>
@@ -482,10 +530,10 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
 </section>
 
-<!-- ══ 03 链路效率深挖 ══ -->
+<!-- ══ 04 链路效率深挖 ══ -->
 <section>
   <div class="sec-head">
-    <div><span class="sec-num">03</span><span class="sec-title">链路效率深挖</span></div>
+    <div><span class="sec-num">04</span><span class="sec-title">链路效率深挖</span></div>
     <div class="sec-hint">曝光 → 点击 → 安装 → 账号</div>
   </div>
   <div class="sec-summary">KR AI 入口效率有优势：CPM $11.7（非AI $15.1），CTR 0.53%（非AI 0.34%），CPC <span class="hi-ai">$2.2 vs $4.4</span>（低50%）；但 <span class="hi-nai">点击→安装率 KR 仅 7.6%（非AI 10.2%），三地安装→账号率均系统性偏低（39/45/39% vs 46/53/44%）</span>。前端低价流量与后端低转化并存，指向同一根因：<b>AI 受众学习可能过于宽泛，采买了大量非目标付费人群</b>，导致安装质量差、账号激活率低、LTV 偏低。</div>
@@ -570,10 +618,10 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   </div>
 </section>
 
-<!-- ══ 04 NA：高消耗低回报 ══ -->
+<!-- ══ 05 NA：高消耗低回报 ══ -->
 <section>
   <div class="sec-head">
-    <div><span class="sec-num">04</span><span class="sec-title">NA：高消耗低回报</span></div>
+    <div><span class="sec-num">05</span><span class="sec-title">NA：高消耗低回报</span></div>
     <div class="sec-hint">花费占比最高，回报最差</div>
   </div>
   <div class="sec-summary">NA AI 花费 $34,824，占 NA 总花费 <span class="hi-nai"><b>41.4%</b></span>（三地最高）；ROI7 <b>13.1%</b> 落后非AI 15.0%，毛利 <b>−$1,203</b> vs 非AI <b>+$4,314</b>；账号单价（$29/$29）和设备单价（$12/$13）与非AI几乎相同，说明 NA 的劣势不在获客成本，而在<span class="hi-nai">用户后续回收能力</span>。</div>
@@ -617,54 +665,6 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       <div class="cc-row"><span class="cc-label">ROI365</span><div class="cc-right"><span class="v-ai">0.951</span><span class="v-sep">/</span><span class="v-nai">1.102</span><span class="badge b-neg">AI −14%</span></div></div>
       <div class="cc-row"><span class="cc-label">新增/回流LTV7</span><div class="cc-right"><span class="v-ai">$2.9/$6.2</span><span class="v-sep">/</span><span class="v-nai">$2.8/$7.8</span></div></div>
       <div class="cc-row"><span class="cc-label">毛利</span><div class="cc-right"><span class="v-ai" style="color:var(--neg)">−$1,203</span><span class="v-sep">/</span><span class="v-nai" style="color:var(--pos)">+$4,314</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 05 获客质量劣化 ══ -->
-<section>
-  <div class="sec-head">
-    <div><span class="sec-num">05</span><span class="sec-title">获客质量劣化</span></div>
-    <div class="sec-hint">安装→账号 / ARPPU / LTV7</div>
-  </div>
-  <div class="sec-summary">（与 Section 01 素材/链路数据共同指向：<b>AI 受众定向精度不足，采买了过泛人群</b>，拉来的用户激活和付费意愿均偏低。）<span class="hi-nai"> KR 最突出：AI ARPPU <b>$25</b> vs 非AI <b>$39</b>（<b>−37%</b>），新增 LTV7 $3.9 vs $5.6（<b>−30%</b>）；7日留存率虽高 4.7pp，但付费能力差。</span>三地安装→账号率均低于非AI（39/45/39% vs 46/53/44%）。JP AI ARPPU $84 领先（+67%），但见 Section 02 大R风险说明。</div>
-  <div class="g2">
-    <div class="panel">
-      <div class="panel-h"><span class="title">新增7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h200"><canvas id="cRetNew"></canvas></div>
-    </div>
-    <div class="panel">
-      <div class="panel-h"><span class="title">回流7日留存率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h200"><canvas id="cRetRet"></canvas></div>
-    </div>
-  </div>
-  <div class="g2" style="margin-top:1px">
-    <div class="panel" style="grid-column:1 / -1">
-      <div class="panel-h"><span class="title">ARPPU (USD)</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h280"><canvas id="cArppu"></canvas></div>
-    </div>
-  </div>
-  <div class="cmp-cards">
-    <div class="cc">
-      <div class="cc-region">JP · 日本</div>
-      <div class="cc-row"><span class="cc-label">新增7日留</span><div class="cc-right"><span class="v-ai">25.7%</span><span class="v-sep">/</span><span class="v-nai">29.2%</span><span class="badge b-neg">AI −3.5pp</span></div></div>
-      <div class="cc-row"><span class="cc-label">回流7日留</span><div class="cc-right"><span class="v-ai">40.0%</span><span class="v-sep">/</span><span class="v-nai">32.8%</span><span class="badge b-pos">AI +7.2pp</span></div></div>
-      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$84</span><span class="v-sep">/</span><span class="v-nai">$50</span><span class="badge b-pos">AI +67%</span></div></div>
-      <div class="cc-row"><span class="cc-label">新增占比</span><div class="cc-right"><span class="v-ai">66%</span><span class="v-sep">/</span><span class="v-nai">69%</span><span class="badge b-flat">相近</span></div></div>
-    </div>
-    <div class="cc">
-      <div class="cc-region">KR · 韩国</div>
-      <div class="cc-row"><span class="cc-label">新增7日留</span><div class="cc-right"><span class="v-ai">27.4%</span><span class="v-sep">/</span><span class="v-nai">22.7%</span><span class="badge b-pos">AI +4.7pp</span></div></div>
-      <div class="cc-row"><span class="cc-label">回流7日留</span><div class="cc-right"><span class="v-ai">29.6%</span><span class="v-sep">/</span><span class="v-nai">28.3%</span><span class="badge b-flat">相近</span></div></div>
-      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$25</span><span class="v-sep">/</span><span class="v-nai">$39</span><span class="badge b-neg">AI −37%</span></div></div>
-      <div class="cc-row"><span class="cc-label">新增占比</span><div class="cc-right"><span class="v-ai">67%</span><span class="v-sep">/</span><span class="v-nai">64%</span><span class="badge b-flat">相近</span></div></div>
-    </div>
-    <div class="cc">
-      <div class="cc-region">NA · 北美</div>
-      <div class="cc-row"><span class="cc-label">新增7日留</span><div class="cc-right"><span class="v-ai">12.0%</span><span class="v-sep">/</span><span class="v-nai">13.0%</span><span class="badge b-flat">相近</span></div></div>
-      <div class="cc-row"><span class="cc-label">回流7日留</span><div class="cc-right"><span class="v-ai">26.3%</span><span class="v-sep">/</span><span class="v-nai">24.8%</span><span class="badge b-flat">相近</span></div></div>
-      <div class="cc-row"><span class="cc-label">ARPPU</span><div class="cc-right"><span class="v-ai">$44</span><span class="v-sep">/</span><span class="v-nai">$46</span><span class="badge b-flat">相近</span></div></div>
-      <div class="cc-row"><span class="cc-label">新增占比</span><div class="cc-right"><span class="v-ai">66%</span><span class="v-sep">/</span><span class="v-nai">67%</span><span class="badge b-flat">相近</span></div></div>
     </div>
   </div>
 </section>
