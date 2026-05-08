@@ -1253,7 +1253,8 @@ mk('cMatPerPlan',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:[709,784,683],backgroundColor:C.ai,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI',data:[320,513,1397],backgroundColor:C.nai,barPercentage:.7,categoryPercentage:.6}
 ]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-  scales:{x:mergeScale(bG),y:mergeScale(bX)},
+  layout:{padding:{right:48}},
+  scales:{x:mergeScale(bG,{max:1600}),y:mergeScale(bX)},
   plugins:{
     tooltip:tooltipCfg(c=>` ${c.dataset.label}: ${c.parsed.x}条/计划`),
     legend:legendCfg(),
