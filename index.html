@@ -564,112 +564,103 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <section>
   <div class="sec-head">
     <div><span class="sec-num">04</span><span class="sec-title">素材质量</span></div>
-    <div class="sec-hint">跑出率 / 单计划素材量 / 分类型 CTR-CPM-CVR</div>
+    <div class="sec-hint">跑出率 / 单素材消耗 / 有花费素材数 / 分类型 CTR-CVR-CPM</div>
   </div>
   <div class="sec-summary">
-    <span class="hi-nai">AI 三地区素材投入 674 / 758 / 616 条，实际跑出 4 / 3 / 0 条，跑出率 <b>0.59% / 0.40% / 0%</b>；非AI 跑出率 5.39% / 4.11% / 1.32%，JP/KR 高出 <b>9–10 倍</b>；NA AI 0 条跑出。</span>
-    AI 三地每地仅 1 个广告系列，广告组数相近（14–19 vs 17–20），说明问题不在计划数或组数，而在<b>单系列素材量过大</b>（最高 758 条）导致<b>平台分发效率大幅降低</b>。NA AI 0 条跑出，分发完全失效。
+    AI 单素材平均消耗 <b>$57–65</b>（非AI <b>$108–605</b>），差距 3–10 倍，全面低于跑出标准 <b>$500/条</b>；有花费素材数 <b>4 / 3 / 0</b> 条（非AI 30 / 19 / 6），跑出率 <b>0–0.59%</b> vs 非AI <b>1.32–5.39%</b>，<span class="hi-neg">NA AI 0 条跑出</span>，分发完全失效。根本原因：单系列 616–758 条素材同时冷启，预算被高度稀释，平台无法筛选出有效素材。分类型来看：图片 AI 在 JP/NA CTR 有优势；视频 AI 仅 KR 领先，NA 大幅落后非AI（0.40% vs 1.66%）。
   </div>
-  <div class="g2">
+  <!-- 核心指标汇总表 -->
+  <div class="panel">
+    <div class="panel-h"><span class="title">素材核心指标对比</span><span class="badge b-neg">AI 单素材消耗全面低于跑出标准</span></div>
+    <table class="cfg-table" style="width:100%;margin-top:0">
+      <thead><tr>
+        <th>地区</th><th>类型</th>
+        <th style="text-align:right">总素材数</th>
+        <th style="text-align:right">有花费素材</th>
+        <th style="text-align:right">跑出率</th>
+        <th style="text-align:right">总花费</th>
+        <th style="text-align:right">单素材消耗</th>
+        <th style="text-align:right">vs 标准 $500</th>
+      </tr></thead>
+      <tbody>
+        <tr style="background:#FEF9F0">
+          <td style="text-align:left;font-weight:700">JP</td>
+          <td><span style="color:var(--ai);font-weight:600">AI</span></td>
+          <td style="text-align:right">674</td><td style="text-align:right">4</td>
+          <td style="text-align:right;color:var(--neg);font-weight:700">0.59%</td>
+          <td style="text-align:right">$43,238</td>
+          <td style="text-align:right;color:var(--neg);font-weight:700">$64</td>
+          <td style="text-align:right;color:var(--neg)">仅 13%</td>
+        </tr>
+        <tr style="background:#F0F6FC">
+          <td></td>
+          <td><span style="color:var(--nai);font-weight:600">非AI</span></td>
+          <td style="text-align:right">557</td><td style="text-align:right">30</td>
+          <td style="text-align:right;color:var(--pos);font-weight:600">5.39%</td>
+          <td style="text-align:right">$283,447</td>
+          <td style="text-align:right;color:var(--pos);font-weight:600">$509</td>
+          <td style="text-align:right;color:var(--pos)">✓ 已达标</td>
+        </tr>
+        <tr style="background:#FEF9F0">
+          <td style="text-align:left;font-weight:700">KR</td>
+          <td><span style="color:var(--ai);font-weight:600">AI</span></td>
+          <td style="text-align:right">758</td><td style="text-align:right">3</td>
+          <td style="text-align:right;color:var(--neg);font-weight:700">0.40%</td>
+          <td style="text-align:right">$47,519</td>
+          <td style="text-align:right;color:var(--neg);font-weight:700">$63</td>
+          <td style="text-align:right;color:var(--neg)">仅 13%</td>
+        </tr>
+        <tr style="background:#F0F6FC">
+          <td></td>
+          <td><span style="color:var(--nai);font-weight:600">非AI</span></td>
+          <td style="text-align:right">462</td><td style="text-align:right">19</td>
+          <td style="text-align:right;color:var(--pos);font-weight:600">4.11%</td>
+          <td style="text-align:right">$279,410</td>
+          <td style="text-align:right;color:var(--pos);font-weight:600">$605</td>
+          <td style="text-align:right;color:var(--pos)">✓ 已达标</td>
+        </tr>
+        <tr style="background:#FEF9F0">
+          <td style="text-align:left;font-weight:700">NA</td>
+          <td><span style="color:var(--ai);font-weight:600">AI</span></td>
+          <td style="text-align:right">616</td><td style="text-align:right">0</td>
+          <td style="text-align:right;color:var(--neg);font-weight:700">0.00%</td>
+          <td style="text-align:right">$34,824</td>
+          <td style="text-align:right;color:var(--neg);font-weight:700">$57</td>
+          <td style="text-align:right;color:var(--neg)">仅 11%</td>
+        </tr>
+        <tr style="background:#F0F6FC">
+          <td></td>
+          <td><span style="color:var(--nai);font-weight:600">非AI</span></td>
+          <td style="text-align:right">455</td><td style="text-align:right">6</td>
+          <td style="text-align:right;color:var(--pos);font-weight:600">1.32%</td>
+          <td style="text-align:right">$49,325</td>
+          <td style="text-align:right;color:var(--pos);font-weight:600">$108</td>
+          <td style="text-align:right">达标 22%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:10px;font-size:12px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace">* 跑出标准：单素材花费累计 ≥ $500（来源：KM 诊断框架）；单素材消耗 = 总花费 / 总素材数</div>
+  </div>
+  <!-- 跑出率 + 单素材消耗图表 -->
+  <div class="g2" style="margin-top:1px">
     <div class="panel">
-      <div class="panel-h"><span class="title">素材跑出率（AI vs 非AI）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="panel-h"><span class="title">素材跑出率</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
       <div class="ch h200"><canvas id="cMatRate"></canvas></div>
     </div>
     <div class="panel">
-      <div class="panel-h"><span class="title">单计划素材数（AI vs 非AI）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
-      <div class="ch h200"><canvas id="cMatPerPlan"></canvas></div>
+      <div class="panel-h"><span class="title">单素材消耗（总花费÷总素材数）</span><span class="legend"><span><span class="dot dot-ai"></span>AI</span><span><span class="dot dot-nai"></span>非AI</span></span></div>
+      <div class="ch h200"><canvas id="cMatSpend"></canvas></div>
     </div>
   </div>
-  <div class="bb-grid">
-    <div class="bb-card">
-      <div class="bb-region">JP · 日本</div>
-      <div class="bb-row">
-        <span class="bb-label">素材总数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">674</span><span class="bb-arrow">/</span><span class="v-nai">557</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">单计划素材数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai" style="color:var(--neg)">674</span><span class="bb-arrow">/</span><span class="v-nai">279</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">跑出数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">4</span><span class="bb-arrow">/</span><span class="v-nai">30</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">跑出率 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">0.59%</span><span class="bb-arrow">/</span><span class="v-nai">5.39%</span><span class="badge b-neg">AI 低9.1×</span></div>
-      </div>
-    </div>
-    <div class="bb-card">
-      <div class="bb-region">KR · 韩国</div>
-      <div class="bb-row">
-        <span class="bb-label">素材总数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">758</span><span class="bb-arrow">/</span><span class="v-nai">462</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">单计划素材数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai" style="color:var(--neg)">758</span><span class="bb-arrow">/</span><span class="v-nai">231</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">跑出数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">3</span><span class="bb-arrow">/</span><span class="v-nai">19</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">跑出率 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">0.40%</span><span class="bb-arrow">/</span><span class="v-nai">4.11%</span><span class="badge b-neg">AI 低10.3×</span></div>
-      </div>
-    </div>
-    <div class="bb-card">
-      <div class="bb-region">NA · 北美</div>
-      <div class="bb-row">
-        <span class="bb-label">素材总数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">616</span><span class="bb-arrow">/</span><span class="v-nai">455</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">单计划素材数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai" style="color:var(--neg)">616</span><span class="bb-arrow">/</span><span class="v-nai">228</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">跑出数 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">0</span><span class="bb-arrow">/</span><span class="v-nai">6</span></div>
-      </div>
-      <div class="bb-row">
-        <span class="bb-label">跑出率 AI / 非AI</span>
-        <div class="bb-vals"><span class="v-ai">0.00%</span><span class="bb-arrow">/</span><span class="v-nai">1.32%</span><span class="badge b-neg">AI 无跑出</span></div>
-      </div>
-    </div>
-  </div>
+  <!-- 分素材类型效率 -->
   <div class="panel" style="margin-top:1px">
     <div class="panel-h">
-      <span class="title">CTR 文案影响分析</span>
-      <span class="badge b-neg">JP AI 文案依赖暴露</span>
-    </div>
-    <div style="font-size:12px;color:var(--ink);font-weight:600;margin-bottom:8px;font-family:'JetBrains Mono','SF Mono',monospace">
-      文案类素材（含文字叠层）CTR 显著高于纯视频/图片；JP AI CTR 优势主要来自文案广告，去除文案维度后与非AI持平；KR AI 纯创意仍领先；NA AI 含/去文案均落后非AI。
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11px;color:var(--ink2);margin-bottom:0;font-family:'JetBrains Mono','SF Mono',monospace;line-height:1.7">
-      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--ail)">
-        <div style="font-weight:600;color:var(--ai);margin-bottom:4px">含文案 CTR（全素材口径）</div>
-        JP: AI <b>0.82%</b> > 非AI 0.64%（+28%）<br>
-        KR: AI <b>0.66%</b> > 非AI 0.37%（+78%）<br>
-        NA: AI 3.69% &lt; 非AI <b>3.83%</b>（−4%）
-      </div>
-      <div style="padding:10px 14px;background:var(--bg2);border-left:2px solid var(--nail)">
-        <div style="font-weight:600;color:var(--nai);margin-bottom:4px">去文案 CTR（纯视频/图片）</div>
-        JP: AI <b>0.52%</b> = 非AI <b>0.52%</b>（持平，AI优势消失）<br>
-        KR: AI <b>0.60%</b> > 非AI 0.38%（+58%，AI仍领先）<br>
-        NA: AI 2.13% &lt; 非AI <b>2.45%</b>（−13%）
-      </div>
-    </div>
-  </div>
-  <div class="panel" style="margin-top:1px">
-    <div class="panel-h">
-      <span class="title">素材类型 · 链路效率（图片 / 视频 / 文案）</span>
+      <span class="title">分素材类型效率（图片 / 视频 / 文案）</span>
       <span style="font-size:10px;color:var(--mute);font-family:'JetBrains Mono','SF Mono',monospace">■ <span style="color:var(--ai)">AI 更优</span> &nbsp;■ <span style="color:var(--nai)">非AI 更优</span></span>
     </div>
     <table class="dtbl ftbl">
       <thead><tr>
-        <th class="lt">素材类型</th><th class="lt">指标</th>
+        <th class="lt">类型</th><th class="lt">指标</th>
         <th class="ft-ai">JP · AI</th><th class="ft-nai">JP · 非AI</th>
         <th class="ft-ai">KR · AI</th><th class="ft-nai">KR · 非AI</th>
         <th class="ft-ai">NA · AI</th><th class="ft-nai">NA · 非AI</th>
@@ -689,7 +680,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
           <td class="ft-ai ft-win">$65.0</td><td class="ft-nai">$88.3</td>
         </tr>
         <tr>
-          <td class="ft-label">安装/点击</td>
+          <td class="ft-label">安装/点击 CVR</td>
           <td class="ft-ai ft-win">6.9%</td><td class="ft-nai">5.4%</td>
           <td class="ft-ai ft-win">11.7%</td><td class="ft-nai">8.1%</td>
           <td class="ft-ai ft-win">21.3%</td><td class="ft-nai">16.5%</td>
@@ -708,35 +699,21 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
           <td class="ft-ai ft-win">$15.9</td><td class="ft-nai">$28.3</td>
         </tr>
         <tr>
-          <td class="ft-label">安装/点击</td>
+          <td class="ft-label">安装/点击 CVR</td>
           <td class="ft-ai ft-win">21.2%</td><td class="ft-nai">3.5%</td>
           <td class="ft-ai">4.2%</td><td class="ft-nai ft-win">8.6%</td>
           <td class="ft-ai ft-win">26.8%</td><td class="ft-nai">25.2%</td>
         </tr>
-        <tr class="ft-group"><td colspan="8">文案</td></tr>
-        <tr>
-          <td class="ft-label" rowspan="3" style="font-weight:700;color:var(--ink)">文案</td>
+        <tr style="border-top:2px solid var(--line2)">
+          <td class="ft-label" rowspan="2" style="font-weight:700;color:var(--ink)">文案</td>
           <td class="ft-label">CTR（含文案口径）</td>
           <td class="ft-ai ft-win">0.82%</td><td class="ft-nai">0.64%</td>
           <td class="ft-ai ft-win">0.66%</td><td class="ft-nai">0.37%</td>
           <td class="ft-ai">3.69%</td><td class="ft-nai ft-win">3.83%</td>
         </tr>
         <tr>
-          <td class="ft-label">CPM</td>
-          <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
-          <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
-          <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
-        </tr>
-        <tr>
-          <td class="ft-label">安装/点击</td>
-          <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
-          <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
-          <td class="ft-ai tmt">—</td><td class="ft-nai tmt">—</td>
-        </tr>
-        <tr>
-          <td colspan="8" style="padding:12px 14px;text-align:left;background:var(--bg2);font-size:11px;color:var(--ink2);line-height:1.7;font-family:'JetBrains Mono','SF Mono',monospace">
-            <span style="color:var(--ink);font-weight:600">文案分析维度：</span>需对比含文案 vs 排除文案口径的 CTR 差异，判断文案对点击率的独立贡献；维度包含文案类型（卖点文案 / 情感文案 / 活动文案） × CTR / CVR。
-          </td>
+          <td class="ft-label">CPM / CVR / 安装单价</td>
+          <td class="ft-ai tmt" colspan="6" style="text-align:center;color:var(--mute)">— 缺失，需拆分文案维度数据 —</td>
         </tr>
       </tbody>
     </table>
@@ -1512,6 +1489,23 @@ mk('cBudget',{type:'bar',data:{labels:bidLabs,datasets:[
   {label:'当前预算',data:budCurr,backgroundColor:bidBgCurr,barPercentage:.55,categoryPercentage:.85}
 ]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
   plugins:{tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.y.toLocaleString()}`),legend:legendCfg()}}});
+// 单素材消耗（总花费 / 总素材数）
+mk('cMatSpend',{type:'bar',data:{labels:LABS,datasets:[
+  {label:'AI',data:[64,63,57],backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
+  {label:'非AI',data:[509,605,108],backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
+]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+  layout:{padding:{right:52}},
+  scales:{x:mergeScale(bG,{ticks:{callback:v=>'$'+v}}),y:mergeScale(bX)},
+  plugins:{
+    tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.x}/条`),
+    legend:legendCfg(),
+    datalabels:{
+      display:true,anchor:'end',align:'end',
+      color:'#4A5168',
+      font:{family:'"JetBrains Mono","SF Mono",monospace',size:10,weight:'600'},
+      formatter:v=>'$'+v
+    }
+  }}});
 // 素材跑出率/数量
 mk('cMatRate',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:REGS.map(r=>+(BB[r].AI.mat_r*100).toFixed(2)),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
