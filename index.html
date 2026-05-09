@@ -511,47 +511,51 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <section>
   <div class="sec-head">
     <div><span class="sec-num">03</span><span class="sec-title">流量分布问题</span></div>
-    <div class="sec-hint">Google network/search/youtube · Meta 待补充</div>
+    <div class="sec-hint">GDN 81.6% · YouTube 8.5% · Search 9.9% | 4/20–5/6</div>
   </div>
-  <div class="sec-summary">先按 Google / Meta 建立版位诊断框架：Google 重点看 network / search / youtube 的流量结构与 CTR / CVR 断点；Meta 暂无 AI 对比数据，先保留 IG / reels / feed 的占比假设与异常排查方向。</div>
+  <div class="sec-summary">
+    AI 花费高度集中 GDN（81.6%），而 Non-AI GDN 仅 68%、YouTube 占 18.6%；<span class="hi-neg">AI YouTube CVR 仅 4.4% vs Non-AI 16.2%</span>，是最严重版位异常；AI GDN CVR（13.4%）反超 Non-AI（7.4%），但 CPM 高 4.6 倍导致 <span class="hi-neg">CPA 倒挂（$28.7 vs $7.1）</span>；Search 是 AI 表现最好版位：CVR 24.7% vs 11.5%，CPA $6.3 vs $2.2。
+  </div>
   <div class="g2">
     <div class="panel">
-      <div class="panel-h">
-        <span class="title">Google 版位分析框架</span>
-        <span class="badge b-flat">network 50-60% · search 10% · youtube 20-30%</span>
-      </div>
-      <div style="font-size:12px;color:var(--ink2);line-height:1.7">
-        先看版位结构是否接近 network 50-60%、search 10%、youtube 20-30%；再拆 CTR / CVR 异常究竟来自素材适配、关键词意图、版位承接还是算法扩量。
-      </div>
-      <div style="display:grid;gap:8px;margin-top:12px;font-size:11px;line-height:1.7;font-family:'JetBrains Mono','SF Mono',monospace">
-        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--ai)">
-          <div style="font-weight:600;color:var(--ai);margin-bottom:4px">CTR 异常诊断</div>
-          network 看素材是否过泛、低质 app 面是否拉低点击；search 看关键词意图与文案是否错配；youtube 看首屏 3 秒钩子、封面和受众包是否失效。
-        </div>
-        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--nail)">
-          <div style="font-weight:600;color:var(--nai);margin-bottom:4px">CVR 异常诊断</div>
-          network 低 CVR 先排查误点流量和商店页承接；search 低 CVR 看高点击关键词是否过宽；youtube 低 CVR 看视频承诺与下载页体验是否不一致。
-        </div>
-      </div>
+      <div class="panel-h"><span class="title">版位花费结构</span><span class="badge b-flat">AI 总 $132,688 · Non-AI 总 $1,497,571</span></div>
+      <table class="cfg-table" style="width:100%">
+        <thead><tr><th>版位</th><th>类型</th><th style="text-align:right">花费 $</th><th style="text-align:right">占比</th></tr></thead>
+        <tbody>
+          <tr style="background:#FEF9F0"><td>GDN</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">108,240</td><td style="text-align:right">81.6%</td></tr>
+          <tr style="background:#F0F6FC"><td>GDN</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">1,018,241</td><td style="text-align:right">68.0%</td></tr>
+          <tr style="background:#FEF9F0"><td>YouTube</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">11,265</td><td style="text-align:right">8.5%</td></tr>
+          <tr style="background:#F0F6FC"><td>YouTube</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">278,297</td><td style="text-align:right">18.6%</td></tr>
+          <tr style="background:#FEF9F0"><td>Search</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">13,085</td><td style="text-align:right">9.9%</td></tr>
+          <tr style="background:#F0F6FC"><td>Search</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">189,695</td><td style="text-align:right">12.7%</td></tr>
+          <tr style="background:#FEF9F0"><td>Partners</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">98</td><td style="text-align:right">0.1%</td></tr>
+          <tr style="background:#F0F6FC"><td>Partners</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">529</td><td style="text-align:right">0.0%</td></tr>
+        </tbody>
+      </table>
     </div>
     <div class="panel">
-      <div class="panel-h">
-        <span class="title">Meta 版位分析框架</span>
-        <span class="badge b-flat">暂无 AI 对比数据，待补充</span>
-      </div>
-      <div style="font-size:12px;color:var(--ink2);line-height:1.7">
-        先保留版位框架：IG 占比 &gt;90%，reels + 激励视频 50-60%，feed 30%。待补齐 AI / 非AI 分版位消耗、CTR、CVR 后，再验证异常到底出在库存结构还是创意匹配。
-      </div>
-      <div style="display:grid;gap:8px;margin-top:12px;font-size:11px;line-height:1.7;font-family:'JetBrains Mono','SF Mono',monospace">
-        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--ai)">
-          <div style="font-weight:600;color:var(--ai);margin-bottom:4px">CTR 异常诊断</div>
-          IG 整体低 CTR 看封面、首帧和文案钩子；reels / 激励视频低 CTR 看短视频节奏与互动设计；feed 低 CTR 看主视觉、标题和评论区社证是否不足。
-        </div>
-        <div style="padding:10px 12px;background:var(--bg2);border-left:2px solid var(--nail)">
-          <div style="font-weight:600;color:var(--nai);margin-bottom:4px">CVR 异常诊断</div>
-          reels / 激励视频高点击低转化时先排查误触和低意图流量；feed 低 CVR 看受众过宽、落地页承接和转化事件回传是否失真。
-        </div>
-      </div>
+      <div class="panel-h"><span class="title">版位效果指标对比</span><span class="badge b-flat">HSR 口径</span></div>
+      <table class="cfg-table" style="width:100%">
+        <thead><tr><th>版位/类型</th><th style="text-align:right">CPM</th><th style="text-align:right">CTR%</th><th style="text-align:right">CVR%</th><th style="text-align:right">CPA</th></tr></thead>
+        <tbody>
+          <tr style="background:#FEF9F0"><td>GDN · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$19.96</td><td style="text-align:right">0.52</td><td style="text-align:right;color:var(--pos);font-weight:600">13.4</td><td style="text-align:right;color:var(--neg)">$28.73</td></tr>
+          <tr style="background:#F0F6FC"><td>GDN · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$4.36</td><td style="text-align:right">0.83</td><td style="text-align:right">7.4</td><td style="text-align:right">$7.09</td></tr>
+          <tr style="background:#FEF9F0"><td>YouTube · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$5.08</td><td style="text-align:right">0.59</td><td style="text-align:right;color:var(--neg);font-weight:600">4.4</td><td style="text-align:right;color:var(--neg)">$19.83</td></tr>
+          <tr style="background:#F0F6FC"><td>YouTube · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$2.36</td><td style="text-align:right">0.46</td><td style="text-align:right;color:var(--pos);font-weight:600">16.2</td><td style="text-align:right;color:var(--pos)">$3.18</td></tr>
+          <tr style="background:#FEF9F0"><td>Search · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$39.71</td><td style="text-align:right">2.57</td><td style="text-align:right;color:var(--pos);font-weight:600">24.7</td><td style="text-align:right">$6.26</td></tr>
+          <tr style="background:#F0F6FC"><td>Search · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$8.78</td><td style="text-align:right">3.45</td><td style="text-align:right">11.5</td><td style="text-align:right;color:var(--pos)">$2.21</td></tr>
+          <tr style="background:#FEF9F0"><td>Partners · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$0.70</td><td style="text-align:right">0.17</td><td style="text-align:right;color:var(--neg)">2.9</td><td style="text-align:right">$14.03</td></tr>
+          <tr style="background:#F0F6FC"><td>Partners · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$0.71</td><td style="text-align:right">0.33</td><td style="text-align:right">5.4</td><td style="text-align:right">$4.01</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- CVR & CPA charts -->
+  <div class="panel" style="margin-top:16px">
+    <div class="panel-h"><span class="title">版位 CVR vs CPA 对比（AI vs Non-AI）</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div><canvas id="sec03CvrChart" height="180"></canvas></div>
+      <div><canvas id="sec03CpaChart" height="180"></canvas></div>
     </div>
   </div>
 </section>
@@ -794,6 +798,43 @@ document.addEventListener('DOMContentLoaded',()=>{
   });
   tbody.innerHTML=html;
 });
+
+// ── Sec 03 版位对比图表 ──
+(function(){
+  var nets = ['GDN','YouTube','Search','Partners'];
+  var aiCvr  = [13.4, 4.4,  24.7, 2.9];
+  var naiCvr = [7.4,  16.2, 11.5, 5.4];
+  var aiCpa  = [28.73, 19.83, 6.26, 14.03];
+  var naiCpa = [7.09,  3.18,  2.21, 4.01];
+  var aiColor  = 'rgba(201,122,16,0.8)';
+  var naiColor = 'rgba(40,120,176,0.8)';
+
+  new Chart(document.getElementById('sec03CvrChart'),{
+    type:'bar', plugins:[ChartDataLabels],
+    data:{labels:nets,datasets:[
+      {label:'AI CVR%',data:aiCvr,backgroundColor:aiColor},
+      {label:'Non-AI CVR%',data:naiCvr,backgroundColor:naiColor}
+    ]},
+    options:{responsive:true,plugins:{
+      title:{display:true,text:'CVR（点击→转化率 %）',font:{size:12}},
+      datalabels:{anchor:'end',align:'top',formatter:v=>v+'%',font:{size:9},color:'#333'},
+      legend:{labels:{font:{size:10}}}
+    },scales:{y:{beginAtZero:true,ticks:{callback:v=>v+'%'}}}}
+  });
+
+  new Chart(document.getElementById('sec03CpaChart'),{
+    type:'bar', plugins:[ChartDataLabels],
+    data:{labels:nets,datasets:[
+      {label:'AI CPA',data:aiCpa,backgroundColor:aiColor},
+      {label:'Non-AI CPA',data:naiCpa,backgroundColor:naiColor}
+    ]},
+    options:{responsive:true,plugins:{
+      title:{display:true,text:'CPA（每次转化成本 USD）',font:{size:12}},
+      datalabels:{anchor:'end',align:'top',formatter:v=>'$'+v,font:{size:9},color:'#333'},
+      legend:{labels:{font:{size:10}}}
+    },scales:{y:{beginAtZero:true,ticks:{callback:v=>'$'+v}}}}
+  });
+})();
 </script>
 
 <!-- ══ 06 调控操作 ══ -->
