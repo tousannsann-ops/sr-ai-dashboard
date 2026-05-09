@@ -736,11 +736,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     regs.forEach(reg=>{
       const aiVal=row.get(reg,'AI');
       const naiVal=row.get(reg,'NAI');
-      // flag-bad covers explicit AI risk rows and bid-gap anomalies.
-      const gapExceeded=(row.label.includes('出价')||row.label.includes('bid'))
-        && naiVal>0
-        && Math.abs(aiVal-naiVal)/naiVal>0.10;
-      const aiBadClass=(row.flagAi||gapExceeded)?'flag-bad':'';
+      const aiBadClass=row.flagAi?'flag-bad':'';
       html+=`<td class="${aiBadClass}" style="color:${aiBadClass?'var(--neg)':'var(--ai)'}">${row.fmt(aiVal)}</td>`;
       html+=`<td style="color:var(--nai)">${row.fmt(naiVal)}</td>`;
     });
