@@ -257,7 +257,7 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
     </div>
     <div class="lede-card" style="border-left-color:var(--neg)">
       <div class="lede-tag">问题03 · 流量分布</div>
-      <div class="lede-body">AI花费高集中 GDN（81.6%），YouTube 仅 8.5%；<b>AI YouTube CVR 4.4% vs 非AI 16.2%</b>，最严重版位异常；GDN CPM 高 4.6 倍导致 <b>CPA 倒挂（AI $28.7 vs 非AI $7.1）</b>。</div>
+      <div class="lede-body">按 <b>new + 3.0</b> 口径重算后，AI 并非单纯“更偏 GDN”，而是 <b>高效 Search 只拿到 10.8% 花费</b>；GDN 吃掉 81.6% 花费但 CPI <b>$26.4</b>，YouTube 点击→安装仅 <b>4.2%</b>、CPI <b>$20.6</b>。AI 流量没有向高效版位倾斜。</div>
     </div>
     <div class="lede-card" style="border-left-color:var(--neg)">
       <div class="lede-tag">问题04 · 素材质量</div>
@@ -503,14 +503,14 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
 <section>
   <div class="sec-head">
     <div><span class="sec-num">03</span><span class="sec-title">流量分布问题</span></div>
-    <div class="sec-hint">GDN 81.6% · YouTube 8.5% · Search 9.9% | 4/20–5/6</div>
+    <div class="sec-hint">映射维度：GDN / Search / YouTube · 仅统计 campaign name 同含 new + 3.0 · AI=含 aiuser</div>
   </div>
   <div class="sec-summary">
-    AI 花费高度集中 GDN（81.6%），而 Non-AI GDN 仅 68%、YouTube 占 18.6%；<span class="hi-neg">AI YouTube CVR 仅 4.4% vs Non-AI 16.2%</span>，是最严重版位异常；AI GDN CVR（13.4%）反超 Non-AI（7.4%），但 CPM 高 4.6 倍导致 <span class="hi-neg">CPA 倒挂（$28.7 vs $7.1）</span>；Search 是 AI 表现最好版位：CVR 24.7% vs 11.5%，CPA $6.3 vs $2.2。
+    按 <b>campaign name 同时包含 new 与 3.0</b>、并以 <b>aiuser</b> 拆分 AI / 非AI 后，AI 与非AI 都以 GDN 为主，但 <span class="hi-neg">AI 最有效的 Search 仅拿到 10.8% 花费，而 YouTube 仍占 7.6%</span>。Search 是 AI 最优版位：点击→安装率 <b>26.9%</b>、CPI <b>$5.57</b>；YouTube 最差：点击→安装率仅 <b>4.2%</b>、CPI <b>$20.60</b>；GDN 又吞掉 <b>81.6%</b> 花费且 CPI 高达 <b>$26.42</b>。问题不只是版位差异，而是 <b>AI 流量没有向高效率 Search 倾斜</b>。
   </div>
   <div class="g2">
     <div class="panel">
-      <div class="panel-h"><span class="title">版位花费分布</span><span class="badge b-flat">AI $132,688 · Non-AI $1,497,571</span></div>
+      <div class="panel-h"><span class="title">映射维度花费分布</span><span class="badge b-flat">AI $139,224 · 非AI $904,806</span></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center;padding-top:8px">
         <div>
           <div style="text-align:center;font-size:10px;color:var(--ai);font-family:'JetBrains Mono','SF Mono',monospace;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px">AI 花费构成</div>
@@ -523,25 +523,23 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
       </div>
     </div>
     <div class="panel">
-      <div class="panel-h"><span class="title">版位效果指标对比</span><span class="badge b-flat">HSR 口径</span></div>
+      <div class="panel-h"><span class="title">映射维度效果指标对比</span><span class="badge b-flat">Search = Google 搜索 + 搜索合作伙伴</span></div>
       <table class="cfg-table" style="width:100%">
-        <thead><tr><th>版位/类型</th><th style="text-align:right">CPM</th><th style="text-align:right">CTR%</th><th style="text-align:right">CVR%</th><th style="text-align:right">CPA</th></tr></thead>
+        <thead><tr><th>维度/类型</th><th style="text-align:right">花费占比</th><th style="text-align:right">CPM</th><th style="text-align:right">CTR%</th><th style="text-align:right">点击→安装%</th><th style="text-align:right">CPI</th></tr></thead>
         <tbody>
-          <tr style="background:#FEF9F0"><td>GDN · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$19.96</td><td style="text-align:right">0.52</td><td style="text-align:right;color:var(--pos);font-weight:600">13.4</td><td style="text-align:right;color:var(--neg)">$28.73</td></tr>
-          <tr style="background:#F0F6FC"><td>GDN · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$4.36</td><td style="text-align:right">0.83</td><td style="text-align:right">7.4</td><td style="text-align:right">$7.09</td></tr>
-          <tr style="background:#FEF9F0"><td>YouTube · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$5.08</td><td style="text-align:right">0.59</td><td style="text-align:right;color:var(--neg);font-weight:600">4.4</td><td style="text-align:right;color:var(--neg)">$19.83</td></tr>
-          <tr style="background:#F0F6FC"><td>YouTube · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$2.36</td><td style="text-align:right">0.46</td><td style="text-align:right;color:var(--pos);font-weight:600">16.2</td><td style="text-align:right;color:var(--pos)">$3.18</td></tr>
-          <tr style="background:#FEF9F0"><td>Search · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$39.71</td><td style="text-align:right">2.57</td><td style="text-align:right;color:var(--pos);font-weight:600">24.7</td><td style="text-align:right">$6.26</td></tr>
-          <tr style="background:#F0F6FC"><td>Search · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$8.78</td><td style="text-align:right">3.45</td><td style="text-align:right">11.5</td><td style="text-align:right;color:var(--pos)">$2.21</td></tr>
-          <tr style="background:#FEF9F0"><td>Partners · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">$0.70</td><td style="text-align:right">0.17</td><td style="text-align:right;color:var(--neg)">2.9</td><td style="text-align:right">$14.03</td></tr>
-          <tr style="background:#F0F6FC"><td>Partners · <span style="color:var(--nai);font-weight:600">NAI</span></td><td style="text-align:right">$0.71</td><td style="text-align:right">0.33</td><td style="text-align:right">5.4</td><td style="text-align:right">$4.01</td></tr>
+          <tr style="background:#FEF9F0"><td>GDN · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">81.6%</td><td style="text-align:right">$21.36</td><td style="text-align:right">0.55</td><td style="text-align:right;color:var(--pos);font-weight:600">14.7</td><td style="text-align:right;color:var(--neg);font-weight:600">$26.42</td></tr>
+          <tr style="background:#F0F6FC"><td>GDN · <span style="color:var(--nai);font-weight:600">非AI</span></td><td style="text-align:right">82.9%</td><td style="text-align:right">$13.38</td><td style="text-align:right">0.89</td><td style="text-align:right">13.7</td><td style="text-align:right">$10.96</td></tr>
+          <tr style="background:#FEF9F0"><td>Search · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">10.8%</td><td style="text-align:right">$31.90</td><td style="text-align:right">2.13</td><td style="text-align:right;color:var(--pos);font-weight:600">26.9</td><td style="text-align:right">$5.57</td></tr>
+          <tr style="background:#F0F6FC"><td>Search · <span style="color:var(--nai);font-weight:600">非AI</span></td><td style="text-align:right">13.2%</td><td style="text-align:right">$13.42</td><td style="text-align:right">4.36</td><td style="text-align:right">26.6</td><td style="text-align:right;color:var(--pos);font-weight:600">$1.16</td></tr>
+          <tr style="background:#FEF9F0"><td>YouTube · <span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">7.6%</td><td style="text-align:right">$5.35</td><td style="text-align:right">0.63</td><td style="text-align:right;color:var(--neg);font-weight:600">4.2</td><td style="text-align:right;color:var(--neg);font-weight:600">$20.60</td></tr>
+          <tr style="background:#F0F6FC"><td>YouTube · <span style="color:var(--nai);font-weight:600">非AI</span></td><td style="text-align:right">3.9%</td><td style="text-align:right">$4.05</td><td style="text-align:right">0.44</td><td style="text-align:right;color:var(--pos);font-weight:600">16.8</td><td style="text-align:right;color:var(--pos);font-weight:600">$5.50</td></tr>
         </tbody>
       </table>
     </div>
   </div>
   <!-- CVR & CPA charts -->
   <div class="panel" style="margin-top:16px">
-    <div class="panel-h"><span class="title">版位 CVR vs CPA 对比（AI vs Non-AI）</span></div>
+    <div class="panel-h"><span class="title">点击→安装率 vs CPI 对比（AI vs 非AI）</span><span class="badge b-flat">按映射维度汇总</span></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
       <div style="position:relative;height:280px"><canvas id="sec03CvrChart"></canvas></div>
       <div style="position:relative;height:280px"><canvas id="sec03CpaChart"></canvas></div>
@@ -765,50 +763,45 @@ document.addEventListener('DOMContentLoaded',()=>{
   tbody.innerHTML=html;
 });
 
-// ── Sec 03 版位花费 饼图 ──
+// ── Sec 03 展示网络分析（按映射维度重算） ──
 (function(){
-  var labels=['GDN','YouTube','Search','Partners'];
-  var aiData=[81.6,8.5,9.9,0.1];
-  var naiData=[68.0,18.6,12.7,0.0];
-  var colors=['#5B9BD5','#ED7D31','#70AD47','#A5A5A5'];
+  var labels=['GDN','Search','YouTube'];
+  var aiShare=[81.6,10.8,7.6];
+  var naiShare=[82.9,13.2,3.9];
+  var aiInstallRate=[14.7,26.9,4.2];
+  var naiInstallRate=[13.7,26.6,16.8];
+  var aiCpi=[26.42,5.57,20.60];
+  var naiCpi=[10.96,1.16,5.50];
+  var pieColors=['#5B9BD5','#70AD47','#ED7D31'];
+  var aiColor='rgba(201,122,16,0.82)';
+  var naiColor='rgba(40,120,176,0.82)';
   var aiEl=document.getElementById('sec03PieAI');
   var naiEl=document.getElementById('sec03PieNAI');
-  if(aiEl)new Chart(aiEl,{type:'pie',data:{labels:labels,datasets:[{data:aiData,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{datalabels:{display:true,formatter:(v)=>v>=1?v+'%':'',font:{size:10,weight:'bold'},color:'#fff'},legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}});
-  if(naiEl)new Chart(naiEl,{type:'pie',data:{labels:labels,datasets:[{data:naiData,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{datalabels:{display:true,formatter:(v)=>v>=1?v+'%':'',font:{size:10,weight:'bold'},color:'#fff'},legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}});
-})();
-
-// ── Sec 03 版位对比图表 ──
-(function(){
-  var nets = ['GDN','YouTube','Search','Partners'];
-  var aiCvr  = [13.4, 4.4,  24.7, 2.9];
-  var naiCvr = [7.4,  16.2, 11.5, 5.4];
-  var aiCpa  = [28.73, 19.83, 6.26, 14.03];
-  var naiCpa = [7.09,  3.18,  2.21, 4.01];
-  var aiColor  = 'rgba(201,122,16,0.8)';
-  var naiColor = 'rgba(40,120,176,0.8)';
+  if(aiEl)new Chart(aiEl,{type:'pie',data:{labels:labels,datasets:[{data:aiShare,backgroundColor:pieColors,borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{datalabels:{display:true,formatter:(v)=>v>=1?v.toFixed(1)+'%':'',font:{size:10,weight:'bold'},color:'#fff'},legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toFixed(1)+'%'}}}}});
+  if(naiEl)new Chart(naiEl,{type:'pie',data:{labels:labels,datasets:[{data:naiShare,backgroundColor:pieColors,borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{datalabels:{display:true,formatter:(v)=>v>=1?v.toFixed(1)+'%':'',font:{size:10,weight:'bold'},color:'#fff'},legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed.toFixed(1)+'%'}}}}});
 
   new Chart(document.getElementById('sec03CvrChart'),{
     type:'bar', plugins:[ChartDataLabels],
-    data:{labels:nets,datasets:[
-      {label:'AI CVR%',data:aiCvr,backgroundColor:aiColor},
-      {label:'Non-AI CVR%',data:naiCvr,backgroundColor:naiColor}
+    data:{labels:labels,datasets:[
+      {label:'AI',data:aiInstallRate,backgroundColor:aiColor},
+      {label:'非AI',data:naiInstallRate,backgroundColor:naiColor}
     ]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{
-      title:{display:true,text:'CVR（点击→转化率 %）',font:{size:12}},
-      datalabels:{anchor:'end',align:'top',formatter:v=>v+'%',font:{size:9},color:'#333'},
+      title:{display:true,text:'点击→安装率 %',font:{size:12}},
+      datalabels:{anchor:'end',align:'top',formatter:v=>v.toFixed(1)+'%',font:{size:9},color:'#333'},
       legend:{labels:{font:{size:10}}}
     },scales:{y:{beginAtZero:true,ticks:{callback:v=>v+'%'}}}}
   });
 
   new Chart(document.getElementById('sec03CpaChart'),{
     type:'bar', plugins:[ChartDataLabels],
-    data:{labels:nets,datasets:[
-      {label:'AI CPA',data:aiCpa,backgroundColor:aiColor},
-      {label:'Non-AI CPA',data:naiCpa,backgroundColor:naiColor}
+    data:{labels:labels,datasets:[
+      {label:'AI',data:aiCpi,backgroundColor:aiColor},
+      {label:'非AI',data:naiCpi,backgroundColor:naiColor}
     ]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{
-      title:{display:true,text:'CPA（每次转化成本 USD）',font:{size:12}},
-      datalabels:{anchor:'end',align:'top',formatter:v=>'$'+v,font:{size:9},color:'#333'},
+      title:{display:true,text:'CPI（每安装成本 USD）',font:{size:12}},
+      datalabels:{anchor:'end',align:'top',formatter:v=>'$'+v.toFixed(2),font:{size:9},color:'#333'},
       legend:{labels:{font:{size:10}}}
     },scales:{y:{beginAtZero:true,ticks:{callback:v=>'$'+v}}}}
   });
@@ -979,18 +972,16 @@ document.addEventListener('DOMContentLoaded',()=>{
   </div>
   <div class="sec-summary">以下为各地区投放规模、出价/预算演变，及各节已替换为图表的原始数据表，供参考核对。</div>
   <div class="panel" style="margin-bottom:1px">
-    <div class="panel-h"><span class="title">Google Ads 版位花费明细</span><span class="badge b-flat">HSR · 4/20–5/6</span></div>
+    <div class="panel-h"><span class="title">Google Ads 投放网络明细（按映射维度）</span><span class="badge b-flat">仅统计 new + 3.0 · AI=含 aiuser</span></div>
     <table class="cfg-table" style="width:100%;margin-top:0">
-      <thead><tr><th>版位</th><th>类型</th><th style="text-align:right">花费 $</th><th style="text-align:right">占比</th><th style="text-align:right">CPM</th><th style="text-align:right">CTR%</th><th style="text-align:right">CVR%</th><th style="text-align:right">CPA</th></tr></thead>
+      <thead><tr><th>映射维度</th><th>类型</th><th style="text-align:right">花费 $</th><th style="text-align:right">占比</th><th style="text-align:right">CPM</th><th style="text-align:right">CTR%</th><th style="text-align:right">点击→安装%</th><th style="text-align:right">CPI</th></tr></thead>
       <tbody>
-        <tr><td>GDN</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">108,240</td><td style="text-align:right">81.6%</td><td style="text-align:right">$19.96</td><td style="text-align:right">0.52</td><td style="text-align:right">13.4</td><td style="text-align:right;color:var(--neg)">$28.73</td></tr>
-        <tr><td>GDN</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">1,018,241</td><td style="text-align:right">68.0%</td><td style="text-align:right">$4.36</td><td style="text-align:right">0.83</td><td style="text-align:right">7.4</td><td style="text-align:right">$7.09</td></tr>
-        <tr><td>YouTube</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">11,265</td><td style="text-align:right">8.5%</td><td style="text-align:right">$5.08</td><td style="text-align:right">0.59</td><td style="text-align:right;color:var(--neg);font-weight:600">4.4</td><td style="text-align:right;color:var(--neg)">$19.83</td></tr>
-        <tr><td>YouTube</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">278,297</td><td style="text-align:right">18.6%</td><td style="text-align:right">$2.36</td><td style="text-align:right">0.46</td><td style="text-align:right;color:var(--pos);font-weight:600">16.2</td><td style="text-align:right">$3.18</td></tr>
-        <tr><td>Search</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">13,085</td><td style="text-align:right">9.9%</td><td style="text-align:right">$39.71</td><td style="text-align:right">2.57</td><td style="text-align:right;color:var(--pos);font-weight:600">24.7</td><td style="text-align:right">$6.26</td></tr>
-        <tr><td>Search</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">189,695</td><td style="text-align:right">12.7%</td><td style="text-align:right">$8.78</td><td style="text-align:right">3.45</td><td style="text-align:right">11.5</td><td style="text-align:right">$2.21</td></tr>
-        <tr><td>Partners</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">98</td><td style="text-align:right">0.1%</td><td style="text-align:right">$0.70</td><td style="text-align:right">0.17</td><td style="text-align:right">2.9</td><td style="text-align:right">$14.03</td></tr>
-        <tr><td>Partners</td><td><span style="color:var(--nai);font-weight:600">Non-AI</span></td><td style="text-align:right">529</td><td style="text-align:right">0.0%</td><td style="text-align:right">$0.71</td><td style="text-align:right">0.33</td><td style="text-align:right">5.4</td><td style="text-align:right">$4.01</td></tr>
+        <tr><td>GDN</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">113,598</td><td style="text-align:right">81.6%</td><td style="text-align:right">$21.36</td><td style="text-align:right">0.55</td><td style="text-align:right">14.7</td><td style="text-align:right;color:var(--neg);font-weight:600">$26.42</td></tr>
+        <tr><td>GDN</td><td><span style="color:var(--nai);font-weight:600">非AI</span></td><td style="text-align:right">749,760</td><td style="text-align:right">82.9%</td><td style="text-align:right">$13.38</td><td style="text-align:right">0.89</td><td style="text-align:right">13.7</td><td style="text-align:right">$10.96</td></tr>
+        <tr><td>Search</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">15,098</td><td style="text-align:right">10.8%</td><td style="text-align:right">$31.90</td><td style="text-align:right">2.13</td><td style="text-align:right;color:var(--pos);font-weight:600">26.9</td><td style="text-align:right">$5.57</td></tr>
+        <tr><td>Search</td><td><span style="color:var(--nai);font-weight:600">非AI</span></td><td style="text-align:right">119,769</td><td style="text-align:right">13.2%</td><td style="text-align:right">$13.42</td><td style="text-align:right">4.36</td><td style="text-align:right">26.6</td><td style="text-align:right;color:var(--pos);font-weight:600">$1.16</td></tr>
+        <tr><td>YouTube</td><td><span style="color:var(--ai);font-weight:600">AI</span></td><td style="text-align:right">10,528</td><td style="text-align:right">7.6%</td><td style="text-align:right">$5.35</td><td style="text-align:right">0.63</td><td style="text-align:right;color:var(--neg);font-weight:600">4.2</td><td style="text-align:right;color:var(--neg);font-weight:600">$20.60</td></tr>
+        <tr><td>YouTube</td><td><span style="color:var(--nai);font-weight:600">非AI</span></td><td style="text-align:right">35,277</td><td style="text-align:right">3.9%</td><td style="text-align:right">$4.05</td><td style="text-align:right">0.44</td><td style="text-align:right;color:var(--pos);font-weight:600">16.8</td><td style="text-align:right">$5.50</td></tr>
       </tbody>
     </table>
   </div>
@@ -1383,11 +1374,10 @@ bar2('cPayOnce','单次付费',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 bar2('cPayUV','单付费UV',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 
 // 04 用户质量
-setTimeout(function(){
 mk('cRetNew',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('新增7日留').map(v=>+(v*100).toFixed(1)),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI',data:na('新增7日留').map(v=>+(v*100).toFixed(1)),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
-]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,animation:false,
   scales:{x:mergeScale(bG,{ticks:{callback:v=>v+'%'}}),y:mergeScale(bX)},
   plugins:{
     legend:legendCfg(),
@@ -1404,7 +1394,7 @@ mk('cRetNew',{type:'bar',data:{labels:LABS,datasets:[
 mk('cRetRet',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('回流7日留').map(v=>+(v*100).toFixed(1)),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI',data:na('回流7日留').map(v=>+(v*100).toFixed(1)),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
-]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,animation:false,
   scales:{x:mergeScale(bG,{ticks:{callback:v=>v+'%'}}),y:mergeScale(bX)},
   plugins:{
     legend:legendCfg(),
@@ -1421,7 +1411,7 @@ mk('cRetRet',{type:'bar',data:{labels:LABS,datasets:[
 mk('cArppu',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI·ARPPU',data:aa('ARPPU'),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI·ARPPU',data:na('ARPPU'),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
-]},options:{responsive:true,maintainAspectRatio:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
+]},options:{responsive:true,maintainAspectRatio:false,animation:false,scales:{y:mergeScale(bG),x:mergeScale(bX)},
   plugins:{
     tooltip:tooltipCfg(c=>` ${c.dataset.label}: $${c.parsed.y.toFixed(2)}`),
     legend:legendCfg(),
@@ -1434,7 +1424,23 @@ mk('cArppu',{type:'bar',data:{labels:LABS,datasets:[
       formatter:v=>'$'+v.toFixed(0)
     }
   }}});
-}, 100);
+
+function refreshPaint(ids){
+  const repaint=()=>ids.forEach(id=>{
+    const el=document.getElementById(id);
+    const chart=el && Chart.getChart(el);
+    if(!chart) return;
+    chart.resize();
+    chart.update('none');
+    chart.render();
+    chart.draw();
+  });
+  requestAnimationFrame(()=>requestAnimationFrame(repaint));
+  if(document.fonts?.ready) document.fonts.ready.then(()=>setTimeout(repaint,0));
+  if(document.readyState==='complete') setTimeout(repaint,0);
+  else window.addEventListener('load',()=>setTimeout(repaint,0),{once:true});
+}
+refreshPaint(['cRetNew','cRetRet','cArppu']);
 
 // 05 出价/预算
 const bidLabs=['JP AI','JP 非AI','KR AI','KR 非AI','NA AI','NA 非AI'];
