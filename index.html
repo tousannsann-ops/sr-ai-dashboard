@@ -543,8 +543,8 @@ footer{padding:32px 0 0;border-top:1px solid var(--line);display:flex;justify-co
   <div class="panel" style="margin-top:16px">
     <div class="panel-h"><span class="title">版位 CVR vs CPA 对比（AI vs Non-AI）</span></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-      <div><canvas id="sec03CvrChart" height="180"></canvas></div>
-      <div><canvas id="sec03CpaChart" height="180"></canvas></div>
+      <div style="position:relative;height:280px"><canvas id="sec03CvrChart"></canvas></div>
+      <div style="position:relative;height:280px"><canvas id="sec03CpaChart"></canvas></div>
     </div>
   </div>
 </section>
@@ -771,17 +771,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   var aiData=[81.6,8.5,9.9,0.1];
   var naiData=[68.0,18.6,12.7,0.0];
   var colors=['#5B9BD5','#ED7D31','#70AD47','#A5A5A5'];
-  var pieOpts={responsive:true,maintainAspectRatio:false,
-    plugins:{
-      datalabels:{display:true,formatter:(v)=>v>=1?v+'%':'',font:{size:10,weight:'bold'},color:'#fff'},
-      legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},
-      tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}
-    }
-  };
   var aiEl=document.getElementById('sec03PieAI');
   var naiEl=document.getElementById('sec03PieNAI');
-  if(aiEl)new Chart(aiEl,{type:'pie',data:{labels:labels,datasets:[{data:aiData,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},options:pieOpts});
-  if(naiEl)new Chart(naiEl,{type:'pie',data:{labels:labels,datasets:[{data:naiData,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},options:pieOpts});
+  if(aiEl)new Chart(aiEl,{type:'pie',data:{labels:labels,datasets:[{data:aiData,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{datalabels:{display:true,formatter:(v)=>v>=1?v+'%':'',font:{size:10,weight:'bold'},color:'#fff'},legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}});
+  if(naiEl)new Chart(naiEl,{type:'pie',data:{labels:labels,datasets:[{data:naiData,backgroundColor:colors,borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{datalabels:{display:true,formatter:(v)=>v>=1?v+'%':'',font:{size:10,weight:'bold'},color:'#fff'},legend:{position:'bottom',labels:{font:{size:10},boxWidth:10,boxHeight:10,padding:7}},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}}}}});
 })();
 
 // ── Sec 03 版位对比图表 ──
@@ -800,7 +793,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       {label:'AI CVR%',data:aiCvr,backgroundColor:aiColor},
       {label:'Non-AI CVR%',data:naiCvr,backgroundColor:naiColor}
     ]},
-    options:{responsive:true,plugins:{
+    options:{responsive:true,maintainAspectRatio:false,plugins:{
       title:{display:true,text:'CVR（点击→转化率 %）',font:{size:12}},
       datalabels:{anchor:'end',align:'top',formatter:v=>v+'%',font:{size:9},color:'#333'},
       legend:{labels:{font:{size:10}}}
@@ -813,7 +806,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       {label:'AI CPA',data:aiCpa,backgroundColor:aiColor},
       {label:'Non-AI CPA',data:naiCpa,backgroundColor:naiColor}
     ]},
-    options:{responsive:true,plugins:{
+    options:{responsive:true,maintainAspectRatio:false,plugins:{
       title:{display:true,text:'CPA（每次转化成本 USD）',font:{size:12}},
       datalabels:{anchor:'end',align:'top',formatter:v=>'$'+v,font:{size:9},color:'#333'},
       legend:{labels:{font:{size:10}}}
@@ -1390,6 +1383,7 @@ bar2('cPayOnce','单次付费',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 bar2('cPayUV','单付费UV',v=>'$'+v.toFixed(2),{categoryPercentage:.6});
 
 // 04 用户质量
+setTimeout(function(){
 mk('cRetNew',{type:'bar',data:{labels:LABS,datasets:[
   {label:'AI',data:aa('新增7日留').map(v=>+(v*100).toFixed(1)),backgroundColor:C.aiS,barPercentage:.7,categoryPercentage:.6},
   {label:'非AI',data:na('新增7日留').map(v=>+(v*100).toFixed(1)),backgroundColor:C.naiS,barPercentage:.7,categoryPercentage:.6}
@@ -1440,6 +1434,7 @@ mk('cArppu',{type:'bar',data:{labels:LABS,datasets:[
       formatter:v=>'$'+v.toFixed(0)
     }
   }}});
+}, 100);
 
 // 05 出价/预算
 const bidLabs=['JP AI','JP 非AI','KR AI','KR 非AI','NA AI','NA 非AI'];
